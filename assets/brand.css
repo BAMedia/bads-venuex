@@ -112,3 +112,15 @@ details p{color:var(--slate);margin:.7em 0 0}
 .biz .card.highlight .btn{background:var(--accent);border-color:var(--accent);color:var(--navy)}
 .biz .card.highlight .btn:hover{background:#d8a64a;border-color:#d8a64a}
 @media(min-width:980px){.biz .card.highlight{grid-column:auto}}
+
+/* Custom Concierge photos */
+.card-photo{margin:-28px -28px 22px;overflow:hidden;border-radius:var(--r) var(--r) 0 0;background:var(--navy)}
+.card-photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.split{display:grid;gap:32px;align-items:center}
+@media(min-width:900px){.split{grid-template-columns:1.1fr .9fr}}
+.photo{margin:0;overflow:hidden;border-radius:18px;border:1px solid var(--line);box-shadow:0 20px 50px -24px rgba(15,31,58,.35);background:var(--navy)}
+.photo img{display:block;width:100%;height:auto}
+.photo figcaption{font-size:.85rem;color:var(--slate2);background:#fff;padding:10px 14px;border-top:1px solid var(--line)}
+.photo-pair{display:grid;gap:16px;margin-top:24px}
+@media(min-width:640px){.photo-pair{grid-template-columns:1fr 1fr}}
+.photo-pair img{aspect-ratio:16/10;object-fit:cover}
