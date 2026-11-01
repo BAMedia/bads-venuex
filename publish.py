@@ -108,6 +108,139 @@ def signup_html(prefix):
 <p>Follow new briefs in any reader app with the {rss}, or install BADS on your phone (see the tip at the top).</p>"""
     return f'<section class="follow" id="follow"><h2>Get updates</h2>{form}</section>'
 
+
+# ---------- Events-first layout (v2) ----------
+# Every brief leads with image-led event cards built from its "What's on" section.
+# Weather and traffic render as compact widgets; the long text stays one tap away.
+# Optional JSON comment anywhere in the brief tunes the widgets and images:
+#   <!-- bads: {"alerts":["..."], "weather":{"now":"...","days":[["Sun","64°","Sunny"]],"notes":["..."]},
+#               "traffic":["..."], "events":{"1":{"img":"opera","blurb":"..."}}} -->
+# Images live in bads/assets/events/<slug>.webp. EVENT_IMAGES picks one by keyword;
+# for a new kind of event, add <slug>.webp (original or licensed, ~960x540, <100KB) and a line here.
+EVENT_IMAGES = [
+    (("marathon", "half", "5k", "10k", " run", "race"), "half-marathon", "Runners on a San Francisco waterfront at sunrise with the Golden Gate Bridge behind"),
+    (("opera", "symphony", "ballet", "theater", "theatre"), "opera", "A grand opera house with red velvet seats and a lit stage curtain"),
+    (("warriors", "valkyries", "basketball", "nba", "wnba"), "basketball", "A basketball on a hardwood court in a lit arena before tip-off"),
+    (("sharks", "hockey", "nhl"), "hockey", "A hockey puck and stick on fresh arena ice"),
+    (("día de los muertos", "dia de los muertos", "muertos"), "dia-de-los-muertos", "A candlelit Día de los Muertos procession under papel picado banners"),
+    (("election", "vote", "voting", "ballot"), "election", "Voting booths and a ballot drop box in a community hall"),
+]
+GENERIC_IMG = ("generic", "A San Francisco street at blue hour with string lights and people heading out")
+
+def pick_image(text):
+    t = text.lower()
+    for keys, slug, alt in EVENT_IMAGES:
+        if any(k in t for k in keys) and os.path.exists(os.path.join(OUT, "assets", "events", slug + ".webp")):
+            return slug, alt
+    return GENERIC_IMG
+
+def short(text, n=150):
+    text = re.sub(r"\s+", " ", text).strip()
+    m = re.match(r"(.+?[.!?])(\s|$)", text)
+    first = m.group(1) if m else text
+    if len(first) > n:
+        first = first[:n].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+    return first
+
+def strip_md(t):
+    return re.sub(r"[*_`]", "", t)
+
+def split_sections(text):
+    parts = re.split(r"(?m)^## +(.+)$", text)
+    return parts[0], [(parts[i].strip(), parts[i + 1]) for i in range(1, len(parts), 2)]
+
+EV_RE = re.compile(r"^\*\*\s*(\d+)\)\s*(.+?)\*\*(.*)$", re.S)
+
+def parse_events(body):
+    events = []
+    for block in re.split(r"\n\s*\n", body.strip()):
+        m = EV_RE.match(block.strip())
+        if not m:
+            continue
+        num, head, rest = m.group(1), m.group(2).strip().rstrip("."), m.group(3)
+        urls = re.findall(r"https?://[^\s<>()\[\]\"·]+", block)
+        rest = re.sub(r"https?://\S+", "", rest).replace("·", " ")
+        title, when = head.split(":", 1) if ":" in head else (head, "")
+        events.append({"n": num, "title": strip_md(title).strip(), "when": strip_md(when).strip().rstrip("."),
+                       "blurb": short(strip_md(rest).lstrip(" .,")), "url": urls[0] if urls else ""})
+    return events
+
+def esc(t):
+    return html.escape(t, quote=True)
+
+BADS_JSON_RE = re.compile(r"<!--\s*bads:\s*(\{.*?\})\s*-->", re.S)
+
+def strip_bads_json(text):
+    return BADS_JSON_RE.sub("", text)
+
+def render_v2(text, prefix):
+    """Events-first HTML for one brief, or None if no events parse (old layout is used then)."""
+    cfg = {}
+    m = BADS_JSON_RE.search(text)
+    if m:
+        try:
+            cfg = json.loads(m.group(1))
+        except ValueError as e:
+            print("warning: bads JSON block ignored:", e)
+        text = strip_bads_json(text)
+    intro, secs = split_sections(text)
+    ev_sec = next(((h, b) for h, b in secs if h.lower().startswith("what")), None)
+    events = parse_events(ev_sec[1]) if ev_sec else []
+    if not events:
+        return None
+    title, sub = meta(text, "")
+    changed = "".join(render_md(p.strip()) for p in re.split(r"\n\s*\n", intro) if "what changed" in p.lower())
+    out = [f'<article class="brief v2"><header class="brief-head"><h1>{esc(title)}</h1><p class="sub">{esc(sub)}</p></header>']
+    if cfg.get("alerts"):
+        out.append('<ul class="alerts" aria-label="Heads up">' + "".join(f"<li>{esc(a)}</li>" for a in cfg["alerts"]) + "</ul>")
+    ov = cfg.get("events") or {}
+    cards = []
+    for i, e in enumerate(events):
+        o = ov.get(e["n"], {})
+        if o.get("img"):
+            slug, alt = o["img"], o.get("alt") or next((a for _, s_, a in EVENT_IMAGES if s_ == o["img"]), GENERIC_IMG[1])
+        else:
+            slug, alt = pick_image(e["title"] + " " + e["blurb"])
+        load = 'fetchpriority="high"' if i == 0 else 'loading="lazy"'
+        link = f'<a class="ev-link" href="{esc(e["url"])}" target="_blank" rel="noopener">Details &rarr;</a>' if e["url"] else ""
+        cards.append(f'<li class="ev"><img src="{prefix}assets/events/{esc(slug)}.webp" width="960" height="540" {load} decoding="async" alt="{esc(alt)}">'
+                     f'<div class="ev-body"><p class="ev-when">{esc(e["when"])}</p><h3>{esc(e["title"])}</h3><p>{esc(o.get("blurb") or e["blurb"])}</p>{link}</div></li>')
+    out.append('<section class="events" id="whats-on"><h2>What\'s on</h2><ul class="ev-grid">' + "".join(cards) + "</ul></section>")
+    by = lambda *keys: next(((h, b) for h, b in secs if any(k in h.lower() for k in keys)), None)
+    w_sec, t_sec = by("weather"), by("road", "traffic")
+    wid = []
+    if w_sec:
+        wc = cfg.get("weather") or {}
+        days = "".join(f'<li><b>{esc(d[0])}</b><span class="t">{esc(d[1])}</span><span class="c">{esc(d[2])}</span></li>' for d in wc.get("days", []))
+        notes = [esc(n) for n in wc.get("notes", [])]
+        if not days and not notes:
+            notes = [esc(short(strip_md(x), 90)) for x in re.findall(r"\*\*(.+?)\*\*", w_sec[1])[:4]]
+        html_w = '<section class="widget weather" id="weather"><h2>Weather</h2>'
+        if wc.get("now"):
+            html_w += f'<p class="w-now">{esc(wc["now"])}</p>'
+        if days:
+            html_w += f'<ul class="days">{days}</ul>'
+        if notes:
+            html_w += '<ul class="w-notes">' + "".join(f"<li>{n}</li>" for n in notes) + "</ul>"
+        html_w += f"<details><summary>Full forecast &amp; alerts</summary>{render_md(w_sec[1])}</details></section>"
+        wid.append(html_w)
+    if t_sec:
+        items = cfg.get("traffic") or [short(strip_md(x), 100) for x in re.findall(r"(?m)^\s*-\s+\*\*(.+?)\*\*", t_sec[1])[:5]]
+        wid.append('<section class="widget traffic" id="traffic"><h2>Traffic</h2><ul class="t-list">' + "".join(f"<li>{esc(x)}</li>" for x in items) +
+                   f"</ul><details><summary>All closures &amp; sources</summary>{render_md(t_sec[1])}</details></section>")
+    if wid:
+        out.append('<div class="widgets">' + "".join(wid) + "</div>")
+    rest = [(h, b) for h, b in secs if (h, b) not in (ev_sec, w_sec, t_sec)]
+    if rest or changed:
+        out.append('<section class="more"><h2>More in this brief</h2>')
+        out += [f"<details><summary>{esc(strip_md(h))}</summary>{render_md(b)}</details>" for h, b in rest]
+        if changed:
+            out.append(f"<details><summary>What changed since the last brief</summary>{changed}</details>")
+        out.append("</section>")
+    out.append("</article>")
+    return "\n".join(out)
+
+
 def page(title, body, prefix, active):
     nav_home = "current" if active == "home" else ""
     nav_arch = "current" if active == "archive" else ""
@@ -155,12 +288,12 @@ def build_brief(src):
     if os.path.abspath(src) != os.path.abspath(dst_md):
         shutil.copyfile(src, dst_md)
     text = open(dst_md, encoding="utf-8").read()
-    title, sub = meta(text, base)
-    body = '<article class="brief">' + render_md(text) + "</article>"
-    archive_body = body + '<p class="back"><a href="index.html">&larr; All briefs</a></p>'
+    title, sub = meta(strip_bads_json(text), base)
+    body = '<article class="brief">' + render_md(strip_bads_json(text)) + "</article>"
+    archive_body = (render_v2(text, "../") or body) + '<p class="back"><a href="index.html">&larr; All briefs</a></p>'
     with open(os.path.join(OUT, "archive", base + ".html"), "w", encoding="utf-8") as f:
         f.write(page(f"{title} · {sub[:60]} · BADS", archive_body, "../", "archive"))
-    return base, title, sub, body
+    return base, title, sub, (render_v2(text, "") or body)
 
 def write_index(base, title, sub, body):
     note = f'<p class="stamp">Latest brief · <a href="archive/{base}.html">permalink</a> · <a href="archive/index.html">past briefs</a></p>'
@@ -199,7 +332,7 @@ def write_feed():
         text = open(os.path.join(BRIEFS, b + ".md"), encoding="utf-8").read()
         title, sub = meta(text, b)
         link = f"{SITE_URL}archive/{b}.html"
-        body = render_md(text)
+        body = render_md(strip_bads_json(text))
         body = re.sub(r'(href|src)="(?!https?:|mailto:|#)([^"]+)"', lambda m: f'{m.group(1)}="{SITE_URL}{m.group(2).lstrip("./")}"', body)
         items.append(f"""  <item>
     <title>{html.escape(title + (" · " + sub if sub else ""))}</title>

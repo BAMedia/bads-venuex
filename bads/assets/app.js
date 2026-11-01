@@ -51,7 +51,7 @@
 function foldBrief(root) {
   if (root.indexOf("..") === 0) return;
   var article = document.querySelector("main article.brief");
-  if (!article || article.getAttribute("data-folded") === "1") return;
+  if (!article || article.classList.contains("v2") || article.getAttribute("data-folded") === "1") return; // v2 = events-first layout, built server-side
   article.setAttribute("data-folded", "1");
 
   var hero = document.createElement("figure");

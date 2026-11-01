@@ -105,3 +105,22 @@ Per SF Travel, Union Square has most major hotels and the best transit links, wi
 6. Fares, Lyft Bike, Lime and Spin pricing not re-checked; restaurant hours not checked; Michelin distinction for Rich Table, Zuni Café and La Taqueria beyond being listed not confirmed.
 7. Muni reroutes and SF street closures carried from SFMTA event pages, not a live alerts feed.
 8. Restaurants not rotated this run (Michelin pages not reloaded).
+
+<!-- bads: {
+"alerts": ["Clocks fall back 1 hour at 2 am Sunday", "Coastal flood advisory until 6 pm Sun", "Beach hazards (sneaker waves, rip currents) late Sun night to 8 pm Tue", "Tue Nov 3 is Election Day"],
+"events": {
+ "1": {"blurb": "Starts at Van Ness and Beach (5K at 7:15 am). Free to watch; Marina and Van Ness closures until about noon."},
+ "2": {"blurb": "Final performance at the War Memorial Opera House, 301 Van Ness. Tickets from $30; runs 3 hr 25 min."},
+ "3": {"blurb": "Chase Center, Mission Bay."},
+ "4": {"blurb": "SAP Center, San Jose."},
+ "5": {"blurb": "Mission District, staging from about 6 pm on Bryant. Free to watch; Mission streets close 5–10 pm."},
+ "6": {"blurb": "Chase Center, Mission Bay. Second Warriors home game in two nights."},
+ "7": {"blurb": "California General Election and SF Consolidated General Election. Check your polling place with SF Elections."}
+},
+"weather": {
+ "now": "Showers likely midnight–5 am (60%), low around 53.",
+ "days": [["Sun", "64°", "Sunny"], ["Mon", "67°", "Partly sunny"], ["Tue", "66°", "50% showers"]],
+ "notes": ["Coastal flood advisory until 6 pm Sun; SF high tide 6.8 ft at 3:59 pm", "Beach hazards late Sun night through 8 pm Tue, SF and Monterey Bay coasts: sneaker waves, rip currents"]
+},
+"traffic": ["Sun ~5 am–noon: Golden Gate Half Marathon closes stretches of Van Ness, Bay, North Point, Polk and Marina Blvd", "Mon 5–10 pm: Mission District closures for the Día de los Muertos procession (starts 7 pm)", "Mon–Sat nights: US-101 Marin lane and ramp closures, 10 pm–6 am", "Sun night: EB SR-24 Pleasant Hill Rd ramps closed midnight–7 am"]
+} -->
