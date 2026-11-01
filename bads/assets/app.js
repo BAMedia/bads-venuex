@@ -2,6 +2,7 @@
 (function () {
   var root = document.documentElement.getAttribute("data-root") || "./";
   foldBrief(root);
+  eventStrip();
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () {
       navigator.serviceWorker.register(root + "sw.js", { scope: root }).catch(function () {});
@@ -142,4 +143,45 @@ function pillLabel(title) {
   if (t.indexOf("assumption") >= 0) return "Notes";
   if (t.indexOf("verified") >= 0) return "Unchecked";
   return title.length > 18 ? title.slice(0, 16) + "…" : title;
+}
+
+/* Events strip: arrows + drag-to-scroll on desktop; native swipe on touch. */
+function eventStrip() {
+  var list = document.querySelector(".brief.v2 .ev-grid");
+  if (!list) return;
+  var wrap = document.createElement("div");
+  wrap.className = "ev-strip";
+  list.parentNode.insertBefore(wrap, list);
+  wrap.appendChild(list);
+  function mk(cls, label, txt, dir) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "ev-arrow " + cls; b.setAttribute("aria-label", label); b.innerHTML = txt;
+    b.addEventListener("click", function () {
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      list.scrollBy({ left: dir * list.clientWidth * 0.85, behavior: reduce ? "auto" : "smooth" });
+    });
+    wrap.appendChild(b); return b;
+  }
+  var prev = mk("prev", "Previous events", "&#8249;", -1), next = mk("next", "More events", "&#8250;", 1);
+  function update() {
+    prev.disabled = list.scrollLeft < 4;
+    next.disabled = list.scrollLeft + list.clientWidth >= list.scrollWidth - 4;
+  }
+  list.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+  var down = false, x0 = 0, s0 = 0, moved = false;
+  list.addEventListener("pointerdown", function (e) {
+    if (e.pointerType !== "mouse") return;
+    down = true; moved = false; x0 = e.clientX; s0 = list.scrollLeft;
+  });
+  window.addEventListener("pointermove", function (e) {
+    if (!down) return;
+    var dx = e.clientX - x0;
+    if (Math.abs(dx) > 5) { moved = true; list.classList.add("dragging"); }
+    if (moved) { list.scrollLeft = s0 - dx; e.preventDefault(); }
+  });
+  window.addEventListener("pointerup", function () { down = false; list.classList.remove("dragging"); });
+  list.addEventListener("click", function (e) { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+  list.addEventListener("dragstart", function (e) { e.preventDefault(); });
 }

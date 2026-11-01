@@ -261,8 +261,8 @@ def page(title, body, prefix, active):
 <meta name="apple-mobile-web-app-title" content="BADS">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="alternate" type="application/rss+xml" title="{html.escape(SITE_TITLE)}" href="{SITE_URL}feed.xml">
-<link rel="stylesheet" href="{prefix}assets/style.css">
-<script src="{prefix}assets/app.js" defer></script>
+<link rel="stylesheet" href="{prefix}assets/style.css?v=6">
+<script src="{prefix}assets/app.js?v=6" defer></script>
 </head>
 <body>
 <header class="site">
