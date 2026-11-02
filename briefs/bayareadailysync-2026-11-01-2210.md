@@ -33,7 +33,7 @@ Source: https://api.weather.gov/alerts/active?point=37.7749,-122.4194
 
 ## What's on (each confirmed on an official, venue or league page)
 
-**1) Sharks vs. Calgary Flames: Mon Nov 2, 6 pm.** SAP Center, San Jose (confirmed on the NHL schedule this run). Ticket prices not checked.
+**1) Sharks vs. Calgary Flames: Mon Nov 2, 6 pm.** SAP Center, San Jose (confirmed on the NHL schedule Sun afternoon). Ticket prices not checked.
 https://www.nhl.com/sharks/schedule
 
 **2) Día de los Muertos procession: Mon Nov 2, 7 pm.** Mission District; staging from about 6 pm on Bryant between 19th and 22nd, route south on Bryant, west on 24th, north on Mission, east on 22nd. Free to watch.
