@@ -1,5 +1,5 @@
 /* BADS service worker: network-first for pages (new briefs show up), cached shell for offline. */
-const VERSION = "bads-v8";
+const VERSION = "bads-v9";
 const SHELL = [
   "./", "./index.html", "./archive/index.html", "./offline.html",
   "./assets/style.css", "./assets/app.js", "./manifest.webmanifest",

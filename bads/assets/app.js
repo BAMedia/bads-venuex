@@ -185,3 +185,17 @@ function eventStrip() {
   list.addEventListener("click", function (e) { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
   list.addEventListener("dragstart", function (e) { e.preventDefault(); });
 }
+
+/* Text-signup widget: US phone validation. Not stored anywhere yet (no SMS service connected). */
+(function () {
+  var f = document.getElementById("sms-form"); if (!f) return;
+  var i = document.getElementById("sms-phone"), m = document.getElementById("sms-msg");
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var d = (i.value || "").replace(/\D/g, "");
+    if (d.length === 11 && d[0] === "1") d = d.slice(1);
+    if (!/^[2-9]\d{2}[2-9]\d{6}$/.test(d)) { m.textContent = "Please enter a valid US phone number, like (415) 555-0123."; m.className = "sms-msg err"; i.focus(); return; }
+    m.textContent = "Thanks! Text delivery isn't live yet, so your number wasn't saved. Check back soon, or use Get updates below.";
+    m.className = "sms-msg ok"; f.reset();
+  });
+})();

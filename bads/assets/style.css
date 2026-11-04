@@ -88,3 +88,14 @@ body:has(.brief.v2) .wrap{max-width:1080px}
 .ev-map{display:block;margin:.5rem 0;text-decoration:none;color:inherit}
 .ev-map img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:8px;display:block}
 .ev-map span{display:block;font-size:.72rem;opacity:.75;margin-top:.2rem}
+
+/* Text signup */
+.sms{border-bottom:1px solid rgba(127,127,127,.2);padding:12px 0}
+.sms-form{max-width:560px}
+.sms-form label{display:block;margin-bottom:6px}
+.sms-row{display:flex;gap:8px}
+.sms-row input{flex:1;min-width:0;font-size:16px;padding:10px 12px;border:1px solid rgba(127,127,127,.45);border-radius:8px;background:transparent;color:inherit}
+.sms-row button{font-size:16px;padding:10px 16px;border:0;border-radius:8px;background:#0b6e99;color:#fff;cursor:pointer;white-space:nowrap}
+.sms-msg{margin:6px 0 0;font-size:.9rem}.sms-msg:empty{display:none}
+.sms-msg.err{color:#b3261e}.sms-msg.ok{color:#1b7f3b}
+.sms-consent{margin:6px 0 0;opacity:.75}
