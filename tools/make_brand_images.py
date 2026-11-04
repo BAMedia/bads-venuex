@@ -13,7 +13,7 @@ def card(path, l1, l2, sub, fine):
     d.text((80,430),sub,font=ImageFont.truetype(D+"DejaVuSans.ttf",30),fill=GOLD)
     d.text((80,490),fine,font=ImageFont.truetype(D+"DejaVuSans.ttf",28),fill=MUTED)
     im.save(path,optimize=True)
-card("assets/og-image.png","A Bay Area media company","with a growing family of brands.","BADS city briefs  ·  Law-firm client concierge","bamedia.agency  ·  San Francisco Bay Area")
+card("assets/og-image.png","A Bay Area media company","with a growing family of brands.","Custom Concierge  ·  Urban Concierge - Bay Area","bamedia.agency  ·  San Francisco Bay Area")
 card("assets/og-law.png","Fast, careful follow-up for","every inquiry and every client.","Client concierge for injury & DUI law firms  ·  CA · NV · AZ","Firm-approved answers. Attorneys stay in control.")
 def icon(n,path):
     i=Image.new("RGB",(n,n),NAVY); g=ImageDraw.Draw(i)
