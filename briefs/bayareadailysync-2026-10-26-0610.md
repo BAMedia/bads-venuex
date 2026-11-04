@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Monday Oct 26 – Wednesday Oct 28, 2026** · Snapshot compiled Mon Oct 26, 2026, 6:10 am PT (BayAreaDailySync)
+**Monday Oct 26 – Wednesday Oct 28, 2026** · Snapshot compiled Mon Oct 26, 2026, 6:10 am PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Sun 10:01 pm):** no major changes. NWS forecast nudged (Tue night low 51, Wed sunny high 65); the Coastal Flood Advisory is unchanged; BART reposted the Millbrae–SFO–Daly City 9 pm delay advisory at 3:36 am; Caltrans and SFMTA posted nothing new. I-80 WB (5th–15th St) and SR-37 reopened this morning as scheduled per Caltrans' notices (live status not confirmed).
 

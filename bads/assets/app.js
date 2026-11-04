@@ -27,7 +27,7 @@
   var ua = navigator.userAgent || "";
   var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
   if (isIOS) {
-    text.innerHTML = 'Get BADS as an app: tap <strong>Share</strong> <span aria-hidden="true">&#x2191;</span> in Safari, then <strong>Add to Home Screen</strong>.';
+    text.innerHTML = 'Get Urban Concierge as an app: tap <strong>Share</strong> <span aria-hidden="true">&#x2191;</span> in Safari, then <strong>Add to Home Screen</strong>.';
     btn.hidden = true;
     box.hidden = false;
     return;
@@ -37,7 +37,7 @@
   window.addEventListener("beforeinstallprompt", function (e) {
     e.preventDefault();
     deferred = e;
-    text.textContent = "Install BADS on your phone or desktop for one-tap access and offline reading.";
+    text.textContent = "Install Urban Concierge on your phone or desktop for one-tap access and offline reading.";
     btn.hidden = false;
     box.hidden = false;
   });

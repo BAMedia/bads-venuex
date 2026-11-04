@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Sunday Oct 25 – Tuesday Oct 27, 2026** · Snapshot compiled Sat Oct 24, 2026, 10:06 pm PT (BayAreaDailySync)
+**Sunday Oct 25 – Tuesday Oct 27, 2026** · Snapshot compiled Sat Oct 24, 2026, 10:06 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Oct 23 sample):** the window rolled forward to Sun–Tue; the Coastal Flood Advisory is now confirmed (runs to Thu 3 pm, highest tides late morning/midday); a 55-hour SR-37 full closure and new nightly SR-92/US-101 ramp closures were added; Doja Cat at Chase Center (Sun) is now confirmed on Live Nation; new picks are Noe Valley Night Market (Tue), Manon (Tue) and Sharks vs. Sabres (Tue); three new restaurants; 3- and 7-day Visitor Passport prices now confirmed.
 

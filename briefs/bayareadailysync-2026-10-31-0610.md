@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Saturday Oct 31 – Monday Nov 2, 2026** · Snapshot compiled Sat Oct 31, 2026, 6:10 am PT (BayAreaDailySync)
+**Saturday Oct 31 – Monday Nov 2, 2026** · Snapshot compiled Sat Oct 31, 2026, 6:10 am PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Fri 10:10 pm):** Saturday daytime now looks dry (NWS dropped the 11 am–5 pm shower chance; showers now 50% from 10 pm to 3 am Saturday night), and Sunday is sunny all day. The Coastal Flood Advisory was reissued at 4:45 am with a lower peak (up to 1.5 ft). The overnight Bay Bridge and Posey Tube closures are wrapping up this morning. No new Caltrans notices, no BART advisories; restaurants rotated.
 

@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Wednesday Oct 28 – Friday Oct 30, 2026** · Snapshot compiled Tue Oct 27, 2026, 10:03 pm PT (BayAreaDailySync)
+**Wednesday Oct 28 – Friday Oct 30, 2026** · Snapshot compiled Tue Oct 27, 2026, 10:03 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Tue 2:05 pm):** the window now runs Wed–Fri, so Friday's Warriors vs. Lakers game and SF Opera's *Manon* are added and Tuesday's items are gone. Caltrans posted new daytime one-way traffic control on SR-84 between La Honda and Woodside, Wed–Fri. NWS reissued the Coastal Flood Advisory at 3:11 pm with no change, and Friday looks sunny, high near 64.
 

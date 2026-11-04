@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Monday Oct 26 – Wednesday Oct 28, 2026** · Snapshot compiled Mon Oct 26, 2026, 2:04 pm PT (BayAreaDailySync)
+**Monday Oct 26 – Wednesday Oct 28, 2026** · Snapshot compiled Mon Oct 26, 2026, 2:04 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Mon 6:10 am):** no major changes. The NWS raised the Coastal Flood Advisory to up to 2.1 ft of inundation (reissued 11:04 am), with Tuesday's 12:15 pm tide now the highest at 7.9 ft; Caltrans confirmed WB I-80 Bayshore (5th–15th St) has reopened; BART reposted the Millbrae–SFO–Daly City 9 pm delay advisory at 1:45 pm.
 

@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Monday Nov 2 – Thursday Nov 5, 2026** · Snapshot compiled Mon Nov 2, 2026, 6:10 am PT (BayAreaDailySync)
+**Monday Nov 2 – Thursday Nov 5, 2026** · Snapshot compiled Mon Nov 2, 2026, 6:10 am PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Sun 10:10 pm):** No major changes. Monday night's rain chance dropped to 20% (Tuesday is still 90%), the Beach Hazards Statement was reissued this morning, and the SR-24 overnight ramp closure in Lafayette is done. Today's Día de los Muertos closures and Wednesday's Valkyries parade closures stand as posted.
 

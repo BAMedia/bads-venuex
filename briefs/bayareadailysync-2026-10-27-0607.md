@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Tuesday Oct 27 – Thursday Oct 29, 2026** · Snapshot compiled Tue Oct 27, 2026, 6:07 am PT (BayAreaDailySync)
+**Tuesday Oct 27 – Thursday Oct 29, 2026** · Snapshot compiled Tue Oct 27, 2026, 6:07 am PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Mon 10:01 pm):** no major changes. NWS reissued the Coastal Flood Advisory at 5:41 am Tue with the same tides and end time (Fri Oct 30, 5 pm), Tuesday night's fog was dropped from the forecast, and Thursday is now mostly cloudy, high near 65. No new Caltrans, BART or Muni items.
 

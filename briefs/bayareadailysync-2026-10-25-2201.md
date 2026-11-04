@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Monday Oct 26 – Wednesday Oct 28, 2026** · Snapshot compiled Sun Oct 25, 2026, 10:01 pm PT (BayAreaDailySync)
+**Monday Oct 26 – Wednesday Oct 28, 2026** · Snapshot compiled Sun Oct 25, 2026, 10:01 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Sun 2:10 pm):** the window now runs Mon–Wed. BART posted new nightly 30-minute delays from 9 pm between Millbrae, SFO and Daly City (Sun–Thu). I-80 into SF and SR-37 reopen early Monday. New events: Slow Pulp at the Fillmore (Tue and Wed), Andrew Huberman at the Masonic and Mo Welch at Punch Line (Wed). New restaurant picks: State Bird Provisions and Zuni Café. NWS reissued the Coastal Flood Advisory at 8:36 pm with the same terms.
 

@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Sunday Nov 1 – Tuesday Nov 3, 2026** · Snapshot compiled Sat Oct 31, 2026, 10:10 pm PT (BayAreaDailySync)
+**Sunday Nov 1 – Tuesday Nov 3, 2026** · Snapshot compiled Sat Oct 31, 2026, 10:10 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Sat 2:10 pm):** The window rolls forward to Tuesday, so Saturday's Halloween events are out and Election Day (Tue Nov 3) is in. NWS added a **Beach Hazards Statement** (sneaker waves, rip currents) from late Sunday night through Tuesday evening, and Tuesday brings a 50% chance of showers. No new Caltrans notices and no BART advisories.
 

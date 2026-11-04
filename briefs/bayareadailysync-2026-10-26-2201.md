@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Tuesday Oct 27 – Thursday Oct 29, 2026** · Snapshot compiled Mon Oct 26, 2026, 10:01 pm PT (BayAreaDailySync)
+**Tuesday Oct 27 – Thursday Oct 29, 2026** · Snapshot compiled Mon Oct 26, 2026, 10:01 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Mon 2:04 pm):** no major changes. The window now runs Tue–Thu. NWS reissued the Coastal Flood Advisory at 8:59 pm and extended it to Fri Oct 30, 5 pm. Caltrans confirmed SR-37 (Vallejo–Sonoma) reopened at 2:15 am Monday, about 3 hours early. Added for Thursday: Sharks vs. Canucks and the Exploratorium's Creepatorium.
 

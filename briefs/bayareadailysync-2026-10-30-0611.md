@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Saturday Oct 31 – Monday Nov 2, 2026** · Snapshot compiled Fri Oct 30, 2026, 6:10 am PT (BayAreaDailySync)
+**Saturday Oct 31 – Monday Nov 2, 2026** · Snapshot compiled Fri Oct 30, 2026, 6:10 am PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Thu 10:15 pm):** the window now runs through Monday. Monday adds the Día de los Muertos procession in the Mission (street closures 5–10 pm), Warriors vs. Suns and Sharks vs. Flames. BART's Powell St. entrance at 4th and Market closes Nov 2–10. Friday-only road closures dropped off. The forecast and Coastal Flood Advisory are unchanged. Restaurant picks rotated to the Mission and Fillmore.
 

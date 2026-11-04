@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Thursday Oct 29 – Saturday Oct 31, 2026** · Snapshot compiled Thu Oct 29, 2026, 6:08 am PT (BayAreaDailySync)
+**Thursday Oct 29 – Saturday Oct 31, 2026** · Snapshot compiled Thu Oct 29, 2026, 6:08 am PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Wed 10:09 pm):** no major changes. NWS dropped the Saturday-evening rain chance (now 12%, mostly cloudy, high near 64). BART had a 20-minute systemwide delay early this morning after a disabled train near Daly City; service has resumed. The Exploratorium's Creepatorium tonight is now confirmed on its own page.
 

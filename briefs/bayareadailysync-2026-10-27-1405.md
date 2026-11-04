@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Tuesday Oct 27 – Thursday Oct 29, 2026** · Snapshot compiled Tue Oct 27, 2026, 2:05 pm PT (BayAreaDailySync)
+**Tuesday Oct 27 – Thursday Oct 29, 2026** · Snapshot compiled Tue Oct 27, 2026, 2:05 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Tue 6:07 am):** no major changes. Caltrans posted two new items: SR-82 (El Camino Real) northbound closes in Burlingame Wed–Fri 9 am–6 pm for tree work, and all southbound US-101 Hospital Curve lanes in SF close Nov 6–9. Wednesday's forecast is now sunny, high near 66. The Coastal Flood Advisory is unchanged.
 

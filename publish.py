@@ -29,7 +29,7 @@ except ImportError:
     sys.exit("python-markdown missing: pip install --user --break-system-packages markdown")
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-SITE_TITLE = "BADS: Bay Area Daily Sync"
+SITE_TITLE = "Urban Concierge - Bay Area"
 TAGLINE = "Your SF Bay Area brief, refreshed every 8 hours."
 FOOTER = "Built from public sources. Snapshot, not real-time; check official links before you go."
 CONFIG = json.load(open(os.path.join(ROOT, "site.json"), encoding="utf-8"))
@@ -105,7 +105,7 @@ def signup_html(prefix):
     else:
         # EMAIL SIGNUP PLACEHOLDER: hidden until site.json "signup.form_action" is set.
         form = f"""<!-- email signup placeholder: set signup.form_action in site.json, then run publish.py --rebuild -->
-<p>Follow new briefs in any reader app with the {rss}, or install BADS on your phone (see the tip at the top).</p>"""
+<p>Follow new briefs in any reader app with the {rss}, or install Urban Concierge on your phone (see the tip at the top).</p>"""
     return f'<section class="follow" id="follow"><h2>Get updates</h2>{form}</section>'
 
 
@@ -264,11 +264,11 @@ def page(title, body, prefix, active):
 <link rel="apple-touch-icon" href="{prefix}assets/icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="BADS">
+<meta name="apple-mobile-web-app-title" content="Urban Concierge">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="alternate" type="application/rss+xml" title="{html.escape(SITE_TITLE)}" href="{SITE_URL}feed.xml">
-<link rel="stylesheet" href="{prefix}assets/style.css?v=7">
-<script src="{prefix}assets/app.js?v=7" defer></script>
+<link rel="stylesheet" href="{prefix}assets/style.css?v=8">
+<script src="{prefix}assets/app.js?v=8" defer></script>
 </head>
 <body>
 <header class="site">
@@ -283,7 +283,7 @@ def page(title, body, prefix, active):
 {body}
 {signup_html(prefix)}
 </main>
-<footer class="site"><div class="wrap"><p>{html.escape(FOOTER)}</p><p class="fine">BADS is a brand of <a href="{prefix}../">Bay Area Media</a>.</p></div></footer>
+<footer class="site"><div class="wrap"><p>{html.escape(FOOTER)}</p><p class="fine">Urban Concierge - Bay Area is a Custom Concierge brand by <a href="{prefix}../">Bay Area Media</a>.</p></div></footer>
 </body>
 </html>
 """
@@ -298,7 +298,7 @@ def build_brief(src):
     body = '<article class="brief">' + render_md(strip_bads_json(text)) + "</article>"
     archive_body = (render_v2(text, "../") or body) + '<p class="back"><a href="index.html">&larr; All briefs</a></p>'
     with open(os.path.join(OUT, "archive", base + ".html"), "w", encoding="utf-8") as f:
-        f.write(page(f"{title} · {sub[:60]} · BADS", archive_body, "../", "archive"))
+        f.write(page(f"{title} · {sub[:60]} · Urban Concierge - Bay Area", archive_body, "../", "archive"))
     return base, title, sub, (render_v2(text, "") or body)
 
 def write_index(base, title, sub, body):
@@ -318,7 +318,7 @@ def write_archive_index():
         items.append(f'<li><a href="{base}.html">{html.escape(sub or title)}</a><span class="fn">{html.escape(base)}</span></li>')
     body = "<h1>Archive</h1><p>Every published brief, newest first.</p><ul class=\"archive\">" + "\n".join(items) + "</ul>"
     with open(os.path.join(OUT, "archive", "index.html"), "w", encoding="utf-8") as f:
-        f.write(page("Archive · BADS", body, "../", "archive"))
+        f.write(page("Archive · Urban Concierge - Bay Area", body, "../", "archive"))
 
 def brief_time(base):
     m = re.search(r"(\d{4})-(\d{2})-(\d{2})-(\d{2})(\d{2})$", base)
@@ -371,16 +371,16 @@ def write_feed():
 def write_offline():
     body = '<h1>You are offline</h1><p>This page has not been saved on this device yet. Briefs you have opened before still work offline. Try the <a href="index.html">latest brief</a> or the <a href="archive/index.html">archive</a>.</p>'
     with open(os.path.join(OUT, "offline.html"), "w", encoding="utf-8") as f:
-        f.write(page("Offline · BADS", body, "", "home"))
+        f.write(page("Offline · Urban Concierge - Bay Area", body, "", "home"))
 
 LEGACY_STUB = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
-<title>Moved · BADS</title>
+<title>Moved · Urban Concierge - Bay Area</title>
 <meta name="robots" content="noindex">
 <link rel="canonical" href="{url}">
 <meta http-equiv="refresh" content="0; url={url}">
 <script>location.replace("{url}" + location.hash);</script>
-</head><body><p>BADS has moved to <a href="{url}">{url}</a>.</p></body></html>
+</head><body><p>Urban Concierge - Bay Area has moved to <a href="{url}">{url}</a>.</p></body></html>
 """
 
 def write_legacy():

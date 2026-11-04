@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Monday Nov 2 – Thursday Nov 5, 2026** · Snapshot compiled Mon Nov 2, 2026, 2:05 pm PT (BayAreaDailySync)
+**Monday Nov 2 – Thursday Nov 5, 2026** · Snapshot compiled Mon Nov 2, 2026, 2:05 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Mon 6:10 am):** No major changes. Caltrans posted two new San Mateo County items (NB El Camino Real closed in Burlingame 9 am–6 pm through Fri, and nightly US-101 lane and ramp closures through Nov 30), and Tuesday's rain now looks lighter (under a tenth of an inch). Tonight's Día de los Muertos closures and Wednesday's Valkyries parade closures stand as posted.
 

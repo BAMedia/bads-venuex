@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Tuesday Nov 3 – Thursday Nov 5, 2026** · Snapshot compiled Tue Nov 3, 2026, 2:10 pm PT (BayAreaDailySync)
+**Tuesday Nov 3 – Thursday Nov 5, 2026** · Snapshot compiled Tue Nov 3, 2026, 2:10 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Tue 6:10 am):** NWS issued a **Coastal Flood Advisory for SF from 6 am Wed through 1 pm Mon Nov 9** (morning high tides up to 1.6 ft above normal), and today's rain now looks light (under a tenth of an inch). Caltrans added tide-related closures of the NB US-101 to SR-1 ramp in Mill Valley and confirmed the Devil's Slide tunnel closure Thu night. Restaurant picks rotated.
 

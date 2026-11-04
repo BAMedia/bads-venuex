@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Tuesday Nov 3 – Thursday Nov 5, 2026** · Snapshot compiled Mon Nov 2, 2026, 10:10 pm PT (BayAreaDailySync)
+**Tuesday Nov 3 – Thursday Nov 5, 2026** · Snapshot compiled Mon Nov 2, 2026, 10:10 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Mon 2:05 pm):** No major changes. No new Caltrans District 4 posts, the NWS forecast and Beach Hazards Statement are unchanged, and BART shows only its planned Millbrae–SFO–Daly City delays. Monday night's games and Día de los Muertos procession have passed and are dropped; the window now runs Tue–Thu.
 

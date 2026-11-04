@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Saturday Oct 31 – Monday Nov 2, 2026** · Snapshot compiled Sat Oct 31, 2026, 2:10 pm PT (BayAreaDailySync)
+**Saturday Oct 31 – Monday Nov 2, 2026** · Snapshot compiled Sat Oct 31, 2026, 2:10 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Sat 6:10 am):** No major changes. NWS now puts tonight's showers at 60% between midnight and 5 am (was 50%, 10 pm–3 am), and Saturday afternoon is sunny. The Coastal Flood Advisory still runs until 6 pm Sunday. No new Caltrans notices and no BART advisories.
 

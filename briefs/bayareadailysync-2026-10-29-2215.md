@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Friday Oct 30 – Sunday Nov 1, 2026** · Snapshot compiled Thu Oct 29, 2026, 10:15 pm PT (BayAreaDailySync)
+**Friday Oct 30 – Sunday Nov 1, 2026** · Snapshot compiled Thu Oct 29, 2026, 10:15 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Thu 2:02 pm):** the window now runs through Sunday. The Coastal Flood Advisory was extended to Sun Nov 1, 6 pm. Halloween rain odds dropped to 20% (Sat afternoon) and 30% (Sat night). Sunday adds the Golden Gate Half Marathon street closures, the last *Manon* (2 pm) and Warriors vs. Clippers. Clocks fall back at 2 am Sunday. New Caltrans notices: SR-37 eastbound Walnut Ave exit closed at Mare Island, and two mid-November closures. Restaurant picks rotated (Michelin pages loaded again this run).
 

@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Thursday Oct 29 – Saturday Oct 31, 2026** · Snapshot compiled Thu Oct 29, 2026, 2:00 pm PT (BayAreaDailySync)
+**Thursday Oct 29 – Saturday Oct 31, 2026** · Snapshot compiled Thu Oct 29, 2026, 2:00 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Thu 6:08 am):** rain is back for Halloween. NWS now gives a 40% chance of showers Saturday after 11 am and 50% Saturday night (under a tenth of an inch), so bring a layer for Castro, the Zoo and trick-or-treating. This morning's BART delay has cleared. New Caltrans notice: nightly SR-37 Petaluma River Bridge lane closures the week of Nov 2. Restaurant picks rotated.
 

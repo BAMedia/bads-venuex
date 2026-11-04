@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Wednesday Nov 4 – Friday Nov 6, 2026** · Snapshot compiled Wed Nov 4, 2026, 6:15 am PT (BayAreaDailySync)
+**Wednesday Nov 4 – Friday Nov 6, 2026** · Snapshot compiled Wed Nov 4, 2026, 6:15 am PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Tue 10:10 pm):** Little. NWS issued a new **Beach Hazards Statement for SF, 5 am Thu to 7 pm Sat** (sneaker waves, rip currents, 12–16 ft breakers); the Coastal Flood Advisory starts this morning as planned. Forecast, Caltrans closures, BART alerts and events are unchanged; the parade is still on today 12–2 pm.
 

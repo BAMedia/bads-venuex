@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Sunday Oct 25 – Tuesday Oct 27, 2026** · Snapshot compiled Sun Oct 25, 2026, 2:10 pm PT (BayAreaDailySync)
+**Sunday Oct 25 – Tuesday Oct 27, 2026** · Snapshot compiled Sun Oct 25, 2026, 2:10 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Sun 6:03 am):** no major changes. NWS reissued the Coastal Flood Advisory at 9:06 am (same terms, still to Thu 3 pm); Tuesday's high eased to 63 and the Monday-night fog mention was dropped. New: Caltrans daytime two-lane closures on SR-29 in Vallejo start Mon Oct 26. All events still listed on their official pages.
 

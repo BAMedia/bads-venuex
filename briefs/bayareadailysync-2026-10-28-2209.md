@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Thursday Oct 29 – Saturday Oct 31, 2026** · Snapshot compiled Wed Oct 28, 2026, 10:09 pm PT (BayAreaDailySync)
+**Thursday Oct 29 – Saturday Oct 31, 2026** · Snapshot compiled Wed Oct 28, 2026, 10:09 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Wed 6:00 am):** the window now reaches Halloween Saturday, so four new Saturday events are in (Boo at the Zoo, SFMOMAween, Halloween Hoopla and a 1 pm Sharks game), plus the Castro street closure. NWS now has a 20% chance of rain Saturday evening. Caltrans posted a new Bay Bridge overnight closure for Nov 12–13. Wednesday's events dropped off.
 

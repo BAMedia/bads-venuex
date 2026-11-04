@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Sunday Nov 1 – Wednesday Nov 4, 2026** · Snapshot compiled Sun Nov 1, 2026, 2:05 pm PT (BayAreaDailySync)
+**Sunday Nov 1 – Wednesday Nov 4, 2026** · Snapshot compiled Sun Nov 1, 2026, 2:05 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Sun 6:05 am):** Rain odds jumped: showers now likely Monday night (70%) and Tuesday (90%, a tenth to a quarter inch). SFMTA posted the **Golden State Valkyries WNBA championship parade, Wed Nov 4 at noon on The Embarcadero**, with closures from 12:01 am. The half marathon and opera matinee are past and dropped.
 

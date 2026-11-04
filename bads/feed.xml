@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>BADS: Bay Area Daily Sync</title>
+  <title>Urban Concierge - Bay Area</title>
   <link>https://bamedia.agency/bads/</link>
   <atom:link href="https://bamedia.agency/bads/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Your SF Bay Area brief, refreshed every 8 hours.</description>
   <language>en-us</language>
   <lastBuildDate>Wed, 04 Nov 2026 06:15:00 -0800</lastBuildDate>
   <ttl>60</ttl>
-  <image><url>https://bamedia.agency/bads/assets/icons/icon-192.png</url><title>BADS: Bay Area Daily Sync</title><link>https://bamedia.agency/bads/</link></image>
+  <image><url>https://bamedia.agency/bads/assets/icons/icon-192.png</url><title>Urban Concierge - Bay Area</title><link>https://bamedia.agency/bads/</link></image>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Wednesday Nov 4 – Friday Nov 6, 2026 · Snapshot compiled Wed Nov 4, 2026, 6:15 am PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Wednesday Nov 4 – Friday Nov 6, 2026 · Snapshot compiled Wed Nov 4, 2026, 6:15 am PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-11-04-0615.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-11-04-0615.html</guid>
     <pubDate>Wed, 04 Nov 2026 06:15:00 -0800</pubDate>
-    <description>Wednesday Nov 4 – Friday Nov 6, 2026 · Snapshot compiled Wed Nov 4, 2026, 6:15 am PT (BayAreaDailySync)</description>
+    <description>Wednesday Nov 4 – Friday Nov 6, 2026 · Snapshot compiled Wed Nov 4, 2026, 6:15 am PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Wednesday Nov 4 – Friday Nov 6, 2026</strong> · Snapshot compiled Wed Nov 4, 2026, 6:15 am PT (BayAreaDailySync)</p>
+<p><strong>Wednesday Nov 4 – Friday Nov 6, 2026</strong> · Snapshot compiled Wed Nov 4, 2026, 6:15 am PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Tue 10:10 pm):</strong> Little. NWS issued a new <strong>Beach Hazards Statement for SF, 5 am Thu to 7 pm Sat</strong> (sneaker waves, rip currents, 12–16 ft breakers); the Coastal Flood Advisory starts this morning as planned. Forecast, Caltrans closures, BART alerts and events are unchanged; the parade is still on today 12–2 pm.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -96,13 +96,13 @@ Source: <a href="https://api.weather.gov/alerts/active?point=37.7749,-122.4194" 
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Wednesday Nov 4 – Friday Nov 6, 2026 · Snapshot compiled Tue Nov 3, 2026, 10:10 pm PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Wednesday Nov 4 – Friday Nov 6, 2026 · Snapshot compiled Tue Nov 3, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-11-03-2210.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-11-03-2210.html</guid>
     <pubDate>Tue, 03 Nov 2026 22:10:00 -0800</pubDate>
-    <description>Wednesday Nov 4 – Friday Nov 6, 2026 · Snapshot compiled Tue Nov 3, 2026, 10:10 pm PT (BayAreaDailySync)</description>
+    <description>Wednesday Nov 4 – Friday Nov 6, 2026 · Snapshot compiled Tue Nov 3, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Wednesday Nov 4 – Friday Nov 6, 2026</strong> · Snapshot compiled Tue Nov 3, 2026, 10:10 pm PT (BayAreaDailySync)</p>
+<p><strong>Wednesday Nov 4 – Friday Nov 6, 2026</strong> · Snapshot compiled Tue Nov 3, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Tue 2:10 pm):</strong> Window rolls forward to Wed–Fri now that Election Day is wrapping up. Events grow from 2 to 6: the Valkyries parade is now confirmed on the team's own page, plus Thursday's Warriors–Heat game (now confirmed on nba.com), Exploratorium After Dark, A.C.T.'s closing week of <em>Every Saturday Night</em>, the Thursday Ferry Plaza market and Friday's SF Symphony. Caltrans <strong>cancelled tonight's I-80 Vallejo closure</strong> (weather) and moved it to Wed and Thu nights. The Beach Hazards Statement has expired. Restaurant picks rotated.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -180,13 +180,13 @@ Source: <a href="https://api.weather.gov/alerts/active?point=37.7749,-122.4194" 
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Tuesday Nov 3 – Thursday Nov 5, 2026 · Snapshot compiled Tue Nov 3, 2026, 2:10 pm PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Tuesday Nov 3 – Thursday Nov 5, 2026 · Snapshot compiled Tue Nov 3, 2026, 2:10 pm PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-11-03-1410.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-11-03-1410.html</guid>
     <pubDate>Tue, 03 Nov 2026 14:10:00 -0800</pubDate>
-    <description>Tuesday Nov 3 – Thursday Nov 5, 2026 · Snapshot compiled Tue Nov 3, 2026, 2:10 pm PT (BayAreaDailySync)</description>
+    <description>Tuesday Nov 3 – Thursday Nov 5, 2026 · Snapshot compiled Tue Nov 3, 2026, 2:10 pm PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Tuesday Nov 3 – Thursday Nov 5, 2026</strong> · Snapshot compiled Tue Nov 3, 2026, 2:10 pm PT (BayAreaDailySync)</p>
+<p><strong>Tuesday Nov 3 – Thursday Nov 5, 2026</strong> · Snapshot compiled Tue Nov 3, 2026, 2:10 pm PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Tue 6:10 am):</strong> NWS issued a <strong>Coastal Flood Advisory for SF from 6 am Wed through 1 pm Mon Nov 9</strong> (morning high tides up to 1.6 ft above normal), and today's rain now looks light (under a tenth of an inch). Caltrans added tide-related closures of the NB US-101 to SR-1 ramp in Mill Valley and confirmed the Devil's Slide tunnel closure Thu night. Restaurant picks rotated.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -267,13 +267,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Tuesday Nov 3 – Thursday Nov 5, 2026 · Snapshot compiled Tue Nov 3, 2026, 6:10 am PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Tuesday Nov 3 – Thursday Nov 5, 2026 · Snapshot compiled Tue Nov 3, 2026, 6:10 am PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-11-03-0610.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-11-03-0610.html</guid>
     <pubDate>Tue, 03 Nov 2026 06:10:00 -0800</pubDate>
-    <description>Tuesday Nov 3 – Thursday Nov 5, 2026 · Snapshot compiled Tue Nov 3, 2026, 6:10 am PT (BayAreaDailySync)</description>
+    <description>Tuesday Nov 3 – Thursday Nov 5, 2026 · Snapshot compiled Tue Nov 3, 2026, 6:10 am PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Tuesday Nov 3 – Thursday Nov 5, 2026</strong> · Snapshot compiled Tue Nov 3, 2026, 6:10 am PT (BayAreaDailySync)</p>
+<p><strong>Tuesday Nov 3 – Thursday Nov 5, 2026</strong> · Snapshot compiled Tue Nov 3, 2026, 6:10 am PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Mon 10:10 pm):</strong> NWS now expects more rain today (a quarter to half an inch, starting after 7 am), and Caltrans posted new overnight closures: full nightly closures of SR-4 in Brentwood through Thursday, and I-80 lane and ramp closures in Vallejo Tue and Wed nights. The Beach Hazards Statement ends at 8 pm tonight.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -347,13 +347,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Tuesday Nov 3 – Thursday Nov 5, 2026 · Snapshot compiled Mon Nov 2, 2026, 10:10 pm PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Tuesday Nov 3 – Thursday Nov 5, 2026 · Snapshot compiled Mon Nov 2, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-11-02-2210.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-11-02-2210.html</guid>
     <pubDate>Mon, 02 Nov 2026 22:10:00 -0800</pubDate>
-    <description>Tuesday Nov 3 – Thursday Nov 5, 2026 · Snapshot compiled Mon Nov 2, 2026, 10:10 pm PT (BayAreaDailySync)</description>
+    <description>Tuesday Nov 3 – Thursday Nov 5, 2026 · Snapshot compiled Mon Nov 2, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Tuesday Nov 3 – Thursday Nov 5, 2026</strong> · Snapshot compiled Mon Nov 2, 2026, 10:10 pm PT (BayAreaDailySync)</p>
+<p><strong>Tuesday Nov 3 – Thursday Nov 5, 2026</strong> · Snapshot compiled Mon Nov 2, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Mon 2:05 pm):</strong> No major changes. No new Caltrans District 4 posts, the NWS forecast and Beach Hazards Statement are unchanged, and BART shows only its planned Millbrae–SFO–Daly City delays. Monday night's games and Día de los Muertos procession have passed and are dropped; the window now runs Tue–Thu.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -425,13 +425,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Monday Nov 2 – Thursday Nov 5, 2026 · Snapshot compiled Mon Nov 2, 2026, 2:05 pm PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Monday Nov 2 – Thursday Nov 5, 2026 · Snapshot compiled Mon Nov 2, 2026, 2:05 pm PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-11-02-1405.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-11-02-1405.html</guid>
     <pubDate>Mon, 02 Nov 2026 14:05:00 -0800</pubDate>
-    <description>Monday Nov 2 – Thursday Nov 5, 2026 · Snapshot compiled Mon Nov 2, 2026, 2:05 pm PT (BayAreaDailySync)</description>
+    <description>Monday Nov 2 – Thursday Nov 5, 2026 · Snapshot compiled Mon Nov 2, 2026, 2:05 pm PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Monday Nov 2 – Thursday Nov 5, 2026</strong> · Snapshot compiled Mon Nov 2, 2026, 2:05 pm PT (BayAreaDailySync)</p>
+<p><strong>Monday Nov 2 – Thursday Nov 5, 2026</strong> · Snapshot compiled Mon Nov 2, 2026, 2:05 pm PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Mon 6:10 am):</strong> No major changes. Caltrans posted two new San Mateo County items (NB El Camino Real closed in Burlingame 9 am–6 pm through Fri, and nightly US-101 lane and ramp closures through Nov 30), and Tuesday's rain now looks lighter (under a tenth of an inch). Tonight's Día de los Muertos closures and Wednesday's Valkyries parade closures stand as posted.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -510,13 +510,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Monday Nov 2 – Thursday Nov 5, 2026 · Snapshot compiled Mon Nov 2, 2026, 6:10 am PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Monday Nov 2 – Thursday Nov 5, 2026 · Snapshot compiled Mon Nov 2, 2026, 6:10 am PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-11-02-0610.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-11-02-0610.html</guid>
     <pubDate>Mon, 02 Nov 2026 06:10:00 -0800</pubDate>
-    <description>Monday Nov 2 – Thursday Nov 5, 2026 · Snapshot compiled Mon Nov 2, 2026, 6:10 am PT (BayAreaDailySync)</description>
+    <description>Monday Nov 2 – Thursday Nov 5, 2026 · Snapshot compiled Mon Nov 2, 2026, 6:10 am PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Monday Nov 2 – Thursday Nov 5, 2026</strong> · Snapshot compiled Mon Nov 2, 2026, 6:10 am PT (BayAreaDailySync)</p>
+<p><strong>Monday Nov 2 – Thursday Nov 5, 2026</strong> · Snapshot compiled Mon Nov 2, 2026, 6:10 am PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Sun 10:10 pm):</strong> No major changes. Monday night's rain chance dropped to 20% (Tuesday is still 90%), the Beach Hazards Statement was reissued this morning, and the SR-24 overnight ramp closure in Lafayette is done. Today's Día de los Muertos closures and Wednesday's Valkyries parade closures stand as posted.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -593,13 +593,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Sunday night Nov 1 – Wednesday Nov 4, 2026 · Snapshot compiled Sun Nov 1, 2026, 10:10 pm PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Sunday night Nov 1 – Wednesday Nov 4, 2026 · Snapshot compiled Sun Nov 1, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-11-01-2210.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-11-01-2210.html</guid>
     <pubDate>Sun, 01 Nov 2026 22:10:00 -0800</pubDate>
-    <description>Sunday night Nov 1 – Wednesday Nov 4, 2026 · Snapshot compiled Sun Nov 1, 2026, 10:10 pm PT (BayAreaDailySync)</description>
+    <description>Sunday night Nov 1 – Wednesday Nov 4, 2026 · Snapshot compiled Sun Nov 1, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Sunday night Nov 1 – Wednesday Nov 4, 2026</strong> · Snapshot compiled Sun Nov 1, 2026, 10:10 pm PT (BayAreaDailySync)</p>
+<p><strong>Sunday night Nov 1 – Wednesday Nov 4, 2026</strong> · Snapshot compiled Sun Nov 1, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Sun 2:05 pm):</strong> No major changes. The Coastal Flood Advisory has expired and tonight's Warriors game is past; the forecast, Beach Hazards Statement, Día de los Muertos closures (Mon) and Valkyries parade closures (Wed) all stand as posted.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -678,13 +678,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Sunday Nov 1 – Wednesday Nov 4, 2026 · Snapshot compiled Sun Nov 1, 2026, 2:05 pm PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Sunday Nov 1 – Wednesday Nov 4, 2026 · Snapshot compiled Sun Nov 1, 2026, 2:05 pm PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-11-01-1405.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-11-01-1405.html</guid>
     <pubDate>Sun, 01 Nov 2026 14:05:00 -0800</pubDate>
-    <description>Sunday Nov 1 – Wednesday Nov 4, 2026 · Snapshot compiled Sun Nov 1, 2026, 2:05 pm PT (BayAreaDailySync)</description>
+    <description>Sunday Nov 1 – Wednesday Nov 4, 2026 · Snapshot compiled Sun Nov 1, 2026, 2:05 pm PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Sunday Nov 1 – Wednesday Nov 4, 2026</strong> · Snapshot compiled Sun Nov 1, 2026, 2:05 pm PT (BayAreaDailySync)</p>
+<p><strong>Sunday Nov 1 – Wednesday Nov 4, 2026</strong> · Snapshot compiled Sun Nov 1, 2026, 2:05 pm PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Sun 6:05 am):</strong> Rain odds jumped: showers now likely Monday night (70%) and Tuesday (90%, a tenth to a quarter inch). SFMTA posted the <strong>Golden State Valkyries WNBA championship parade, Wed Nov 4 at noon on The Embarcadero</strong>, with closures from 12:01 am. The half marathon and opera matinee are past and dropped.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -766,13 +766,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Sunday Nov 1 – Tuesday Nov 3, 2026 · Snapshot compiled Sun Nov 1, 2026, 6:05 am PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Sunday Nov 1 – Tuesday Nov 3, 2026 · Snapshot compiled Sun Nov 1, 2026, 6:05 am PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-11-01-0605.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-11-01-0605.html</guid>
     <pubDate>Sun, 01 Nov 2026 06:05:00 -0800</pubDate>
-    <description>Sunday Nov 1 – Tuesday Nov 3, 2026 · Snapshot compiled Sun Nov 1, 2026, 6:05 am PT (BayAreaDailySync)</description>
+    <description>Sunday Nov 1 – Tuesday Nov 3, 2026 · Snapshot compiled Sun Nov 1, 2026, 6:05 am PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Sunday Nov 1 – Tuesday Nov 3, 2026</strong> · Snapshot compiled Sun Nov 1, 2026, 6:05 am PT (BayAreaDailySync)</p>
+<p><strong>Sunday Nov 1 – Tuesday Nov 3, 2026</strong> · Snapshot compiled Sun Nov 1, 2026, 6:05 am PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Sat 10:10 pm):</strong> No major changes. NWS raised Tuesday's shower chance to 70% (from 50%); the Coastal Flood Advisory runs until 6 pm today and the Beach Hazards Statement starts 5 am Monday. No new Caltrans notices and no BART advisories.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -857,13 +857,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Sunday Nov 1 – Tuesday Nov 3, 2026 · Snapshot compiled Sat Oct 31, 2026, 10:10 pm PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Sunday Nov 1 – Tuesday Nov 3, 2026 · Snapshot compiled Sat Oct 31, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-10-31-2210.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-10-31-2210.html</guid>
     <pubDate>Sat, 31 Oct 2026 22:10:00 -0700</pubDate>
-    <description>Sunday Nov 1 – Tuesday Nov 3, 2026 · Snapshot compiled Sat Oct 31, 2026, 10:10 pm PT (BayAreaDailySync)</description>
+    <description>Sunday Nov 1 – Tuesday Nov 3, 2026 · Snapshot compiled Sat Oct 31, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Sunday Nov 1 – Tuesday Nov 3, 2026</strong> · Snapshot compiled Sat Oct 31, 2026, 10:10 pm PT (BayAreaDailySync)</p>
+<p><strong>Sunday Nov 1 – Tuesday Nov 3, 2026</strong> · Snapshot compiled Sat Oct 31, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Sat 2:10 pm):</strong> The window rolls forward to Tuesday, so Saturday's Halloween events are out and Election Day (Tue Nov 3) is in. NWS added a <strong>Beach Hazards Statement</strong> (sneaker waves, rip currents) from late Sunday night through Tuesday evening, and Tuesday brings a 50% chance of showers. No new Caltrans notices and no BART advisories.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -948,13 +948,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Sat Oct 31, 2026, 2:10 pm PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Sat Oct 31, 2026, 2:10 pm PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-10-31-1410.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-10-31-1410.html</guid>
     <pubDate>Sat, 31 Oct 2026 14:10:00 -0700</pubDate>
-    <description>Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Sat Oct 31, 2026, 2:10 pm PT (BayAreaDailySync)</description>
+    <description>Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Sat Oct 31, 2026, 2:10 pm PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Saturday Oct 31 – Monday Nov 2, 2026</strong> · Snapshot compiled Sat Oct 31, 2026, 2:10 pm PT (BayAreaDailySync)</p>
+<p><strong>Saturday Oct 31 – Monday Nov 2, 2026</strong> · Snapshot compiled Sat Oct 31, 2026, 2:10 pm PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Sat 6:10 am):</strong> No major changes. NWS now puts tonight's showers at 60% between midnight and 5 am (was 50%, 10 pm–3 am), and Saturday afternoon is sunny. The Coastal Flood Advisory still runs until 6 pm Sunday. No new Caltrans notices and no BART advisories.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -1041,13 +1041,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Sat Oct 31, 2026, 6:10 am PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Sat Oct 31, 2026, 6:10 am PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-10-31-0610.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-10-31-0610.html</guid>
     <pubDate>Sat, 31 Oct 2026 06:10:00 -0700</pubDate>
-    <description>Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Sat Oct 31, 2026, 6:10 am PT (BayAreaDailySync)</description>
+    <description>Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Sat Oct 31, 2026, 6:10 am PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Saturday Oct 31 – Monday Nov 2, 2026</strong> · Snapshot compiled Sat Oct 31, 2026, 6:10 am PT (BayAreaDailySync)</p>
+<p><strong>Saturday Oct 31 – Monday Nov 2, 2026</strong> · Snapshot compiled Sat Oct 31, 2026, 6:10 am PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Fri 10:10 pm):</strong> Saturday daytime now looks dry (NWS dropped the 11 am–5 pm shower chance; showers now 50% from 10 pm to 3 am Saturday night), and Sunday is sunny all day. The Coastal Flood Advisory was reissued at 4:45 am with a lower peak (up to 1.5 ft). The overnight Bay Bridge and Posey Tube closures are wrapping up this morning. No new Caltrans notices, no BART advisories; restaurants rotated.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -1134,13 +1134,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Fri Oct 30, 2026, 10:10 pm PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Fri Oct 30, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-10-30-2210.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-10-30-2210.html</guid>
     <pubDate>Fri, 30 Oct 2026 22:10:00 -0700</pubDate>
-    <description>Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Fri Oct 30, 2026, 10:10 pm PT (BayAreaDailySync)</description>
+    <description>Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Fri Oct 30, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Saturday Oct 31 – Monday Nov 2, 2026</strong> · Snapshot compiled Fri Oct 30, 2026, 10:10 pm PT (BayAreaDailySync)</p>
+<p><strong>Saturday Oct 31 – Monday Nov 2, 2026</strong> · Snapshot compiled Fri Oct 30, 2026, 10:10 pm PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Fri 2:10 pm):</strong> no major changes. New Caltrans notices: overnight SR-24 ramp closures at Pleasant Hill Rd in Lafayette starting tonight, and new nightly work from Monday on US-101 in Marin, SR-92/US-101 in San Mateo, and SR-17 near Lexington Hills. The forecast, Coastal Flood Advisory (reissued 3:58 pm, same timing), events and restaurants are unchanged; BART shows no live advisories.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -1228,13 +1228,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Fri Oct 30, 2026, 2:10 pm PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Fri Oct 30, 2026, 2:10 pm PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-10-30-1410.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-10-30-1410.html</guid>
     <pubDate>Fri, 30 Oct 2026 14:10:00 -0700</pubDate>
-    <description>Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Fri Oct 30, 2026, 2:10 pm PT (BayAreaDailySync)</description>
+    <description>Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Fri Oct 30, 2026, 2:10 pm PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Saturday Oct 31 – Monday Nov 2, 2026</strong> · Snapshot compiled Fri Oct 30, 2026, 2:10 pm PT (BayAreaDailySync)</p>
+<p><strong>Saturday Oct 31 – Monday Nov 2, 2026</strong> · Snapshot compiled Fri Oct 30, 2026, 2:10 pm PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Fri 6:10 am):</strong> no major changes. New: overnight closures tonight (Fri) on the eastbound Bay Bridge and the Posey Tube, a daytime SR-9 lane closure near Saratoga from Monday, and BART Yellow Line late-night single tracking Nov 2–6. Saturday night's rain chance is up to 40% (after midnight). Events, restaurants and the Coastal Flood Advisory are unchanged.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -1318,13 +1318,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Fri Oct 30, 2026, 6:10 am PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Fri Oct 30, 2026, 6:10 am PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-10-30-0611.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-10-30-0611.html</guid>
     <pubDate>Fri, 30 Oct 2026 06:11:00 -0700</pubDate>
-    <description>Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Fri Oct 30, 2026, 6:10 am PT (BayAreaDailySync)</description>
+    <description>Saturday Oct 31 – Monday Nov 2, 2026 · Snapshot compiled Fri Oct 30, 2026, 6:10 am PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Saturday Oct 31 – Monday Nov 2, 2026</strong> · Snapshot compiled Fri Oct 30, 2026, 6:10 am PT (BayAreaDailySync)</p>
+<p><strong>Saturday Oct 31 – Monday Nov 2, 2026</strong> · Snapshot compiled Fri Oct 30, 2026, 6:10 am PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Thu 10:15 pm):</strong> the window now runs through Monday. Monday adds the Día de los Muertos procession in the Mission (street closures 5–10 pm), Warriors vs. Suns and Sharks vs. Flames. BART's Powell St. entrance at 4th and Market closes Nov 2–10. Friday-only road closures dropped off. The forecast and Coastal Flood Advisory are unchanged. Restaurant picks rotated to the Mission and Fillmore.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -1403,13 +1403,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Friday Oct 30 – Sunday Nov 1, 2026 · Snapshot compiled Thu Oct 29, 2026, 10:15 pm PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Friday Oct 30 – Sunday Nov 1, 2026 · Snapshot compiled Thu Oct 29, 2026, 10:15 pm PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-10-29-2215.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-10-29-2215.html</guid>
     <pubDate>Thu, 29 Oct 2026 22:15:00 -0700</pubDate>
-    <description>Friday Oct 30 – Sunday Nov 1, 2026 · Snapshot compiled Thu Oct 29, 2026, 10:15 pm PT (BayAreaDailySync)</description>
+    <description>Friday Oct 30 – Sunday Nov 1, 2026 · Snapshot compiled Thu Oct 29, 2026, 10:15 pm PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Friday Oct 30 – Sunday Nov 1, 2026</strong> · Snapshot compiled Thu Oct 29, 2026, 10:15 pm PT (BayAreaDailySync)</p>
+<p><strong>Friday Oct 30 – Sunday Nov 1, 2026</strong> · Snapshot compiled Thu Oct 29, 2026, 10:15 pm PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Thu 2:02 pm):</strong> the window now runs through Sunday. The Coastal Flood Advisory was extended to Sun Nov 1, 6 pm. Halloween rain odds dropped to 20% (Sat afternoon) and 30% (Sat night). Sunday adds the Golden Gate Half Marathon street closures, the last <em>Manon</em> (2 pm) and Warriors vs. Clippers. Clocks fall back at 2 am Sunday. New Caltrans notices: SR-37 eastbound Walnut Ave exit closed at Mare Island, and two mid-November closures. Restaurant picks rotated (Michelin pages loaded again this run).</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -1487,13 +1487,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Thursday Oct 29 – Saturday Oct 31, 2026 · Snapshot compiled Thu Oct 29, 2026, 2:00 pm PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Thursday Oct 29 – Saturday Oct 31, 2026 · Snapshot compiled Thu Oct 29, 2026, 2:00 pm PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-10-29-1402.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-10-29-1402.html</guid>
     <pubDate>Thu, 29 Oct 2026 14:02:00 -0700</pubDate>
-    <description>Thursday Oct 29 – Saturday Oct 31, 2026 · Snapshot compiled Thu Oct 29, 2026, 2:00 pm PT (BayAreaDailySync)</description>
+    <description>Thursday Oct 29 – Saturday Oct 31, 2026 · Snapshot compiled Thu Oct 29, 2026, 2:00 pm PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Thursday Oct 29 – Saturday Oct 31, 2026</strong> · Snapshot compiled Thu Oct 29, 2026, 2:00 pm PT (BayAreaDailySync)</p>
+<p><strong>Thursday Oct 29 – Saturday Oct 31, 2026</strong> · Snapshot compiled Thu Oct 29, 2026, 2:00 pm PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Thu 6:08 am):</strong> rain is back for Halloween. NWS now gives a 40% chance of showers Saturday after 11 am and 50% Saturday night (under a tenth of an inch), so bring a layer for Castro, the Zoo and trick-or-treating. This morning's BART delay has cleared. New Caltrans notice: nightly SR-37 Petaluma River Bridge lane closures the week of Nov 2. Restaurant picks rotated.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -1571,13 +1571,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Thursday Oct 29 – Saturday Oct 31, 2026 · Snapshot compiled Thu Oct 29, 2026, 6:08 am PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Thursday Oct 29 – Saturday Oct 31, 2026 · Snapshot compiled Thu Oct 29, 2026, 6:08 am PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-10-29-0608.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-10-29-0608.html</guid>
     <pubDate>Thu, 29 Oct 2026 06:08:00 -0700</pubDate>
-    <description>Thursday Oct 29 – Saturday Oct 31, 2026 · Snapshot compiled Thu Oct 29, 2026, 6:08 am PT (BayAreaDailySync)</description>
+    <description>Thursday Oct 29 – Saturday Oct 31, 2026 · Snapshot compiled Thu Oct 29, 2026, 6:08 am PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Thursday Oct 29 – Saturday Oct 31, 2026</strong> · Snapshot compiled Thu Oct 29, 2026, 6:08 am PT (BayAreaDailySync)</p>
+<p><strong>Thursday Oct 29 – Saturday Oct 31, 2026</strong> · Snapshot compiled Thu Oct 29, 2026, 6:08 am PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Wed 10:09 pm):</strong> no major changes. NWS dropped the Saturday-evening rain chance (now 12%, mostly cloudy, high near 64). BART had a 20-minute systemwide delay early this morning after a disabled train near Daly City; service has resumed. The Exploratorium's Creepatorium tonight is now confirmed on its own page.</p>
 <hr />
 <h2>Weather and alerts</h2>
@@ -1655,13 +1655,13 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 </ol>]]></content:encoded>
   </item>
   <item>
-    <title>Urban Concierge Brief: SF Bay Area · Thursday Oct 29 – Saturday Oct 31, 2026 · Snapshot compiled Wed Oct 28, 2026, 10:09 pm PT (BayAreaDailySync)</title>
+    <title>Urban Concierge Brief: SF Bay Area · Thursday Oct 29 – Saturday Oct 31, 2026 · Snapshot compiled Wed Oct 28, 2026, 10:09 pm PT (Urban Concierge - Bay Area)</title>
     <link>https://bamedia.agency/bads/archive/bayareadailysync-2026-10-28-2209.html</link>
     <guid isPermaLink="true">https://bamedia.agency/bads/archive/bayareadailysync-2026-10-28-2209.html</guid>
     <pubDate>Wed, 28 Oct 2026 22:09:00 -0700</pubDate>
-    <description>Thursday Oct 29 – Saturday Oct 31, 2026 · Snapshot compiled Wed Oct 28, 2026, 10:09 pm PT (BayAreaDailySync)</description>
+    <description>Thursday Oct 29 – Saturday Oct 31, 2026 · Snapshot compiled Wed Oct 28, 2026, 10:09 pm PT (Urban Concierge - Bay Area)</description>
     <content:encoded><![CDATA[<h1>Urban Concierge Brief: SF Bay Area</h1>
-<p><strong>Thursday Oct 29 – Saturday Oct 31, 2026</strong> · Snapshot compiled Wed Oct 28, 2026, 10:09 pm PT (BayAreaDailySync)</p>
+<p><strong>Thursday Oct 29 – Saturday Oct 31, 2026</strong> · Snapshot compiled Wed Oct 28, 2026, 10:09 pm PT (Urban Concierge - Bay Area)</p>
 <p><strong>What changed since the last brief (Wed 6:00 am):</strong> the window now reaches Halloween Saturday, so four new Saturday events are in (Boo at the Zoo, SFMOMAween, Halloween Hoopla and a 1 pm Sharks game), plus the Castro street closure. NWS now has a 20% chance of rain Saturday evening. Caltrans posted a new Bay Bridge overnight closure for Nov 12–13. Wednesday's events dropped off.</p>
 <hr />
 <h2>Weather and alerts</h2>

@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Sunday night Nov 1 – Wednesday Nov 4, 2026** · Snapshot compiled Sun Nov 1, 2026, 10:10 pm PT (BayAreaDailySync)
+**Sunday night Nov 1 – Wednesday Nov 4, 2026** · Snapshot compiled Sun Nov 1, 2026, 10:10 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Sun 2:05 pm):** No major changes. The Coastal Flood Advisory has expired and tonight's Warriors game is past; the forecast, Beach Hazards Statement, Día de los Muertos closures (Mon) and Valkyries parade closures (Wed) all stand as posted.
 

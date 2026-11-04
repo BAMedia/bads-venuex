@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Saturday Oct 31 – Monday Nov 2, 2026** · Snapshot compiled Fri Oct 30, 2026, 2:10 pm PT (BayAreaDailySync)
+**Saturday Oct 31 – Monday Nov 2, 2026** · Snapshot compiled Fri Oct 30, 2026, 2:10 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Fri 6:10 am):** no major changes. New: overnight closures tonight (Fri) on the eastbound Bay Bridge and the Posey Tube, a daytime SR-9 lane closure near Saratoga from Monday, and BART Yellow Line late-night single tracking Nov 2–6. Saturday night's rain chance is up to 40% (after midnight). Events, restaurants and the Coastal Flood Advisory are unchanged.
 

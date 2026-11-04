@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Wednesday Nov 4 – Friday Nov 6, 2026** · Snapshot compiled Tue Nov 3, 2026, 10:10 pm PT (BayAreaDailySync)
+**Wednesday Nov 4 – Friday Nov 6, 2026** · Snapshot compiled Tue Nov 3, 2026, 10:10 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Tue 2:10 pm):** Window rolls forward to Wed–Fri now that Election Day is wrapping up. Events grow from 2 to 6: the Valkyries parade is now confirmed on the team's own page, plus Thursday's Warriors–Heat game (now confirmed on nba.com), Exploratorium After Dark, A.C.T.'s closing week of *Every Saturday Night*, the Thursday Ferry Plaza market and Friday's SF Symphony. Caltrans **cancelled tonight's I-80 Vallejo closure** (weather) and moved it to Wed and Thu nights. The Beach Hazards Statement has expired. Restaurant picks rotated.
 

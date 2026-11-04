@@ -1,6 +1,6 @@
 {
-  "name": "BADS: Bay Area Daily Sync",
-  "short_name": "BADS",
+  "name": "Urban Concierge - Bay Area",
+  "short_name": "Urban Concierge",
   "description": "Your SF Bay Area brief, refreshed every 8 hours.",
   "id": "./",
   "start_url": "./index.html?source=pwa",

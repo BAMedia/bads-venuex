@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Saturday Oct 31 – Monday Nov 2, 2026** · Snapshot compiled Fri Oct 30, 2026, 10:10 pm PT (BayAreaDailySync)
+**Saturday Oct 31 – Monday Nov 2, 2026** · Snapshot compiled Fri Oct 30, 2026, 10:10 pm PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Fri 2:10 pm):** no major changes. New Caltrans notices: overnight SR-24 ramp closures at Pleasant Hill Rd in Lafayette starting tonight, and new nightly work from Monday on US-101 in Marin, SR-92/US-101 in San Mateo, and SR-17 near Lexington Hills. The forecast, Coastal Flood Advisory (reissued 3:58 pm, same timing), events and restaurants are unchanged; BART shows no live advisories.
 

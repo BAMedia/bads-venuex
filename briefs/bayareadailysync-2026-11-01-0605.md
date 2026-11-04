@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Sunday Nov 1 – Tuesday Nov 3, 2026** · Snapshot compiled Sun Nov 1, 2026, 6:05 am PT (BayAreaDailySync)
+**Sunday Nov 1 – Tuesday Nov 3, 2026** · Snapshot compiled Sun Nov 1, 2026, 6:05 am PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Sat 10:10 pm):** No major changes. NWS raised Tuesday's shower chance to 70% (from 50%); the Coastal Flood Advisory runs until 6 pm today and the Beach Hazards Statement starts 5 am Monday. No new Caltrans notices and no BART advisories.
 

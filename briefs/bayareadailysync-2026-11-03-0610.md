@@ -1,5 +1,5 @@
 # Urban Concierge Brief: SF Bay Area
-**Tuesday Nov 3 – Thursday Nov 5, 2026** · Snapshot compiled Tue Nov 3, 2026, 6:10 am PT (BayAreaDailySync)
+**Tuesday Nov 3 – Thursday Nov 5, 2026** · Snapshot compiled Tue Nov 3, 2026, 6:10 am PT (Urban Concierge - Bay Area)
 
 **What changed since the last brief (Mon 10:10 pm):** NWS now expects more rain today (a quarter to half an inch, starting after 7 am), and Caltrans posted new overnight closures: full nightly closures of SR-4 in Brentwood through Thursday, and I-80 lane and ramp closures in Vallejo Tue and Wed nights. The Beach Hazards Statement ends at 8 pm tonight.
 
