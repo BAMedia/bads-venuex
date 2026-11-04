@@ -118,7 +118,7 @@ def signup_html(prefix):
 # Images live in bads/assets/events/<slug>.webp. EVENT_IMAGES picks one by keyword;
 # for a new kind of event, add <slug>.webp (original or licensed, ~960x540, <100KB) and a line here.
 EVENT_IMAGES = [
-    (("valkyries parade", "championship parade", "parade"), "valkyries-parade", "Fans in violet and black cheer under falling confetti as a parade bus rolls along a palm-lined waterfront boulevard"),
+    (("valkyries parade", "valkyries wnba championship parade", "championship parade"), "valkyries-parade", "Fans in violet and black cheer under falling confetti as a parade bus rolls along a palm-lined waterfront boulevard"),
     (("marathon", "half", "5k", "10k", " run", "race"), "half-marathon", "Runners on a San Francisco waterfront at sunrise with the Golden Gate Bridge behind"),
     (("opera", "symphony", "ballet", "theater", "theatre"), "opera", "A grand opera house with red velvet seats and a lit stage curtain"),
     (("warriors", "valkyries", "basketball", "nba", "wnba"), "basketball", "A basketball on a hardwood court in a lit arena before tip-off"),
