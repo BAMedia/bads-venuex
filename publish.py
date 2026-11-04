@@ -120,6 +120,7 @@ def signup_html(prefix):
 EVENT_IMAGES = [
     (("marathon", "half", "5k", "10k", " run", "race"), "half-marathon", "Runners on a San Francisco waterfront at sunrise with the Golden Gate Bridge behind"),
     (("opera", "symphony", "ballet", "theater", "theatre"), "opera", "A grand opera house with red velvet seats and a lit stage curtain"),
+    (("valkyries parade", "championship parade", "parade"), "valkyries-parade", "Fans in violet and black cheer under falling confetti as a parade bus rolls along a palm-lined waterfront boulevard"),
     (("warriors", "valkyries", "basketball", "nba", "wnba"), "basketball", "A basketball on a hardwood court in a lit arena before tip-off"),
     (("sharks", "hockey", "nhl"), "hockey", "A hockey puck and stick on fresh arena ice"),
     (("día de los muertos", "dia de los muertos", "muertos"), "dia-de-los-muertos", "A candlelit Día de los Muertos procession under papel picado banners"),
@@ -203,8 +204,13 @@ def render_v2(text, prefix):
             slug, alt = pick_image(e["title"] + " " + e["blurb"])
         load = 'fetchpriority="high"' if i == 0 else 'loading="lazy"'
         link = f'<a class="ev-link" href="{esc(e["url"])}" target="_blank" rel="noopener">Details &rarr;</a>' if e["url"] else ""
+        mp = ""
+        if os.path.exists(os.path.join(OUT, "assets", "events", slug + "-map.webp")):
+            msrc = f'{prefix}assets/events/{esc(slug)}-map.webp'
+            mp = (f'<a class="ev-map" href="{msrc}" target="_blank" rel="noopener"><img src="{msrc}" width="960" height="640" loading="lazy" decoding="async" '
+                  f'alt="Route map: {esc(e["title"])}"><span>Route map &middot; &copy; OpenStreetMap contributors</span></a>')
         cards.append(f'<li class="ev"><img src="{prefix}assets/events/{esc(slug)}.webp" width="960" height="540" {load} decoding="async" alt="{esc(alt)}">'
-                     f'<div class="ev-body"><p class="ev-when">{esc(e["when"])}</p><h3>{esc(e["title"])}</h3><p>{esc(o.get("blurb") or e["blurb"])}</p>{link}</div></li>')
+                     f'<div class="ev-body"><p class="ev-when">{esc(e["when"])}</p><h3>{esc(e["title"])}</h3><p>{esc(o.get("blurb") or e["blurb"])}</p>{mp}{link}</div></li>')
     out.append('<section class="events" id="whats-on"><h2>What\'s on</h2><ul class="ev-grid">' + "".join(cards) + "</ul></section>")
     by = lambda *keys: next(((h, b) for h, b in secs if any(k in h.lower() for k in keys)), None)
     w_sec, t_sec = by("weather"), by("road", "traffic")
@@ -261,8 +267,8 @@ def page(title, body, prefix, active):
 <meta name="apple-mobile-web-app-title" content="BADS">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="alternate" type="application/rss+xml" title="{html.escape(SITE_TITLE)}" href="{SITE_URL}feed.xml">
-<link rel="stylesheet" href="{prefix}assets/style.css?v=6">
-<script src="{prefix}assets/app.js?v=6" defer></script>
+<link rel="stylesheet" href="{prefix}assets/style.css?v=7">
+<script src="{prefix}assets/app.js?v=7" defer></script>
 </head>
 <body>
 <header class="site">

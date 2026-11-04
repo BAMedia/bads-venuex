@@ -85,3 +85,6 @@ body:has(.brief.v2) .wrap{max-width:1080px}
 .widget summary,.more summary{cursor:pointer;color:var(--accent);font-weight:600}
 .more details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0}
 .more summary{color:var(--fg)}
+.ev-map{display:block;margin:.5rem 0;text-decoration:none;color:inherit}
+.ev-map img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:8px;display:block}
+.ev-map span{display:block;font-size:.72rem;opacity:.75;margin-top:.2rem}
