@@ -99,3 +99,7 @@ body:has(.brief.v2) .wrap{max-width:1080px}
 .sms-msg{margin:6px 0 0;font-size:.9rem}.sms-msg:empty{display:none}
 .sms-msg.err{color:#b3261e}.sms-msg.ok{color:#1b7f3b}
 .sms-consent{margin:6px 0 0;opacity:.75}
+
+.signup-msg{margin:6px 0 0;font-size:.9rem}.signup-msg:empty{display:none}
+.signup-msg.err{color:#b3261e}.signup-msg.ok{color:#1b7f3b}
+.signup .hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}

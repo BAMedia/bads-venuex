@@ -15,8 +15,8 @@
 <meta name="apple-mobile-web-app-title" content="Urban Concierge">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="alternate" type="application/rss+xml" title="Urban Concierge - Bay Area" href="https://bamedia.agency/bads/feed.xml">
-<link rel="stylesheet" href="../assets/style.css?v=9">
-<script src="../assets/app.js?v=9" defer></script>
+<link rel="stylesheet" href="../assets/style.css?v=10">
+<script src="../assets/app.js?v=10" defer></script>
 </head>
 <body>
 <header class="site">
@@ -91,8 +91,20 @@ Sources: <a href="https://www.bart.gov/schedules/advisories" target="_blank" rel
 <details><summary>What changed since the last brief</summary><p><strong>What changed since the last brief (Sun 10:01 pm):</strong> no major changes. NWS forecast nudged (Tue night low 51, Wed sunny high 65); the Coastal Flood Advisory is unchanged; BART reposted the Millbrae–SFO–Daly City 9 pm delay advisory at 3:36 am; Caltrans and SFMTA posted nothing new. I-80 WB (5th–15th St) and SR-37 reopened this morning as scheduled per Caltrans' notices (live status not confirmed).</p></details>
 </section>
 </article><p class="back"><a href="index.html">&larr; All briefs</a></p>
-<section class="follow" id="follow"><h2>Get updates</h2><!-- email signup placeholder: set signup.form_action in site.json, then run publish.py --rebuild -->
-<p>Follow new briefs in any reader app with the <a href="../feed.xml">RSS feed</a>, or install Urban Concierge on your phone (see the tip at the top).</p></section>
+<section class="follow" id="follow"><div class="signup">
+  <h2>Get the Urban Concierge brief by email</h2>
+  <p>Bay Area events, weather and getting-around updates. Unsubscribe anytime.</p>
+  <form id="bads-signup" data-endpoint="https://uc-signup.scootrlink.workers.dev/subscribe" novalidate>
+    <label class="fine" for="bads-email">Email address</label>
+    <input id="bads-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <div class="hp" aria-hidden="true">
+      <label for="bads-company">Company</label>
+      <input id="bads-company" type="text" name="company" tabindex="-1" autocomplete="off">
+    </div>
+    <button type="submit">Subscribe</button>
+  </form>
+  <p class="signup-msg" id="signup-msg" role="status" aria-live="polite"></p>
+</div></section>
 </main>
 <footer class="site"><div class="wrap"><p>Built from public sources. Snapshot, not real-time; check official links before you go.</p><p class="fine">Urban Concierge - Bay Area is a Custom Concierge brand by <a href="../../">Bay Area Media</a>.</p></div></footer>
 </body>

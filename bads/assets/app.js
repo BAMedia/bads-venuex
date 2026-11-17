@@ -199,3 +199,56 @@ function eventStrip() {
     m.className = "sms-msg ok"; f.reset();
   });
 })();
+
+/* Email signup: POST to the Worker in site.json signup.form_action. */
+(function () {
+  var f = document.getElementById("bads-signup"); if (!f) return;
+  var i = document.getElementById("bads-email");
+  var m = document.getElementById("signup-msg");
+  var hp = document.getElementById("bads-company");
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    m.textContent = "";
+    m.className = "signup-msg";
+    var email = (i.value || "").trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      m.textContent = "Please enter a valid email address.";
+      m.className = "signup-msg err";
+      i.focus();
+      return;
+    }
+    var endpoint = f.getAttribute("data-endpoint");
+    if (!endpoint) {
+      m.textContent = "Signup is not available right now.";
+      m.className = "signup-msg err";
+      return;
+    }
+    var btn = f.querySelector("button[type=submit]");
+    if (btn) btn.disabled = true;
+    fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: email,
+        company: hp ? hp.value : "",
+        source: "bads"
+      })
+    }).then(function (res) {
+      return res.json().then(function (data) {
+        return { ok: res.ok, data: data };
+      }).catch(function () { return { ok: res.ok, data: {} }; });
+    }).then(function (r) {
+      if (r.ok && r.data && r.data.ok) {
+        m.textContent = "You're on the list.";
+        m.className = "signup-msg ok";
+        f.reset();
+      } else {
+        m.textContent = (r.data && r.data.error) || "Something went wrong. Please try again.";
+        m.className = "signup-msg err";
+      }
+    }).catch(function () {
+      m.textContent = "Something went wrong. Please try again.";
+      m.className = "signup-msg err";
+    }).finally(function () { if (btn) btn.disabled = false; });
+  });
+})();

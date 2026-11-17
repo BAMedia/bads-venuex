@@ -7,8 +7,8 @@ Usage:
 
 Also writes feed.xml (RSS 2.0, last 20 briefs) and offline.html. Every page links
 the PWA manifest, service worker (assets/app.js) and the install hint.
-Email signup: set "signup.form_action" in site.json to the provider's form URL
-(Buttondown / follow.it / MailerLite / Kit). While it is empty the form is not shown.
+Email signup: set "signup.form_action" in site.json to the Worker subscribe URL
+(https://uc-signup.<account>.workers.dev/subscribe). While it is empty the form is not shown.
 
 Layout: the repo root is the BAMedia company site (/ and /law/, static, not touched
 here). BADS lives in the "out_dir" from site.json (default "bads", served at /bads/).
@@ -84,29 +84,31 @@ def meta(md_text, basename):
     return title, sub
 
 def signup_html(prefix):
-    """Follow section: RSS always; email form only once site.json signup.form_action is set."""
+    """Follow section: email form once site.json signup.form_action is set; otherwise RSS only."""
     su = CONFIG.get("signup", {}) or {}
     action = (su.get("form_action") or "").strip()
     rss = f'<a href="{prefix}feed.xml">RSS feed</a>'
     if action:
-        field = html.escape(su.get("email_field") or "email")
-        hidden = "".join(f'<input type="hidden" name="{html.escape(k)}" value="{html.escape(str(v))}">'
-                         for k, v in (su.get("hidden_fields") or {}).items())
-        prov = html.escape(su.get("provider_name") or "our email provider")
         form = f"""<div class="signup">
-  <p>Get each new brief by email. You'll get a confirmation email first; unsubscribe any time.</p>
-  <form action="{html.escape(action)}" method="post" target="_blank">
+  <h2>Get the Urban Concierge brief by email</h2>
+  <p>Bay Area events, weather and getting-around updates. Unsubscribe anytime.</p>
+  <form id="bads-signup" data-endpoint="{html.escape(action)}" novalidate>
     <label class="fine" for="bads-email">Email address</label>
-    <input id="bads-email" type="email" name="{field}" placeholder="you@example.com" required autocomplete="email">{hidden}
+    <input id="bads-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <div class="hp" aria-hidden="true">
+      <label for="bads-company">Company</label>
+      <input id="bads-company" type="text" name="company" tabindex="-1" autocomplete="off">
+    </div>
     <button type="submit">Subscribe</button>
   </form>
-  <p class="fine">Emails are sent by {prov}. Prefer a reader app? Use the {rss}.</p>
+  <p class="signup-msg" id="signup-msg" role="status" aria-live="polite"></p>
 </div>"""
     else:
         # EMAIL SIGNUP PLACEHOLDER: hidden until site.json "signup.form_action" is set.
         form = f"""<!-- email signup placeholder: set signup.form_action in site.json, then run publish.py --rebuild -->
+<h2>Get updates</h2>
 <p>Follow new briefs in any reader app with the {rss}, or install Urban Concierge on your phone (see the tip at the top).</p>"""
-    return f'<section class="follow" id="follow"><h2>Get updates</h2>{form}</section>'
+    return f'<section class="follow" id="follow">{form}</section>'
 
 
 # ---------- Events-first layout (v2) ----------
@@ -267,8 +269,8 @@ def page(title, body, prefix, active):
 <meta name="apple-mobile-web-app-title" content="Urban Concierge">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="alternate" type="application/rss+xml" title="{html.escape(SITE_TITLE)}" href="{SITE_URL}feed.xml">
-<link rel="stylesheet" href="{prefix}assets/style.css?v=9">
-<script src="{prefix}assets/app.js?v=9" defer></script>
+<link rel="stylesheet" href="{prefix}assets/style.css?v=10">
+<script src="{prefix}assets/app.js?v=10" defer></script>
 </head>
 <body>
 <header class="site">

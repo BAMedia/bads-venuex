@@ -2,7 +2,7 @@
   "site_url": "https://bamedia.agency/bads/",
   "out_dir": "bads",
   "signup": {
-    "form_action": "",
+    "form_action": "https://uc-signup.scootrlink.workers.dev/subscribe",
     "provider_name": "",
     "email_field": "email",
     "hidden_fields": {}

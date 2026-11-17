@@ -1,0 +1,25 @@
+{
+  "name": "uc-signup",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-16",
+  "account_id": "05e049f0e7f4d6afa26a93cb12975331",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true,
+    "traces": { "enabled": true }
+  },
+  "ratelimits": [
+    {
+      "name": "RATE_LIMITER",
+      "namespace_id": "2718",
+      "simple": { "limit": 8, "period": 60 }
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "uc-signup",
+      "database_id": "186ee611-6b18-4a74-b3ea-d28c0eb2a747"
+    }
+  ]
+}
