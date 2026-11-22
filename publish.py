@@ -38,7 +38,7 @@ OUT = os.path.join(ROOT, CONFIG.get("out_dir", "bads"))  # where BADS pages/feed
 BRIEFS = os.path.join(ROOT, "briefs")                     # markdown sources stay at repo root
 FEED_ITEMS = 20
 TZ = ZoneInfo("America/Los_Angeles")
-ASSET_VER = "12"
+ASSET_VER = "13"
 MEDIA_JSON = os.path.join(OUT, "media", "media.json")
 PHOTO_CREDIT = "Photos: John Leyes / Bay Area Media"
 
