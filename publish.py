@@ -255,7 +255,7 @@ def gallery_html(prefix):
     for photo in photos:
         cap = photo.get("caption") or photo.get("title") or ""
         orient = esc(photo.get("orientation") or "landscape")
-        items.append(f'<li class="{orient}"><figure>{picture_html(prefix, photo, variant="thumb", lazy=True)}'
+        items.append(f'<li class="{orient} {esc(photo.get("id") or "")}"><figure>{picture_html(prefix, photo, variant="thumb", lazy=True)}'
                      f'<figcaption>{esc(cap)}</figcaption></figure></li>')
     return (f'<section class="city-gallery" id="around-the-city"><h2>Around the city</h2>'
             f'<ul class="city-grid">{"".join(items)}</ul>'

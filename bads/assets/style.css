@@ -142,4 +142,4 @@ body:has(.brief.v2) .wrap{max-width:1080px}
 .city-grid .portrait img{object-position:center top}
 .city-grid figcaption{margin:0;padding:8px 10px 10px;color:var(--muted);font-size:.8rem;line-height:1.4}
 .city-gallery .photo-credit{margin:10px 0 0}
-
+.city-grid .steam-navigation-sign-old-sacramento img{object-position:center 80%}
