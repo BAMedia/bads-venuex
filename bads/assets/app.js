@@ -186,18 +186,310 @@ function eventStrip() {
   list.addEventListener("dragstart", function (e) { e.preventDefault(); });
 }
 
-/* Text-signup widget: US phone validation. Not stored anywhere yet (no SMS service connected). */
+/* Bay Area scores ticker: live / recent finals / upcoming times from ESPN's public scoreboard API. */
 (function () {
-  var f = document.getElementById("sms-form"); if (!f) return;
-  var i = document.getElementById("sms-phone"), m = document.getElementById("sms-msg");
-  f.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var d = (i.value || "").replace(/\D/g, "");
-    if (d.length === 11 && d[0] === "1") d = d.slice(1);
-    if (!/^[2-9]\d{2}[2-9]\d{6}$/.test(d)) { m.textContent = "Please enter a valid US phone number, like (415) 555-0123."; m.className = "sms-msg err"; i.focus(); return; }
-    m.textContent = "Thanks! Text delivery isn't live yet, so your number wasn't saved. Check back soon, or use Get updates below.";
-    m.className = "sms-msg ok"; f.reset();
-  });
+  var track = document.getElementById("scores-track");
+  var sr = document.getElementById("scores-sr");
+  if (!track) return;
+
+  var ESPN = "https://site.api.espn.com/apis/site/v2/sports/";
+  var TZ = "America/Los_Angeles";
+  var FEEDS = [
+    { path: "basketball/nba/teams/9/schedule", sport: "basketball/nba", id: "9", kind: "NBA" },
+    { path: "basketball/wnba/teams/129689/schedule", sport: "basketball/wnba", id: "129689", kind: "WNBA" },
+    { path: "football/nfl/teams/25/schedule", sport: "football/nfl", id: "25", kind: "NFL" },
+    { path: "baseball/mlb/teams/26/schedule", sport: "baseball/mlb", id: "26", kind: "MLB" },
+    { path: "baseball/mlb/teams/11/schedule", sport: "baseball/mlb", id: "11", kind: "MLB" },
+    { path: "hockey/nhl/teams/18/schedule", sport: "hockey/nhl", id: "18", kind: "NHL" },
+    { path: "soccer/usa.1/teams/191/schedule", sport: "soccer/usa.1", id: "191", kind: "MLS" },
+    { path: "soccer/usa.nwsl/teams/22187/schedule", sport: "soccer/usa.nwsl", id: "22187", kind: "NWSL" },
+    { path: "football/college-football/teams/24/schedule", sport: "football/college-football", id: "24", kind: "Football" },
+    { path: "football/college-football/teams/25/schedule", sport: "football/college-football", id: "25", kind: "Football" },
+    { path: "football/college-football/teams/23/schedule", sport: "football/college-football", id: "23", kind: "Football" },
+    { path: "basketball/mens-college-basketball/teams/24/schedule", sport: "basketball/mens-college-basketball", id: "24", kind: "Men" },
+    { path: "basketball/mens-college-basketball/teams/25/schedule", sport: "basketball/mens-college-basketball", id: "25", kind: "Men" },
+    { path: "basketball/mens-college-basketball/teams/23/schedule", sport: "basketball/mens-college-basketball", id: "23", kind: "Men" },
+    { path: "basketball/mens-college-basketball/teams/2608/schedule", sport: "basketball/mens-college-basketball", id: "2608", kind: "Men" },
+    { path: "basketball/mens-college-basketball/teams/2539/schedule", sport: "basketball/mens-college-basketball", id: "2539", kind: "Men" },
+    { path: "basketball/mens-college-basketball/teams/2541/schedule", sport: "basketball/mens-college-basketball", id: "2541", kind: "Men" },
+    { path: "basketball/womens-college-basketball/teams/24/schedule", sport: "basketball/womens-college-basketball", id: "24", kind: "Women" },
+    { path: "basketball/womens-college-basketball/teams/25/schedule", sport: "basketball/womens-college-basketball", id: "25", kind: "Women" },
+    { path: "basketball/womens-college-basketball/teams/23/schedule", sport: "basketball/womens-college-basketball", id: "23", kind: "Women" },
+    { path: "basketball/womens-college-basketball/teams/2608/schedule", sport: "basketball/womens-college-basketball", id: "2608", kind: "Women" },
+    { path: "basketball/womens-college-basketball/teams/2539/schedule", sport: "basketball/womens-college-basketball", id: "2539", kind: "Women" },
+    { path: "basketball/womens-college-basketball/teams/2541/schedule", sport: "basketball/womens-college-basketball", id: "2541", kind: "Women" }
+  ];
+  var LABELS = {
+    "basketball/nba": { "9": "Warriors" },
+    "basketball/wnba": { "129689": "Valkyries" },
+    "football/nfl": { "25": "49ers" },
+    "baseball/mlb": { "26": "Giants", "11": "Athletics (Sacramento)" },
+    "hockey/nhl": { "18": "Sharks" },
+    "soccer/usa.1": { "191": "Earthquakes" },
+    "soccer/usa.nwsl": { "22187": "Bay FC" },
+    "football/college-football": { "24": "Stanford", "25": "Cal", "23": "San José State" },
+    "basketball/mens-college-basketball": { "24": "Stanford", "25": "Cal", "23": "San José State", "2608": "Saint Mary's", "2539": "USF", "2541": "Santa Clara" },
+    "basketball/womens-college-basketball": { "24": "Stanford", "25": "Cal", "23": "San José State", "2608": "Saint Mary's", "2539": "USF", "2541": "Santa Clara" }
+  };
+  var COLLEGE_KINDS = { Football: 1, Men: 1, Women: 1 };
+  var timer = null;
+
+  function ptYmd(d) {
+    return new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" }).format(d);
+  }
+  function isYesterdayOrToday(d) {
+    var g = ptYmd(d), today = ptYmd(new Date());
+    var yest = ptYmd(new Date(Date.now() - 24 * 60 * 60 * 1000));
+    return g === today || g === yest;
+  }
+  function isTodayOrTomorrow(d) {
+    var g = ptYmd(d), today = ptYmd(new Date());
+    var tom = ptYmd(new Date(Date.now() + 24 * 60 * 60 * 1000));
+    return g === today || g === tom;
+  }
+  function formatWhen(iso, timeValid) {
+    var d = new Date(iso);
+    if (isNaN(d.getTime())) return "";
+    var weekday = new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "short" }).format(d);
+    if (timeValid === false) return weekday + " " + new Intl.DateTimeFormat("en-US", { timeZone: TZ, month: "short", day: "numeric" }).format(d) + " (time TBD)";
+    var time = new Intl.DateTimeFormat("en-US", { timeZone: TZ, hour: "numeric", minute: "2-digit" }).format(d);
+    var today = ptYmd(new Date()), g = ptYmd(d);
+    if (g === today) return "Today " + time + " PT";
+    return weekday + " " + time + " PT";
+  }
+  function scoreOf(c) {
+    var s = c && c.score;
+    if (s == null) return "";
+    if (typeof s === "object") {
+      if (s.displayValue != null && s.displayValue !== "") return String(s.displayValue);
+      if (s.value != null && s.value !== "") return String(s.value);
+      return "";
+    }
+    return String(s);
+  }
+  function teamName(sport, team) {
+    var id = String((team && team.id) || "");
+    var map = LABELS[sport] || {};
+    if (map[id]) return map[id];
+    if (!team) return "TBD";
+    return team.shortDisplayName || team.nickname || team.displayName || team.abbreviation || "TBD";
+  }
+  function normalizeState(type) {
+    type = type || {};
+    var state = (type.state || "").toLowerCase();
+    var desc = (type.shortDetail || type.detail || type.description || "");
+    if (state === "in") return { key: "live", label: desc || "Live" };
+    if (state === "post") {
+      var lab = desc || "Final";
+      if (/^ft$|^full[- ]?time$/i.test(lab)) lab = "Final";
+      return { key: "final", label: lab };
+    }
+    return { key: "pre", label: desc };
+  }
+
+  function parseEvent(ev, sport, kind) {
+    var comp = (ev.competitions && ev.competitions[0]) || ev;
+    var status = normalizeState((comp.status || ev.status || {}).type);
+    var competitors = (comp.competitors || []).slice();
+    if (competitors.length < 2) return null;
+    var ours = [];
+    competitors.forEach(function (c) {
+      var id = String((c.team || {}).id || c.id || "");
+      if ((LABELS[sport] || {})[id]) ours.push(c);
+    });
+    if (!ours.length) return null;
+    // Watched team first; if both are Bay Area teams and the game is scored, winner first.
+    var left;
+    if (ours.length === 1) {
+      left = ours[0];
+    } else {
+      var s0 = Number(scoreOf(ours[0])), s1 = Number(scoreOf(ours[1]));
+      if (scoreOf(ours[0]) !== "" && scoreOf(ours[1]) !== "" && s0 !== s1) {
+        left = s0 > s1 ? ours[0] : ours[1];
+      } else {
+        left = ours.filter(function (c) { return c.homeAway === "home"; })[0] || ours[0];
+      }
+    }
+    var right = competitors.filter(function (c) { return c !== left; })[0];
+    var dateIso = comp.date || ev.date;
+    var when = new Date(dateIso);
+    if (isNaN(when.getTime())) return null;
+    return {
+      id: String(comp.id || ev.id || (dateIso + sport + kind)),
+      sport: sport,
+      kind: kind,
+      status: status.key,
+      statusLabel: status.label,
+      date: when,
+      timeValid: comp.timeValid !== false,
+      leftName: teamName(sport, left.team),
+      rightName: teamName(sport, right && right.team),
+      leftScore: scoreOf(left),
+      rightScore: scoreOf(right)
+    };
+  }
+
+  function inWindow(g) {
+    var now = Date.now();
+    if (g.status === "live") return true;
+    if (g.status === "final") return isYesterdayOrToday(g.date);
+    if (g.status === "pre") return isTodayOrTomorrow(g.date) && g.date.getTime() >= now - 2 * 60 * 60 * 1000;
+    return false;
+  }
+
+  function rank(g) {
+    if (g.status === "live") return 0;
+    if (g.status === "final") return 1;
+    return 2;
+  }
+
+  function matchText(g) {
+    if (g.status === "pre") return g.leftName + " vs " + g.rightName;
+    return g.leftName + " " + g.leftScore + "–" + g.rightScore + " " + g.rightName;
+  }
+
+  function itemParts(g) {
+    var state = g.status === "live" ? "LIVE" : (g.status === "final" ? g.statusLabel : "");
+    var when = g.status === "pre" ? formatWhen(g.date.toISOString(), g.timeValid) : (g.status === "live" ? g.statusLabel : "");
+    var kind = COLLEGE_KINDS[g.kind] ? g.kind : "";
+    return { state: state, live: g.status === "live", match: matchText(g), kind: kind, when: when, spoken: spoken(g, state, when, kind) };
+  }
+  function spoken(g, state, when, kind) {
+    var bits = [];
+    if (state) bits.push(state);
+    bits.push(matchText(g));
+    if (kind) bits.push(kind);
+    if (when && g.status !== "live") bits.push(when);
+    else if (g.status === "live" && g.statusLabel) bits.push(g.statusLabel);
+    return bits.join(", ");
+  }
+
+  function renderItems(games) {
+    var parts = games.map(itemParts);
+    track.textContent = "";
+    track.style.animation = "none";
+    if (!parts.length) {
+      var empty = document.createElement("p");
+      empty.className = "scores-status";
+      empty.textContent = "No Bay Area games right now";
+      track.appendChild(empty);
+      if (sr) sr.textContent = "No Bay Area games right now";
+      return;
+    }
+    function fill(into) {
+      parts.forEach(function (p) {
+        var item = document.createElement("div");
+        item.className = "score-item";
+        if (p.state) {
+          var st = document.createElement("span");
+          st.className = "state" + (p.live ? " live" : "");
+          st.textContent = p.state;
+          item.appendChild(st);
+        }
+        var match = document.createElement("span");
+        match.className = "match";
+        match.textContent = p.match;
+        item.appendChild(match);
+        if (p.kind) {
+          var kind = document.createElement("span");
+          kind.className = "kind";
+          kind.textContent = p.kind;
+          item.appendChild(kind);
+        }
+        if (p.when) {
+          var when = document.createElement("span");
+          when.className = "when";
+          when.textContent = p.when;
+          item.appendChild(when);
+        }
+        into.appendChild(item);
+      });
+    }
+    var copy = document.createElement("div");
+    copy.className = "scores-copy";
+    fill(copy);
+    track.appendChild(copy);
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var viewport = document.getElementById("scores-viewport");
+    var needsScroll = !reduce && viewport && copy.scrollWidth > viewport.clientWidth;
+    if (!needsScroll && !reduce && viewport && copy.scrollWidth > 0) {
+      // Still scroll if a few items would otherwise sit still; duplicate only when animating.
+      needsScroll = parts.length >= 4;
+    }
+    if (needsScroll) {
+      var copy2 = copy.cloneNode(true);
+      copy2.setAttribute("aria-hidden", "true");
+      track.appendChild(copy2);
+      var duration = Math.max(28, parts.length * 5);
+      track.style.setProperty("--scores-duration", duration + "s");
+      // Force restart of the animation after content swap.
+      void track.offsetWidth;
+      track.style.animation = "";
+    }
+    if (sr) sr.textContent = parts.map(function (p) { return p.spoken; }).join(". ");
+  }
+
+  function showMessage(msg) {
+    track.textContent = "";
+    track.style.animation = "none";
+    var p = document.createElement("p");
+    p.className = "scores-status";
+    p.textContent = msg;
+    track.appendChild(p);
+    if (sr) sr.textContent = msg;
+  }
+
+  function load() {
+    var results = Promise.all(FEEDS.map(function (feed) {
+      return fetch(ESPN + feed.path, { cache: "no-store" }).then(function (res) {
+        if (!res.ok) throw new Error("espn " + res.status);
+        return res.json();
+      }).then(function (data) {
+        return { feed: feed, events: data.events || [], ok: true };
+      }).catch(function () {
+        return { feed: feed, events: [], ok: false };
+      });
+    }));
+
+    results.then(function (rows) {
+      var ok = 0, failed = 0;
+      var byId = {};
+      rows.forEach(function (row) {
+        if (row.ok) ok += 1; else failed += 1;
+        (row.events || []).forEach(function (ev) {
+          var g = parseEvent(ev, row.feed.sport, row.feed.kind);
+          if (!g || !inWindow(g)) return;
+          var prev = byId[g.id];
+          if (!prev) byId[g.id] = g;
+        });
+      });
+      if (!ok) {
+        showMessage("Scores unavailable");
+        scheduleNext(false);
+        return;
+      }
+      var games = [];
+      Object.keys(byId).forEach(function (k) { games.push(byId[k]); });
+      games.sort(function (a, b) {
+        var r = rank(a) - rank(b);
+        if (r) return r;
+        return a.date.getTime() - b.date.getTime();
+      });
+      renderItems(games);
+      var live = games.some(function (g) { return g.status === "live"; });
+      scheduleNext(live);
+    }).catch(function () {
+      showMessage("Scores unavailable");
+      scheduleNext(false);
+    });
+  }
+
+  function scheduleNext(live) {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(load, live ? 60 * 1000 : 3 * 60 * 1000);
+  }
+
+  load();
 })();
 
 /* Email signup: POST to the Worker in site.json signup.form_action. */

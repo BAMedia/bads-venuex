@@ -269,8 +269,8 @@ def page(title, body, prefix, active):
 <meta name="apple-mobile-web-app-title" content="Urban Concierge">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="alternate" type="application/rss+xml" title="{html.escape(SITE_TITLE)}" href="{SITE_URL}feed.xml">
-<link rel="stylesheet" href="{prefix}assets/style.css?v=10">
-<script src="{prefix}assets/app.js?v=10" defer></script>
+<link rel="stylesheet" href="{prefix}assets/style.css?v=11">
+<script src="{prefix}assets/app.js?v=11" defer></script>
 </head>
 <body>
 <header class="site">
@@ -280,14 +280,17 @@ def page(title, body, prefix, active):
     <nav><a class="{nav_home}" href="{prefix}index.html">Latest</a> <a class="{nav_arch}" href="{prefix}archive/index.html">Archive</a> <a href="{prefix}index.html#follow">Get updates</a> <a href="{prefix}feed.xml">RSS</a></nav>
   </div>
 </header>
-<section class="sms" aria-labelledby="sms-h"><div class="wrap">
-  <form class="sms-form" id="sms-form" novalidate>
-    <label id="sms-h" for="sms-phone"><strong>Get the brief by text</strong></label>
-    <div class="sms-row"><input id="sms-phone" type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="(415) 555-0123" required><button type="submit">Sign up</button></div>
-    <p class="sms-msg" id="sms-msg" role="status" aria-live="polite"></p>
-    <p class="fine sms-consent">Coming soon. By signing up you agree to receive the brief by text; msg &amp; data rates may apply; reply STOP to opt out.</p>
-  </form>
-</div></section>
+<section class="scores" aria-label="Bay Area sports scores">
+  <div class="scores-bar">
+    <p class="scores-label" id="scores-label">Scores</p>
+    <div class="scores-sr visually-hidden" id="scores-sr" role="status" aria-live="polite">Loading scores…</div>
+    <div class="scores-viewport" id="scores-viewport" aria-hidden="true">
+      <div class="scores-track" id="scores-track">
+        <p class="scores-status">Loading scores…</p>
+      </div>
+    </div>
+  </div>
+</section>
 <main class="wrap">
 <div class="install-hint" id="install-hint" hidden><span class="install-text"></span><button class="install-btn" type="button" hidden>Install</button><button class="install-close" type="button" aria-label="Dismiss">&times;</button></div>
 {body}
