@@ -38,6 +38,9 @@ OUT = os.path.join(ROOT, CONFIG.get("out_dir", "bads"))  # where BADS pages/feed
 BRIEFS = os.path.join(ROOT, "briefs")                     # markdown sources stay at repo root
 FEED_ITEMS = 20
 TZ = ZoneInfo("America/Los_Angeles")
+ASSET_VER = "12"
+MEDIA_JSON = os.path.join(OUT, "media", "media.json")
+PHOTO_CREDIT = "Photos: John Leyes / Bay Area Media"
 
 URL_RE = re.compile(r'(?<![(<\["\'=])(https?://[^\s<>()\[\]"]+)')
 
@@ -120,6 +123,8 @@ def signup_html(prefix):
 # Images live in bads/assets/events/<slug>.webp. EVENT_IMAGES picks one by keyword;
 # for a new kind of event, add <slug>.webp (original or licensed, ~960x540, <100KB) and a line here.
 EVENT_IMAGES = [
+    (("grace cathedral", "sound bath"), "grace-cathedral", "The front steps and facade of Grace Cathedral on Nob Hill"),
+    (("oracle park", "sf giants", "giants vs", "mlb", "baseball"), "oracle-park", "Oracle Park across McCovey Cove, with the Willie McCovey statue in the foreground"),
     (("valkyries parade", "valkyries wnba championship parade", "championship parade"), "valkyries-parade", "Fans in violet and black cheer under falling confetti as a parade bus rolls along a palm-lined waterfront boulevard"),
     (("marathon", "half", "5k", "10k", " run", "race"), "half-marathon", "Runners on a San Francisco waterfront at sunrise with the Golden Gate Bridge behind"),
     (("opera", "symphony", "ballet", "theater", "theatre"), "opera", "A grand opera house with red velvet seats and a lit stage curtain"),
@@ -170,6 +175,91 @@ def parse_events(body):
 
 def esc(t):
     return html.escape(t, quote=True)
+
+def load_media():
+    """Read bads/media/media.json. Missing file means no city photos are shown."""
+    if os.path.exists(MEDIA_JSON):
+        with open(MEDIA_JSON, encoding="utf-8") as f:
+            return json.load(f)
+    return {"credit": PHOTO_CREDIT, "photos": []}
+
+def media_photos(placement):
+    return [p for p in load_media().get("photos", [])
+            if p.get("on_page", True) and placement in (p.get("placements") or [])]
+
+def media_url(prefix, rel):
+    if not rel:
+        return ""
+    if rel.startswith("assets/"):
+        return prefix + rel
+    return prefix + "media/" + rel
+
+def picture_html(prefix, photo, variant="web", lazy=True, fetchpriority=None):
+    assets = photo.get(variant) or photo.get("web") or {}
+    jpeg, webp = assets.get("jpeg"), assets.get("webp")
+    if not jpeg and not webp:
+        return ""
+    src = media_url(prefix, jpeg or webp)
+    alt = esc(photo.get("alt") or photo.get("title") or "")
+    attrs = f'src="{esc(src)}" alt="{alt}"'
+    if assets.get("width") and assets.get("height"):
+        attrs += f' width="{int(assets["width"])}" height="{int(assets["height"])}"'
+    if fetchpriority:
+        attrs += f' fetchpriority="{fetchpriority}"'
+    elif lazy:
+        attrs += ' loading="lazy"'
+    attrs += ' decoding="async"'
+    if webp:
+        return (f'<picture><source type="image/webp" srcset="{esc(media_url(prefix, webp))}">'
+                f'<img {attrs}></picture>')
+    return f'<img {attrs}>'
+
+def hero_html(prefix):
+    photos = media_photos("hero")
+    if not photos:
+        return ""
+    photo = photos[0]
+    variant = "hero" if photo.get("hero") else "web"
+    credit = load_media().get("credit") or PHOTO_CREDIT
+    return (f'<figure class="city-hero">{picture_html(prefix, photo, variant=variant, lazy=False, fetchpriority="high")}'
+            f'<figcaption class="photo-credit">{esc(credit)}</figcaption></figure>')
+
+def section_figure_html(prefix, placement):
+    photos = media_photos(placement)
+    if not photos:
+        return ""
+    bits = []
+    for photo in photos:
+        orient = esc(photo.get("orientation") or "landscape")
+        cap = photo.get("caption") or ""
+        cap_html = f'<figcaption>{esc(cap)}</figcaption>' if cap else ""
+        bits.append(f'<figure class="section-photo {orient}">{picture_html(prefix, photo, variant="web", lazy=True)}{cap_html}</figure>')
+    return "".join(bits)
+
+def section_placement(heading):
+    h = heading.lower()
+    if "where to eat" in h or "restaurant" in h:
+        return "eat"
+    if "getting around" in h:
+        return "transit"
+    if "where to stay" in h:
+        return "stay"
+    return ""
+
+def gallery_html(prefix):
+    photos = media_photos("gallery")
+    if not photos:
+        return ""
+    credit = load_media().get("credit") or PHOTO_CREDIT
+    items = []
+    for photo in photos:
+        cap = photo.get("caption") or photo.get("title") or ""
+        orient = esc(photo.get("orientation") or "landscape")
+        items.append(f'<li class="{orient}"><figure>{picture_html(prefix, photo, variant="thumb", lazy=True)}'
+                     f'<figcaption>{esc(cap)}</figcaption></figure></li>')
+    return (f'<section class="city-gallery" id="around-the-city"><h2>Around the city</h2>'
+            f'<ul class="city-grid">{"".join(items)}</ul>'
+            f'<p class="photo-credit">{esc(credit)}</p></section>')
 
 BADS_JSON_RE = re.compile(r"<!--\s*bads:\s*(\{.*?\})\s*-->", re.S)
 
@@ -241,7 +331,11 @@ def render_v2(text, prefix):
     rest = [(h, b) for h, b in secs if (h, b) not in (ev_sec, w_sec, t_sec)]
     if rest or changed:
         out.append('<section class="more"><h2>More in this brief</h2>')
-        out += [f"<details><summary>{esc(strip_md(h))}</summary>{render_md(b)}</details>" for h, b in rest]
+        more_bits = []
+        for h, b in rest:
+            fig = section_figure_html(prefix, section_placement(h))
+            more_bits.append(f"<details><summary>{esc(strip_md(h))}</summary>{fig}{render_md(b)}</details>")
+        out += more_bits
         if changed:
             out.append(f"<details><summary>What changed since the last brief</summary>{changed}</details>")
         out.append("</section>")
@@ -249,7 +343,7 @@ def render_v2(text, prefix):
     return "\n".join(out)
 
 
-def page(title, body, prefix, active):
+def page(title, body, prefix, active, photos=True):
     nav_home = "current" if active == "home" else ""
     nav_arch = "current" if active == "archive" else ""
     return f"""<!doctype html>
@@ -269,8 +363,8 @@ def page(title, body, prefix, active):
 <meta name="apple-mobile-web-app-title" content="Urban Concierge">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="alternate" type="application/rss+xml" title="{html.escape(SITE_TITLE)}" href="{SITE_URL}feed.xml">
-<link rel="stylesheet" href="{prefix}assets/style.css?v=11">
-<script src="{prefix}assets/app.js?v=11" defer></script>
+<link rel="stylesheet" href="{prefix}assets/style.css?v={ASSET_VER}">
+<script src="{prefix}assets/app.js?v={ASSET_VER}" defer></script>
 </head>
 <body>
 <header class="site">
@@ -293,7 +387,9 @@ def page(title, body, prefix, active):
 </section>
 <main class="wrap">
 <div class="install-hint" id="install-hint" hidden><span class="install-text"></span><button class="install-btn" type="button" hidden>Install</button><button class="install-close" type="button" aria-label="Dismiss">&times;</button></div>
+{hero_html(prefix) if photos else ""}
 {body}
+{gallery_html(prefix) if photos else ""}
 {signup_html(prefix)}
 </main>
 <footer class="site"><div class="wrap"><p>{html.escape(FOOTER)}</p><p class="fine">Urban Concierge - Bay Area is a Custom Concierge brand by <a href="{prefix}../">Bay Area Media</a>.</p></div></footer>
@@ -384,7 +480,7 @@ def write_feed():
 def write_offline():
     body = '<h1>You are offline</h1><p>This page has not been saved on this device yet. Briefs you have opened before still work offline. Try the <a href="index.html">latest brief</a> or the <a href="archive/index.html">archive</a>.</p>'
     with open(os.path.join(OUT, "offline.html"), "w", encoding="utf-8") as f:
-        f.write(page("Offline · Urban Concierge - Bay Area", body, "", "home"))
+        f.write(page("Offline · Urban Concierge - Bay Area", body, "", "home", photos=False))
 
 LEGACY_STUB = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8">

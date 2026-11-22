@@ -120,3 +120,26 @@ body:has(.brief.v2) .wrap{max-width:1080px}
 .signup-msg{margin:6px 0 0;font-size:.9rem}.signup-msg:empty{display:none}
 .signup-msg.err{color:#b3261e}.signup-msg.ok{color:#1b7f3b}
 .signup .hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+
+/* John's city photos: hero, section figures, Around the city gallery */
+.city-hero{margin:0 0 20px;overflow:hidden;border-radius:16px;border:1px solid var(--line);background:var(--card)}
+.city-hero picture,.city-hero img{display:block;width:100%}
+.city-hero img{height:auto;aspect-ratio:2/1;object-fit:cover;object-position:center}
+.photo-credit{margin:8px 12px 10px;color:var(--muted);font-size:.8rem}
+.city-hero .photo-credit{margin:8px 12px 10px}
+.section-photo{margin:0 0 14px;overflow:hidden;border-radius:12px;border:1px solid var(--line);background:var(--card)}
+.section-photo picture,.section-photo img{display:block;width:100%}
+.section-photo img{height:auto;max-height:420px;object-fit:cover;object-position:center top}
+.section-photo.portrait img{max-height:480px}
+.section-photo figcaption{margin:0;padding:8px 10px 10px;color:var(--muted);font-size:.8rem}
+.city-gallery{margin:2.4em 0 0;padding-top:1.2em;border-top:1px solid var(--line)}
+.city-gallery h2{margin:0 0 .7em;padding-top:0;border-top:0}
+.city-grid{list-style:none;padding:0;margin:0;display:grid;gap:12px;grid-template-columns:1fr 1fr}
+@media(min-width:760px){.city-grid{grid-template-columns:repeat(3,1fr);gap:14px}}
+.city-grid figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;height:100%;display:flex;flex-direction:column}
+.city-grid picture,.city-grid img{display:block;width:100%}
+.city-grid img{height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center}
+.city-grid .portrait img{object-position:center top}
+.city-grid figcaption{margin:0;padding:8px 10px 10px;color:var(--muted);font-size:.8rem;line-height:1.4}
+.city-gallery .photo-credit{margin:10px 0 0}
+

@@ -1,0 +1,352 @@
+{
+  "credit": "Photos: John Leyes / Bay Area Media",
+  "media_root": "bads/media/",
+  "how_to_add": "Drop a new original into a staging folder, add a record to PHOTOS in tools/optimize_media.py (filename, description, suggested_section, placements, alt text), then run: python3 tools/optimize_media.py. publish.py reads media.json, so the next brief refresh will pick up new placements without editing the HTML by hand.",
+  "photos": [
+    {
+      "id": "red-sculpture-rincon",
+      "original": "originals/red-sculpture-rincon.jpg",
+      "source_hash": "4f93ee74967ec8f093328e5b77f19c927108866e8fe5ef219699f82e66ec5650.jpg",
+      "title": "Red sculpture and the SoMa skyline",
+      "description": "A red sculpture on a lawn with the SoMa and Rincon skyline behind it.",
+      "alt": "A red steel sculpture on a green lawn, with palm trees and the San Francisco SoMa skyline beyond",
+      "caption": "South Beach, looking toward the SoMa skyline",
+      "location": "South Beach / Rincon, San Francisco",
+      "suggested_section": "hero",
+      "placements": [
+        "hero"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/red-sculpture-rincon.webp",
+        "jpeg": "web/red-sculpture-rincon.jpg",
+        "width": 1600,
+        "height": 1200
+      },
+      "thumb": {
+        "webp": "web/red-sculpture-rincon-thumb.webp",
+        "jpeg": "web/red-sculpture-rincon-thumb.jpg",
+        "width": 800,
+        "height": 600
+      },
+      "credit": "Photos: John Leyes / Bay Area Media",
+      "hero": {
+        "webp": "web/red-sculpture-rincon-hero.webp",
+        "jpeg": "web/red-sculpture-rincon-hero.jpg",
+        "width": 1600,
+        "height": 800
+      }
+    },
+    {
+      "id": "rincon-park-cupids-span",
+      "original": "originals/rincon-park-cupids-span.jpg",
+      "source_hash": "6d2e006b6f931def97c2b4a0aba42b2cda47f136ebef23cd6792487aac4a433a.jpg",
+      "title": "Cupid's Span at Rincon Park",
+      "description": "The Cupid's Span bow-and-arrow sculpture in Rincon Park, with the Embarcadero skyline.",
+      "alt": "The Cupid's Span bow-and-arrow sculpture in Rincon Park along the Embarcadero, with San Francisco office towers behind it",
+      "caption": "Cupid's Span, Rincon Park",
+      "location": "Rincon Park, Embarcadero, San Francisco",
+      "suggested_section": "transit",
+      "placements": [
+        "transit",
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/rincon-park-cupids-span.webp",
+        "jpeg": "web/rincon-park-cupids-span.jpg",
+        "width": 1600,
+        "height": 1200
+      },
+      "thumb": {
+        "webp": "web/rincon-park-cupids-span-thumb.webp",
+        "jpeg": "web/rincon-park-cupids-span-thumb.jpg",
+        "width": 800,
+        "height": 600
+      },
+      "credit": "Photos: John Leyes / Bay Area Media"
+    },
+    {
+      "id": "oracle-park-mccovey-statue",
+      "original": "originals/oracle-park-mccovey-statue.jpg",
+      "source_hash": "9c014bc19e47bac1c57ef025a6becaf9a3a0af5469ce0c9ecbcca0753fdc1ddc.jpg",
+      "title": "Oracle Park and the Willie McCovey statue",
+      "description": "Oracle Park across McCovey Cove, with boats on the water and the Willie McCovey statue in the foreground.",
+      "alt": "The Willie McCovey statue in the foreground, with boats in McCovey Cove and Oracle Park beyond",
+      "caption": "Oracle Park from McCovey Cove",
+      "location": "McCovey Cove, San Francisco",
+      "suggested_section": "sports",
+      "placements": [
+        "gallery",
+        "event"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/oracle-park-mccovey-statue.webp",
+        "jpeg": "web/oracle-park-mccovey-statue.jpg",
+        "width": 1600,
+        "height": 1200
+      },
+      "thumb": {
+        "webp": "web/oracle-park-mccovey-statue-thumb.webp",
+        "jpeg": "web/oracle-park-mccovey-statue-thumb.jpg",
+        "width": 800,
+        "height": 600
+      },
+      "credit": "Photos: John Leyes / Bay Area Media",
+      "event": {
+        "slug": "oracle-park",
+        "alt": "Oracle Park across McCovey Cove, with the Willie McCovey statue in the foreground",
+        "webp": "assets/events/oracle-park.webp",
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "id": "oracle-park-marina-gate",
+      "original": "originals/oracle-park-marina-gate.jpg",
+      "source_hash": "ab224d200f5e07966b7c54880d6ff7a67f90600b914aed1f746e5d5d1b54ae23.jpg",
+      "title": "Oracle Park Marina Gate",
+      "description": "The Marina Gate at Oracle Park, with palm trees and the Bay Bridge in the distance.",
+      "alt": "Oracle Park's Marina Gate under a row of palm trees, with the Bay Bridge in the distance",
+      "caption": "Oracle Park, Marina Gate",
+      "location": "Oracle Park, San Francisco",
+      "suggested_section": "sports",
+      "placements": [
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/oracle-park-marina-gate.webp",
+        "jpeg": "web/oracle-park-marina-gate.jpg",
+        "width": 1600,
+        "height": 900
+      },
+      "thumb": {
+        "webp": "web/oracle-park-marina-gate-thumb.webp",
+        "jpeg": "web/oracle-park-marina-gate-thumb.jpg",
+        "width": 800,
+        "height": 450
+      },
+      "credit": "Photos: John Leyes / Bay Area Media"
+    },
+    {
+      "id": "oracle-park-mccovey-cove",
+      "original": "originals/oracle-park-mccovey-cove.jpg",
+      "source_hash": "4bca1b596766f953efbca37ea726aca4e610daadcc433963333ae3021188cbd2.jpg",
+      "title": "Oracle Park across McCovey Cove",
+      "description": "Oracle Park seen across McCovey Cove from the shoreline path.",
+      "alt": "Oracle Park across McCovey Cove, seen from the shoreline path with people walking by the water",
+      "caption": "Oracle Park across McCovey Cove",
+      "location": "McCovey Cove, San Francisco",
+      "suggested_section": "sports",
+      "placements": [
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/oracle-park-mccovey-cove.webp",
+        "jpeg": "web/oracle-park-mccovey-cove.jpg",
+        "width": 1600,
+        "height": 900
+      },
+      "thumb": {
+        "webp": "web/oracle-park-mccovey-cove-thumb.webp",
+        "jpeg": "web/oracle-park-mccovey-cove-thumb.jpg",
+        "width": 800,
+        "height": 450
+      },
+      "credit": "Photos: John Leyes / Bay Area Media"
+    },
+    {
+      "id": "financial-district-dusk",
+      "original": "originals/financial-district-dusk.jpg",
+      "source_hash": "edfa6046dd399428a026ef099b697054dd16ec8e136c57e3a659b3dcbd0ad1a9.jpg",
+      "title": "Financial District at dusk",
+      "description": "Financial District towers at dusk, including a US Bank sign and a Chime sign.",
+      "alt": "Financial District towers at dusk, with a US Bank building and a Chime sign lit against a deep blue sky",
+      "caption": "The Financial District at dusk",
+      "location": "Financial District, San Francisco",
+      "suggested_section": "stay",
+      "placements": [
+        "stay"
+      ],
+      "on_page": true,
+      "orientation": "portrait",
+      "web": {
+        "webp": "web/financial-district-dusk.webp",
+        "jpeg": "web/financial-district-dusk.jpg",
+        "width": 1200,
+        "height": 1600
+      },
+      "thumb": {
+        "webp": "web/financial-district-dusk-thumb.webp",
+        "jpeg": "web/financial-district-dusk-thumb.jpg",
+        "width": 600,
+        "height": 800
+      },
+      "credit": "Photos: John Leyes / Bay Area Media"
+    },
+    {
+      "id": "columbus-tower",
+      "original": "originals/columbus-tower.jpg",
+      "source_hash": "3ccc947364c9b01a08d766db0cd9ff55347e82b50e964e03274d940899ce594f.jpg",
+      "title": "Columbus Tower and Cafe Zoetrope",
+      "description": "Columbus Tower (the Sentinel Building) in North Beach, with Cafe Zoetrope at street level.",
+      "alt": "The green copper Columbus Tower in North Beach, with Cafe Zoetrope's red awning at the corner",
+      "caption": "Columbus Tower, North Beach",
+      "location": "North Beach, San Francisco",
+      "suggested_section": "eat",
+      "placements": [
+        "eat"
+      ],
+      "on_page": true,
+      "orientation": "portrait",
+      "web": {
+        "webp": "web/columbus-tower.webp",
+        "jpeg": "web/columbus-tower.jpg",
+        "width": 900,
+        "height": 1600
+      },
+      "thumb": {
+        "webp": "web/columbus-tower-thumb.webp",
+        "jpeg": "web/columbus-tower-thumb.jpg",
+        "width": 450,
+        "height": 800
+      },
+      "credit": "Photos: John Leyes / Bay Area Media"
+    },
+    {
+      "id": "grace-cathedral",
+      "original": "originals/grace-cathedral.jpg",
+      "source_hash": "3a2641905fa3cc43000b702439e7ff024e1265d517042029485e87f6e0bf7c37.jpg",
+      "title": "Grace Cathedral",
+      "description": "The front steps and facade of Grace Cathedral on Nob Hill.",
+      "alt": "The front steps and Gothic facade of Grace Cathedral on Nob Hill, under a clear blue sky",
+      "caption": "Grace Cathedral, Nob Hill",
+      "location": "Nob Hill, San Francisco",
+      "suggested_section": "events",
+      "placements": [
+        "gallery",
+        "event"
+      ],
+      "on_page": true,
+      "orientation": "portrait",
+      "web": {
+        "webp": "web/grace-cathedral.webp",
+        "jpeg": "web/grace-cathedral.jpg",
+        "width": 1205,
+        "height": 1600
+      },
+      "thumb": {
+        "webp": "web/grace-cathedral-thumb.webp",
+        "jpeg": "web/grace-cathedral-thumb.jpg",
+        "width": 602,
+        "height": 800
+      },
+      "credit": "Photos: John Leyes / Bay Area Media",
+      "note": "The original has a small date stamp in the lower right corner; left as shot.",
+      "event": {
+        "slug": "grace-cathedral",
+        "alt": "The front steps and facade of Grace Cathedral on Nob Hill",
+        "webp": "assets/events/grace-cathedral.webp",
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "id": "ferry-building",
+      "original": "originals/ferry-building.jpg",
+      "source_hash": "c0dcb6cc6b2311b74e0bf541cbcc990d9a91177dd6d7d5daa6902dbff1cc5fc0.jpg",
+      "title": "Ferry Building from the Embarcadero",
+      "description": "The Ferry Building clock tower on the Embarcadero, beside a public toilet kiosk.",
+      "alt": "The Ferry Building clock tower on the Embarcadero, seen beside a metal public toilet kiosk and a palm tree",
+      "caption": "The Ferry Building, Embarcadero",
+      "location": "Embarcadero, San Francisco",
+      "suggested_section": "transit",
+      "placements": [
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "portrait",
+      "web": {
+        "webp": "web/ferry-building.webp",
+        "jpeg": "web/ferry-building.jpg",
+        "width": 1200,
+        "height": 1600
+      },
+      "thumb": {
+        "webp": "web/ferry-building-thumb.webp",
+        "jpeg": "web/ferry-building-thumb.jpg",
+        "width": 600,
+        "height": 800
+      },
+      "credit": "Photos: John Leyes / Bay Area Media"
+    },
+    {
+      "id": "steam-navigation-sign-old-sacramento",
+      "original": "originals/steam-navigation-sign-old-sacramento.jpg",
+      "source_hash": "f32c55ecf231c70b206094e3cd0d50d73457e3ce1dd40deccfc6968018f970c2.jpg",
+      "title": "California Steam Navigation Co. sign",
+      "description": "A sign reading \u201cCalifornia Steam Navigation Co's Steamers for San Francisco,\u201d photographed on the Old Sacramento waterfront, not in San Francisco.",
+      "alt": "A white sign on the Old Sacramento waterfront reading California Steam Navigation Co's Steamers for San Francisco",
+      "caption": "California Steam Navigation Co. sign, Old Sacramento waterfront",
+      "location": "Old Sacramento (not San Francisco)",
+      "suggested_section": "gallery",
+      "placements": [
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "portrait",
+      "web": {
+        "webp": "web/steam-navigation-sign-old-sacramento.webp",
+        "jpeg": "web/steam-navigation-sign-old-sacramento.jpg",
+        "width": 900,
+        "height": 1600
+      },
+      "thumb": {
+        "webp": "web/steam-navigation-sign-old-sacramento-thumb.webp",
+        "jpeg": "web/steam-navigation-sign-old-sacramento-thumb.jpg",
+        "width": 450,
+        "height": 800
+      },
+      "credit": "Photos: John Leyes / Bay Area Media",
+      "note": "This photo is from Old Sacramento, not San Francisco. Caption says so on the page."
+    },
+    {
+      "id": "collage-sf-scenes",
+      "original": "originals/collage-sf-scenes.jpg",
+      "source_hash": "9914053011489598f103813c7da42c337fb66ed0a6d55af5faaf78c4c7df0069.jpg",
+      "title": "San Francisco scenes, collage",
+      "description": "A Google Photos collage of San Francisco scenes, kept in the library for later use.",
+      "alt": "A Google Photos collage of San Francisco scenes, including Oracle Park, the Ferry Building, and Grace Cathedral",
+      "caption": "San Francisco scenes",
+      "location": "Various, mostly San Francisco",
+      "suggested_section": "library",
+      "placements": [
+        "library"
+      ],
+      "on_page": false,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/collage-sf-scenes.webp",
+        "jpeg": "web/collage-sf-scenes.jpg",
+        "width": 1067,
+        "height": 1600
+      },
+      "thumb": {
+        "webp": "web/collage-sf-scenes-thumb.webp",
+        "jpeg": "web/collage-sf-scenes-thumb.jpg",
+        "width": 533,
+        "height": 800
+      },
+      "credit": "Photos: John Leyes / Bay Area Media",
+      "note": "Google Photos collage with a visible Google Photos mark. Kept in the media library, not placed on the live page."
+    }
+  ]
+}
