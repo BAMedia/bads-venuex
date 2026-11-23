@@ -102,8 +102,20 @@
         "alt": "Oracle Park across McCovey Cove, with the Willie McCovey statue in the foreground",
         "webp": "assets/events/oracle-park.webp",
         "width": 960,
-        "height": 540
-      }
+        "height": 540,
+        "keywords": [
+          "oracle park",
+          "sf giants",
+          "giants vs",
+          "mccovey"
+        ]
+      },
+      "keywords": [
+        "oracle park",
+        "sf giants",
+        "giants vs",
+        "mccovey"
+      ]
     },
     {
       "id": "oracle-park-marina-gate",
@@ -256,8 +268,16 @@
         "alt": "The front steps and facade of Grace Cathedral on Nob Hill",
         "webp": "assets/events/grace-cathedral.webp",
         "width": 960,
-        "height": 540
-      }
+        "height": 540,
+        "keywords": [
+          "grace cathedral",
+          "sound bath"
+        ]
+      },
+      "keywords": [
+        "grace cathedral",
+        "sound bath"
+      ]
     },
     {
       "id": "ferry-building",
@@ -270,7 +290,8 @@
       "location": "Embarcadero, San Francisco",
       "suggested_section": "transit",
       "placements": [
-        "gallery"
+        "gallery",
+        "event"
       ],
       "on_page": true,
       "orientation": "portrait",
@@ -286,7 +307,22 @@
         "width": 600,
         "height": 800
       },
-      "credit": "Photos: John Leyes / Bay Area Media"
+      "credit": "Photos: John Leyes / Bay Area Media",
+      "keywords": [
+        "ferry building",
+        "ferry plaza"
+      ],
+      "event": {
+        "slug": "ferry-building",
+        "alt": "The Ferry Building clock tower on the Embarcadero",
+        "webp": "assets/events/ferry-building.webp",
+        "width": 960,
+        "height": 540,
+        "keywords": [
+          "ferry building",
+          "ferry plaza"
+        ]
+      }
     },
     {
       "id": "steam-navigation-sign-old-sacramento",

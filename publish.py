@@ -125,6 +125,7 @@ def signup_html(prefix):
 EVENT_IMAGES = [
     (("grace cathedral", "sound bath"), "grace-cathedral", "The front steps and facade of Grace Cathedral on Nob Hill"),
     (("oracle park", "sf giants", "giants vs", "mlb", "baseball"), "oracle-park", "Oracle Park across McCovey Cove, with the Willie McCovey statue in the foreground"),
+    (("ferry building", "ferry plaza"), "ferry-building", "The Ferry Building clock tower on the Embarcadero"),
     (("valkyries parade", "valkyries wnba championship parade", "championship parade"), "valkyries-parade", "Fans in violet and black cheer under falling confetti as a parade bus rolls along a palm-lined waterfront boulevard"),
     (("marathon", "half", "5k", "10k", " run", "race"), "half-marathon", "Runners on a San Francisco waterfront at sunrise with the Golden Gate Bridge behind"),
     (("opera", "symphony", "ballet", "theater", "theatre"), "opera", "A grand opera house with red velvet seats and a lit stage curtain"),
@@ -132,15 +133,103 @@ EVENT_IMAGES = [
     (("sharks", "hockey", "nhl"), "hockey", "A hockey puck and stick on fresh arena ice"),
     (("día de los muertos", "dia de los muertos", "muertos"), "dia-de-los-muertos", "A candlelit Día de los Muertos procession under papel picado banners"),
     (("election", "vote", "voting", "ballot"), "election", "Voting booths and a ballot drop box in a community hall"),
+    (("glow", "zoolights", "zoo lights", "holiday lights", "festival of lights"), "lights", "A San Francisco street at blue hour with string lights and people heading out"),
 ]
 GENERIC_IMG = ("generic", "A San Francisco street at blue hour with string lights and people heading out")
 
+# John's photos in media.json, matched by venue or keyword. A photo's event.keywords
+# (or these defaults) win over a brief JSON image override, so a leftover
+# {"1":{"img":"lights"}} still shows Grace Cathedral when the event is there.
+MEDIA_EVENT_KEYWORDS = {
+    "grace-cathedral": ("grace cathedral", "sound bath"),
+    "oracle-park": ("oracle park", "sf giants", "giants vs", "mccovey"),
+    "ferry-building": ("ferry building", "ferry plaza"),
+}
+
+DAYS = r"(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*"
+MONTHS = r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*"
+DATE_RE = rf"{DAYS}\s+{MONTHS}\s+\d{{1,2}}"
+
+def event_asset_path(slug):
+    return os.path.join(OUT, "assets", "events", slug + ".webp")
+
+def event_asset_exists(slug):
+    return bool(slug) and os.path.exists(event_asset_path(slug))
+
+def split_title_when(head):
+    """Split a headline into title and when without breaking on times like 7–8:30 pm."""
+    head = head.strip().rstrip(".")
+    m = re.search(r"(?:,|:)\s*(ongoing\b.*)$", head, re.I)
+    if m:
+        return head[:m.start()].strip(" ,:"), m.group(1).strip().rstrip(".")
+    m = re.search(rf"(?:,|:)\s*((?:through|until|from)\s+)?({DATE_RE}\b.*)$", head, re.I)
+    if m:
+        return head[:m.start()].strip(" ,:"), m.group(0).lstrip(" ,:").strip().rstrip(".")
+    # Only split on a colon when the right side is not a clock time (":30 pm").
+    if ":" in head:
+        left, right = head.split(":", 1)
+        if not re.match(r"\s*\d", right):
+            return left.strip(), right.strip().rstrip(".")
+    return head, ""
+
+def photo_event_keys(photo):
+    ev = photo.get("event") or {}
+    keys = []
+    for src in (
+        photo.get("keywords"),
+        ev.get("keywords"),
+        MEDIA_EVENT_KEYWORDS.get(photo.get("id") or ""),
+        MEDIA_EVENT_KEYWORDS.get(ev.get("slug") or ""),
+    ):
+        if src:
+            keys.extend(k.lower() for k in src)
+    seen, out = set(), []
+    for k in keys:
+        if k and k not in seen:
+            seen.add(k)
+            out.append(k)
+    return out
+
+def media_rel_exists(rel):
+    if not rel:
+        return False
+    return os.path.exists(os.path.join(OUT, rel))
+
+def match_media_event(text):
+    """Return (src, alt) for a John photo whose venue keywords appear in the event text."""
+    t = text.lower()
+    photos = [p for p in load_media().get("photos", []) if p.get("on_page", True) or "event" in (p.get("placements") or [])]
+    photos.sort(key=lambda p: (0 if p.get("event") or "event" in (p.get("placements") or []) else 1))
+    for photo in photos:
+        keys = photo_event_keys(photo)
+        if not keys or not any(k in t for k in keys):
+            continue
+        ev = photo.get("event") or {}
+        rel = ev.get("webp")
+        if media_rel_exists(rel):
+            return rel, ev.get("alt") or photo.get("alt") or ""
+    return None
+
 def pick_image(text):
+    media = match_media_event(text)
+    if media:
+        return media
     t = text.lower()
     for keys, slug, alt in EVENT_IMAGES:
-        if any(k in t for k in keys) and os.path.exists(os.path.join(OUT, "assets", "events", slug + ".webp")):
-            return slug, alt
-    return GENERIC_IMG
+        if any(k in t for k in keys) and event_asset_exists(slug):
+            return f"assets/events/{slug}.webp", alt
+    return f"assets/events/{GENERIC_IMG[0]}.webp", GENERIC_IMG[1]
+
+def resolve_event_image(event, override):
+    text = " ".join(event.get(k, "") or "" for k in ("title", "when", "blurb"))
+    media = match_media_event(text)
+    if media:
+        return media
+    slug = (override or {}).get("img")
+    if slug and event_asset_exists(slug):
+        alt = (override or {}).get("alt") or next((a for _, s_, a in EVENT_IMAGES if s_ == slug), GENERIC_IMG[1])
+        return f"assets/events/{slug}.webp", alt
+    return pick_image(text)
 
 def short(text, n=150):
     text = re.sub(r"\s+", " ", text).strip()
@@ -168,7 +257,7 @@ def parse_events(body):
         num, head, rest = m.group(1), m.group(2).strip().rstrip("."), m.group(3)
         urls = re.findall(r"https?://[^\s<>()\[\]\"·]+", block)
         rest = re.sub(r"https?://\S+", "", rest).replace("·", " ")
-        title, when = head.split(":", 1) if ":" in head else (head, "")
+        title, when = split_title_when(head)
         events.append({"n": num, "title": strip_md(title).strip(), "when": strip_md(when).strip().rstrip("."),
                        "blurb": short(strip_md(rest).lstrip(" .,")), "url": urls[0] if urls else ""})
     return events
@@ -289,11 +378,9 @@ def render_v2(text, prefix):
     ov = cfg.get("events") or {}
     cards = []
     for i, e in enumerate(events):
-        o = ov.get(e["n"], {})
-        if o.get("img"):
-            slug, alt = o["img"], o.get("alt") or next((a for _, s_, a in EVENT_IMAGES if s_ == o["img"]), GENERIC_IMG[1])
-        else:
-            slug, alt = pick_image(e["title"] + " " + e["blurb"])
+        o = ov.get(e["n"], {}) or ov.get(str(e["n"]), {})
+        src, alt = resolve_event_image(e, o)
+        slug = os.path.splitext(os.path.basename(src))[0]
         load = 'fetchpriority="high"' if i == 0 else 'loading="lazy"'
         link = f'<a class="ev-link" href="{esc(e["url"])}" target="_blank" rel="noopener">Details &rarr;</a>' if e["url"] else ""
         mp = ""
@@ -301,7 +388,7 @@ def render_v2(text, prefix):
             msrc = f'{prefix}assets/events/{esc(slug)}-map.webp'
             mp = (f'<a class="ev-map" href="{msrc}" target="_blank" rel="noopener"><img src="{msrc}" width="960" height="640" loading="lazy" decoding="async" '
                   f'alt="Route map: {esc(e["title"])}"><span>Route map &middot; &copy; OpenStreetMap contributors</span></a>')
-        cards.append(f'<li class="ev"><img src="{prefix}assets/events/{esc(slug)}.webp" width="960" height="540" {load} decoding="async" alt="{esc(alt)}">'
+        cards.append(f'<li class="ev"><img src="{prefix}{esc(src)}" width="960" height="540" {load} decoding="async" alt="{esc(alt)}">'
                      f'<div class="ev-body"><p class="ev-when">{esc(e["when"])}</p><h3>{esc(e["title"])}</h3><p>{esc(o.get("blurb") or e["blurb"])}</p>{mp}{link}</div></li>')
     out.append('<section class="events" id="whats-on"><h2>What\'s on</h2><ul class="ev-grid">' + "".join(cards) + "</ul></section>")
     by = lambda *keys: next(((h, b) for h, b in secs if any(k in h.lower() for k in keys)), None)

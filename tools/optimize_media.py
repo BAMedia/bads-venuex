@@ -67,6 +67,7 @@ PHOTOS = [
         "suggested_section": "sports",
         "placements": ["gallery", "event"],
         "on_page": True,
+        "keywords": ["oracle park", "sf giants", "giants vs", "mccovey"],
         "event_slug": "oracle-park",
         "event_alt": "Oracle Park across McCovey Cove, with the Willie McCovey statue in the foreground",
         "event_crop": "upper-16x9",
@@ -138,6 +139,7 @@ PHOTOS = [
         "placements": ["gallery", "event"],
         "on_page": True,
         "orientation": "portrait",
+        "keywords": ["grace cathedral", "sound bath"],
         "event_slug": "grace-cathedral",
         "event_alt": "The front steps and facade of Grace Cathedral on Nob Hill",
         "event_crop": "upper-16x9",
@@ -153,9 +155,13 @@ PHOTOS = [
         "caption": "The Ferry Building, Embarcadero",
         "location": "Embarcadero, San Francisco",
         "suggested_section": "transit",
-        "placements": ["gallery"],
+        "placements": ["gallery", "event"],
         "on_page": True,
         "orientation": "portrait",
+        "keywords": ["ferry building", "ferry plaza"],
+        "event_slug": "ferry-building",
+        "event_alt": "The Ferry Building clock tower on the Embarcadero",
+        "event_crop": "upper-16x9",
     },
     {
         "id": "steam-navigation-sign-old-sacramento",
@@ -346,6 +352,9 @@ def process(photo: dict) -> dict:
             "width": 960,
             "height": 540,
         }
+        if photo.get("keywords"):
+            entry["keywords"] = list(photo["keywords"])
+            entry["event"]["keywords"] = list(photo["keywords"])
 
     print(
         f"{photo['id']}: orig {im.size[0]}x{im.size[1]} {orig_path.stat().st_size//1024}KB | "
