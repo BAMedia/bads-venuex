@@ -1,0 +1,382 @@
+{
+  "credit": "Photos: Wikimedia Commons contributors, used under the license on each caption",
+  "media_root": "phoenix/media/",
+  "source": "Wikimedia Commons. Attribution and license appear on each photo.",
+  "photos": [
+    {
+      "id": "phoenix-skyline-night",
+      "original": "originals/phoenix-skyline-night.jpg",
+      "commons_title": "File:Downtown Phoenix Skyline at Night.jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3ADowntown_Phoenix_Skyline_at_Night.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Alan Stark",
+      "title": "Downtown Phoenix at night",
+      "description": "The downtown Phoenix skyline at night.",
+      "alt": "The downtown Phoenix skyline at night, with lit high-rises under a deep blue sky",
+      "caption": "Downtown Phoenix at night. Photo: Alan Stark, CC BY-SA 2.0, via Wikimedia Commons",
+      "location": "Downtown Phoenix",
+      "suggested_section": "hero",
+      "placements": [
+        "hero"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/phoenix-skyline-night.webp",
+        "jpeg": "web/phoenix-skyline-night.jpg",
+        "width": 1600,
+        "height": 1020
+      },
+      "thumb": {
+        "webp": "web/phoenix-skyline-night-thumb.webp",
+        "jpeg": "web/phoenix-skyline-night-thumb.jpg",
+        "width": 800,
+        "height": 510
+      },
+      "credit": "Photo: Alan Stark, CC BY-SA 2.0, via Wikimedia Commons",
+      "hero": {
+        "webp": "web/phoenix-skyline-night-hero.webp",
+        "jpeg": "web/phoenix-skyline-night-hero.jpg",
+        "width": 1600,
+        "height": 800
+      },
+      "event": {
+        "slug": "phoenix-skyline",
+        "alt": "The downtown Phoenix skyline at night, with lit high-rises under a deep blue sky",
+        "webp": "assets/events/phoenix-skyline.webp",
+        "width": 960,
+        "height": 540,
+        "keywords": [
+          "crescent ballroom",
+          "downtown phoenix",
+          "concert"
+        ]
+      },
+      "keywords": [
+        "crescent ballroom",
+        "downtown phoenix",
+        "concert"
+      ]
+    },
+    {
+      "id": "papago-camelback",
+      "original": "originals/papago-camelback.jpg",
+      "commons_title": "File:2013, Papago Park, Papago Buttes, Hole in the Rock, Camelback Mountain in the Distance - panoramio.jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3A2013%2C_Papago_Park%2C_Papago_Buttes%2C_Hole_in_the_Rock%2C_Camelback_Mountain_in_the_Distance_-_panoramio.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Chris English",
+      "title": "Papago Park and Camelback Mountain",
+      "description": "Papago Buttes and Hole-in-the-Rock in Papago Park, with Camelback Mountain in the distance.",
+      "alt": "Red sandstone buttes in Papago Park, with Camelback Mountain visible in the distance",
+      "caption": "Papago Park, looking toward Camelback Mountain. Photo: Chris English, CC BY-SA 3.0, via Wikimedia Commons",
+      "location": "Papago Park, Phoenix",
+      "suggested_section": "gallery",
+      "placements": [
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/papago-camelback.webp",
+        "jpeg": "web/papago-camelback.jpg",
+        "width": 1600,
+        "height": 1067
+      },
+      "thumb": {
+        "webp": "web/papago-camelback-thumb.webp",
+        "jpeg": "web/papago-camelback-thumb.jpg",
+        "width": 800,
+        "height": 533
+      },
+      "credit": "Photo: Chris English, CC BY-SA 3.0, via Wikimedia Commons",
+      "event": {
+        "slug": "papago-park",
+        "alt": "Red sandstone buttes in Papago Park, with Camelback Mountain visible in the distance",
+        "webp": "assets/events/papago-park.webp",
+        "width": 960,
+        "height": 540,
+        "keywords": [
+          "papago",
+          "camelback"
+        ]
+      },
+      "keywords": [
+        "papago",
+        "camelback"
+      ]
+    },
+    {
+      "id": "gammage-auditorium",
+      "original": "originals/gammage-auditorium.jpg",
+      "commons_title": "File:Gammage Auditorium, Arizona State University, Forest Avenue, Tempe, AZ - 54438015923.jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3AGammage_Auditorium%2C_Arizona_State_University%2C_Forest_Avenue%2C_Tempe%2C_AZ_-_54438015923.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "w_lemay",
+      "title": "ASU Gammage Auditorium",
+      "description": "Frank Lloyd Wright's Gammage Auditorium at Arizona State University in Tempe.",
+      "alt": "The curved copper-colored colonnade, sculptural lamps and entrance ramp of ASU Gammage Auditorium in Tempe",
+      "caption": "ASU Gammage, Tempe. Photo: w_lemay, CC BY-SA 2.0, via Wikimedia Commons",
+      "location": "Tempe, Arizona",
+      "suggested_section": "events",
+      "placements": [
+        "event",
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "portrait",
+      "web": {
+        "webp": "web/gammage-auditorium.webp",
+        "jpeg": "web/gammage-auditorium.jpg",
+        "width": 1200,
+        "height": 1600
+      },
+      "thumb": {
+        "webp": "web/gammage-auditorium-thumb.webp",
+        "jpeg": "web/gammage-auditorium-thumb.jpg",
+        "width": 600,
+        "height": 800
+      },
+      "credit": "Photo: w_lemay, CC BY-SA 2.0, via Wikimedia Commons",
+      "event": {
+        "slug": "gammage",
+        "alt": "The curved copper-colored colonnade, sculptural lamps and entrance ramp of ASU Gammage Auditorium in Tempe",
+        "webp": "assets/events/gammage.webp",
+        "width": 960,
+        "height": 540,
+        "keywords": [
+          "gammage",
+          "wind symphony",
+          "wind ensemble",
+          "glory of the organ",
+          "asu gammage"
+        ]
+      },
+      "keywords": [
+        "gammage",
+        "wind symphony",
+        "wind ensemble",
+        "glory of the organ",
+        "asu gammage"
+      ]
+    },
+    {
+      "id": "phoenix-zoo",
+      "original": "originals/phoenix-zoo.jpg",
+      "commons_title": "File:2023 Phoenix Zoo - April-0638.jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3A2023_Phoenix_Zoo_-_April-0638.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "mbaylor",
+      "title": "Phoenix Zoo",
+      "description": "Pelicans on a floating raft in a pond at the Phoenix Zoo.",
+      "alt": "Pelicans standing on a floating raft in a pond at the Phoenix Zoo",
+      "caption": "Phoenix Zoo. Photo: mbaylor, CC BY 2.0, via Wikimedia Commons",
+      "location": "Papago Park, Phoenix",
+      "suggested_section": "events",
+      "placements": [
+        "event"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/phoenix-zoo.webp",
+        "jpeg": "web/phoenix-zoo.jpg",
+        "width": 1600,
+        "height": 1065
+      },
+      "thumb": {
+        "webp": "web/phoenix-zoo-thumb.webp",
+        "jpeg": "web/phoenix-zoo-thumb.jpg",
+        "width": 800,
+        "height": 532
+      },
+      "credit": "Photo: mbaylor, CC BY 2.0, via Wikimedia Commons",
+      "event": {
+        "slug": "phoenix-zoo",
+        "alt": "Pelicans standing on a floating raft in a pond at the Phoenix Zoo",
+        "webp": "assets/events/phoenix-zoo.webp",
+        "width": 960,
+        "height": 540,
+        "keywords": [
+          "zoolights",
+          "zoo lights",
+          "phoenix zoo"
+        ]
+      },
+      "keywords": [
+        "zoolights",
+        "zoo lights",
+        "phoenix zoo"
+      ]
+    },
+    {
+      "id": "desert-botanical-garden",
+      "original": "originals/desert-botanical-garden.jpg",
+      "commons_title": "File:Desert Botanical Garden Phoenix.jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3ADesert_Botanical_Garden_Phoenix.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Slywire",
+      "title": "Desert Botanical Garden",
+      "description": "A view of the Desert Botanical Garden in Phoenix.",
+      "alt": "Cacti and desert plants along a path at the Desert Botanical Garden in Phoenix",
+      "caption": "Desert Botanical Garden. Photo: Slywire, CC BY-SA 4.0, via Wikimedia Commons",
+      "location": "Papago Park, Phoenix",
+      "suggested_section": "gallery",
+      "placements": [
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/desert-botanical-garden.webp",
+        "jpeg": "web/desert-botanical-garden.jpg",
+        "width": 1600,
+        "height": 1200
+      },
+      "thumb": {
+        "webp": "web/desert-botanical-garden-thumb.webp",
+        "jpeg": "web/desert-botanical-garden-thumb.jpg",
+        "width": 800,
+        "height": 600
+      },
+      "credit": "Photo: Slywire, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    {
+      "id": "chase-field",
+      "original": "originals/chase-field.jpg",
+      "commons_title": "File:Chase Field (51809484371).jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3AChase_Field_%2851809484371%29.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Gage Skidmore from Surprise, AZ, United States of America",
+      "title": "Chase Field",
+      "description": "Chase Field, home of the Arizona Diamondbacks, in downtown Phoenix.",
+      "alt": "The exterior of Chase Field in downtown Phoenix, with the stadium name on the facade",
+      "caption": "Chase Field. Photo: Gage Skidmore, CC BY-SA 2.0, via Wikimedia Commons",
+      "location": "Downtown Phoenix",
+      "suggested_section": "gallery",
+      "placements": [
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/chase-field.webp",
+        "jpeg": "web/chase-field.jpg",
+        "width": 1600,
+        "height": 1067
+      },
+      "thumb": {
+        "webp": "web/chase-field-thumb.webp",
+        "jpeg": "web/chase-field-thumb.jpg",
+        "width": 800,
+        "height": 533
+      },
+      "credit": "Photo: Gage Skidmore, CC BY-SA 2.0, via Wikimedia Commons"
+    },
+    {
+      "id": "tempe-town-lake-rail",
+      "original": "originals/tempe-town-lake-rail.jpg",
+      "commons_title": "File:Tempe Town Lake Light Rail.jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3ATempe_Town_Lake_Light_Rail.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "JoseE1471",
+      "title": "Valley Metro rail over Tempe Town Lake",
+      "description": "A Valley Metro light rail train crossing Tempe Town Lake.",
+      "alt": "A Valley Metro light rail train crossing the bridge over Tempe Town Lake",
+      "caption": "Valley Metro rail at Tempe Town Lake. Photo: JoseE1471, CC BY-SA 4.0, via Wikimedia Commons",
+      "location": "Tempe, Arizona",
+      "suggested_section": "transit",
+      "placements": [
+        "transit",
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/tempe-town-lake-rail.webp",
+        "jpeg": "web/tempe-town-lake-rail.jpg",
+        "width": 1600,
+        "height": 1067
+      },
+      "thumb": {
+        "webp": "web/tempe-town-lake-rail-thumb.webp",
+        "jpeg": "web/tempe-town-lake-rail-thumb.jpg",
+        "width": 800,
+        "height": 533
+      },
+      "credit": "Photo: JoseE1471, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    {
+      "id": "heard-museum",
+      "original": "originals/heard-museum.jpg",
+      "commons_title": "File:HeardMuseum May2013.jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3AHeardMuseum_May2013.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Yassie",
+      "title": "Heard Museum",
+      "description": "The Heard Museum in Phoenix.",
+      "alt": "The adobe-style buildings and courtyard of the Heard Museum in Phoenix",
+      "caption": "Heard Museum. Photo: Yassie, CC BY-SA 3.0, via Wikimedia Commons",
+      "location": "Phoenix",
+      "suggested_section": "gallery",
+      "placements": [
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/heard-museum.webp",
+        "jpeg": "web/heard-museum.jpg",
+        "width": 1600,
+        "height": 1200
+      },
+      "thumb": {
+        "webp": "web/heard-museum-thumb.webp",
+        "jpeg": "web/heard-museum-thumb.jpg",
+        "width": 800,
+        "height": 600
+      },
+      "credit": "Photo: Yassie, CC BY-SA 3.0, via Wikimedia Commons"
+    },
+    {
+      "id": "hole-in-the-rock",
+      "original": "originals/hole-in-the-rock.jpg",
+      "commons_title": "File:Phoenix-Hole-in-the-Rock-Papago Park.JPG",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3APhoenix-Hole-in-the-Rock-Papago_Park.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Tony the Marine ( talk )",
+      "title": "Hole-in-the-Rock, Papago Park",
+      "description": "Hole-in-the-Rock, a sandstone formation in Papago Park.",
+      "alt": "The sandstone Hole-in-the-Rock formation in Papago Park, Phoenix",
+      "caption": "Hole-in-the-Rock, Papago Park. Photo: Tony the Marine, CC BY-SA 3.0, via Wikimedia Commons",
+      "location": "Papago Park, Phoenix",
+      "suggested_section": "gallery",
+      "placements": [
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/hole-in-the-rock.webp",
+        "jpeg": "web/hole-in-the-rock.jpg",
+        "width": 1600,
+        "height": 1200
+      },
+      "thumb": {
+        "webp": "web/hole-in-the-rock-thumb.webp",
+        "jpeg": "web/hole-in-the-rock-thumb.jpg",
+        "width": 800,
+        "height": 600
+      },
+      "credit": "Photo: Tony the Marine, CC BY-SA 3.0, via Wikimedia Commons"
+    }
+  ]
+}
