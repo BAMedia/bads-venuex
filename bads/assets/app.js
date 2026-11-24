@@ -193,8 +193,10 @@ function eventStrip() {
   if (!track) return;
 
   var ESPN = "https://site.api.espn.com/apis/site/v2/sports/";
-  var TZ = "America/Los_Angeles";
-  var FEEDS = [
+  var cfg = window.UC_SCORES || {};
+  var TZ = cfg.tz || "America/Los_Angeles";
+  var TZ_ABBR = cfg.tzAbbr || "PT";
+  var FEEDS = cfg.feeds || [
     { path: "basketball/nba/teams/9/schedule", sport: "basketball/nba", id: "9", kind: "NBA" },
     { path: "basketball/wnba/teams/129689/schedule", sport: "basketball/wnba", id: "129689", kind: "WNBA" },
     { path: "football/nfl/teams/25/schedule", sport: "football/nfl", id: "25", kind: "NFL" },
@@ -231,6 +233,7 @@ function eventStrip() {
     "basketball/mens-college-basketball": { "24": "Stanford", "25": "Cal", "23": "San José State", "2608": "Saint Mary's", "2539": "USF", "2541": "Santa Clara" },
     "basketball/womens-college-basketball": { "24": "Stanford", "25": "Cal", "23": "San José State", "2608": "Saint Mary's", "2539": "USF", "2541": "Santa Clara" }
   };
+  if (cfg.labels) LABELS = cfg.labels;
   var COLLEGE_KINDS = { Football: 1, Men: 1, Women: 1 };
   var timer = null;
 
@@ -254,8 +257,8 @@ function eventStrip() {
     if (timeValid === false) return weekday + " " + new Intl.DateTimeFormat("en-US", { timeZone: TZ, month: "short", day: "numeric" }).format(d) + " (time TBD)";
     var time = new Intl.DateTimeFormat("en-US", { timeZone: TZ, hour: "numeric", minute: "2-digit" }).format(d);
     var today = ptYmd(new Date()), g = ptYmd(d);
-    if (g === today) return "Today " + time + " PT";
-    return weekday + " " + time + " PT";
+    if (g === today) return "Today " + time + " " + TZ_ABBR;
+    return weekday + " " + time + " " + TZ_ABBR;
   }
   function scoreOf(c) {
     var s = c && c.score;
@@ -523,7 +526,7 @@ function eventStrip() {
       body: JSON.stringify({
         email: email,
         company: hp ? hp.value : "",
-        source: "bads"
+        source: f.getAttribute("data-source") || "bads"
       })
     }).then(function (res) {
       return res.json().then(function (data) {

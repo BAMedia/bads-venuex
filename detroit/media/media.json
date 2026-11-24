@@ -1,0 +1,400 @@
+{
+  "credit": "Photos: Wikimedia Commons contributors, used under the license on each caption",
+  "media_root": "detroit/media/",
+  "source": "Wikimedia Commons. Attribution and license appear on each photo.",
+  "photos": [
+    {
+      "id": "detroit-skyline",
+      "original": "originals/detroit-skyline.jpg",
+      "commons_title": "File:Detroit Skyline (123143197).jpeg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3ADetroit_Skyline_%28123143197%29.jpeg",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Michael Tighe",
+      "title": "Detroit skyline from Windsor",
+      "description": "The Detroit skyline at sunset, seen from across the river in Windsor, Ontario.",
+      "alt": "The Detroit skyline at sunset across the Detroit River, with the Renaissance Center towers at center",
+      "caption": "Detroit skyline from Windsor. Photo: Michael Tighe, CC0, via Wikimedia Commons",
+      "location": "Detroit River, looking toward downtown Detroit",
+      "suggested_section": "hero",
+      "placements": [
+        "hero"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/detroit-skyline.webp",
+        "jpeg": "web/detroit-skyline.jpg",
+        "width": 1600,
+        "height": 844
+      },
+      "thumb": {
+        "webp": "web/detroit-skyline-thumb.webp",
+        "jpeg": "web/detroit-skyline-thumb.jpg",
+        "width": 800,
+        "height": 422
+      },
+      "credit": "Photo: Michael Tighe, CC0, via Wikimedia Commons",
+      "hero": {
+        "webp": "web/detroit-skyline-hero.webp",
+        "jpeg": "web/detroit-skyline-hero.jpg",
+        "width": 1600,
+        "height": 800
+      },
+      "event": {
+        "slug": "detroit-skyline",
+        "alt": "The Detroit skyline at sunset across the Detroit River, with the Renaissance Center towers at center",
+        "webp": "assets/events/detroit-skyline.webp",
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "id": "spirit-of-detroit-night",
+      "original": "originals/spirit-of-detroit-night.jpg",
+      "commons_title": "File:The Spirit of Detroit at night, wide angle.jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3AThe_Spirit_of_Detroit_at_night%2C_wide_angle.jpg",
+      "license": "Public domain",
+      "license_url": "",
+      "artist": "42-BRT",
+      "title": "The Spirit of Detroit at night",
+      "description": "The Spirit of Detroit sculpture at night in downtown Detroit.",
+      "alt": "The green Spirit of Detroit sculpture lit at night in front of the Coleman A. Young Municipal Center",
+      "caption": "The Spirit of Detroit. Photo: 42-BRT, public domain, via Wikimedia Commons",
+      "location": "Coleman A. Young Municipal Center, downtown Detroit",
+      "suggested_section": "events",
+      "placements": [
+        "event",
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/spirit-of-detroit-night.webp",
+        "jpeg": "web/spirit-of-detroit-night.jpg",
+        "width": 1600,
+        "height": 901
+      },
+      "thumb": {
+        "webp": "web/spirit-of-detroit-night-thumb.webp",
+        "jpeg": "web/spirit-of-detroit-night-thumb.jpg",
+        "width": 800,
+        "height": 450
+      },
+      "credit": "Photo: 42-BRT, public domain, via Wikimedia Commons",
+      "event": {
+        "slug": "detroit-night",
+        "alt": "The green Spirit of Detroit sculpture lit at night in front of the Coleman A. Young Municipal Center",
+        "webp": "assets/events/detroit-night.webp",
+        "width": 960,
+        "height": 540,
+        "keywords": [
+          "beacon park",
+          "holiday lights",
+          "winter lighting",
+          "aglow",
+          "lights",
+          "downtown detroit",
+          "saint andrew",
+          "saint andrew's",
+          "toosii",
+          "black milk",
+          "concert"
+        ]
+      },
+      "keywords": [
+        "beacon park",
+        "holiday lights",
+        "winter lighting",
+        "aglow",
+        "lights",
+        "downtown detroit",
+        "saint andrew",
+        "saint andrew's",
+        "toosii",
+        "black milk",
+        "concert"
+      ]
+    },
+    {
+      "id": "fisher-building",
+      "original": "originals/fisher-building.jpg",
+      "commons_title": "File:Detroit December 2021 09 (Fisher Building).jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3ADetroit_December_2021_09_%28Fisher_Building%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Michael Barera",
+      "title": "The Fisher Building",
+      "description": "The Fisher Building in Detroit's New Center, home of the Fisher Theatre.",
+      "alt": "The Fisher Building's stepped stone tower seen from the street, with scaffolding along the ground-floor storefronts",
+      "caption": "The Fisher Building, New Center. Photo: Michael Barera, CC BY-SA 4.0, via Wikimedia Commons",
+      "location": "New Center, Detroit",
+      "suggested_section": "events",
+      "placements": [
+        "event",
+        "stay",
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "portrait",
+      "web": {
+        "webp": "web/fisher-building.webp",
+        "jpeg": "web/fisher-building.jpg",
+        "width": 1067,
+        "height": 1600
+      },
+      "thumb": {
+        "webp": "web/fisher-building-thumb.webp",
+        "jpeg": "web/fisher-building-thumb.jpg",
+        "width": 533,
+        "height": 800
+      },
+      "credit": "Photo: Michael Barera, CC BY-SA 4.0, via Wikimedia Commons",
+      "event": {
+        "slug": "fisher-building",
+        "alt": "The Fisher Building's stepped stone tower seen from the street, with scaffolding along the ground-floor storefronts",
+        "webp": "assets/events/fisher-building.webp",
+        "width": 960,
+        "height": 540,
+        "keywords": [
+          "fisher",
+          "fisher theatre",
+          "fisher theater",
+          "gatsby",
+          "great gatsby"
+        ]
+      },
+      "keywords": [
+        "fisher",
+        "fisher theatre",
+        "fisher theater",
+        "gatsby",
+        "great gatsby"
+      ]
+    },
+    {
+      "id": "little-caesars-arena",
+      "original": "originals/little-caesars-arena.jpg",
+      "commons_title": "File:Detroit December 2018 09 (Little Caesars Arena).jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3ADetroit_December_2018_09_%28Little_Caesars_Arena%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Michael Barera",
+      "title": "Little Caesars Arena",
+      "description": "The exterior of Little Caesars Arena in downtown Detroit.",
+      "alt": "The glass and steel exterior of Little Caesars Arena in downtown Detroit",
+      "caption": "Little Caesars Arena. Photo: Michael Barera, CC BY-SA 4.0, via Wikimedia Commons",
+      "location": "Downtown Detroit",
+      "suggested_section": "events",
+      "placements": [
+        "event",
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/little-caesars-arena.webp",
+        "jpeg": "web/little-caesars-arena.jpg",
+        "width": 1600,
+        "height": 1067
+      },
+      "thumb": {
+        "webp": "web/little-caesars-arena-thumb.webp",
+        "jpeg": "web/little-caesars-arena-thumb.jpg",
+        "width": 800,
+        "height": 533
+      },
+      "credit": "Photo: Michael Barera, CC BY-SA 4.0, via Wikimedia Commons",
+      "event": {
+        "slug": "little-caesars-arena",
+        "alt": "The glass and steel exterior of Little Caesars Arena in downtown Detroit",
+        "webp": "assets/events/little-caesars-arena.webp",
+        "width": 960,
+        "height": 540,
+        "keywords": [
+          "little caesars",
+          "red wings",
+          "pistons",
+          "hockey",
+          "nba",
+          "nhl"
+        ]
+      },
+      "keywords": [
+        "little caesars",
+        "red wings",
+        "pistons",
+        "hockey",
+        "nba",
+        "nhl"
+      ]
+    },
+    {
+      "id": "michigan-central",
+      "original": "originals/michigan-central.jpg",
+      "commons_title": "File:Detroit August 2025 23 (Michigan Central Station).jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3ADetroit_August_2025_23_%28Michigan_Central_Station%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Michael Barera",
+      "title": "Michigan Central Station",
+      "description": "Michigan Central Station in Corktown, Detroit.",
+      "alt": "The restored Michigan Central Station building in Corktown, Detroit, under a clear sky",
+      "caption": "Michigan Central Station, Corktown. Photo: Michael Barera, CC BY-SA 4.0, via Wikimedia Commons",
+      "location": "Corktown, Detroit",
+      "suggested_section": "gallery",
+      "placements": [
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/michigan-central.webp",
+        "jpeg": "web/michigan-central.jpg",
+        "width": 1600,
+        "height": 1067
+      },
+      "thumb": {
+        "webp": "web/michigan-central-thumb.webp",
+        "jpeg": "web/michigan-central-thumb.jpg",
+        "width": 800,
+        "height": 533
+      },
+      "credit": "Photo: Michael Barera, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    {
+      "id": "detroit-institute-of-arts",
+      "original": "originals/detroit-institute-of-arts.jpg",
+      "commons_title": "File:Detroit Institute of Arts January 2015 01.jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3ADetroit_Institute_of_Arts_January_2015_01.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Michael Barera",
+      "title": "Detroit Institute of Arts",
+      "description": "The Detroit Institute of Arts on Woodward Avenue.",
+      "alt": "The limestone facade and grand entrance of the Detroit Institute of Arts on Woodward Avenue",
+      "caption": "Detroit Institute of Arts. Photo: Michael Barera, CC BY-SA 4.0, via Wikimedia Commons",
+      "location": "Midtown, Detroit",
+      "suggested_section": "gallery",
+      "placements": [
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/detroit-institute-of-arts.webp",
+        "jpeg": "web/detroit-institute-of-arts.jpg",
+        "width": 1600,
+        "height": 1067
+      },
+      "thumb": {
+        "webp": "web/detroit-institute-of-arts-thumb.webp",
+        "jpeg": "web/detroit-institute-of-arts-thumb.jpg",
+        "width": 800,
+        "height": 533
+      },
+      "credit": "Photo: Michael Barera, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    {
+      "id": "guardian-building",
+      "original": "originals/guardian-building.jpg",
+      "commons_title": "File:Detroit December 2015 28 (Guardian Building).jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3ADetroit_December_2015_28_%28Guardian_Building%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Michael Barera",
+      "title": "The Guardian Building",
+      "description": "The Guardian Building in downtown Detroit.",
+      "alt": "The brick and terracotta Guardian Building rising above downtown Detroit",
+      "caption": "The Guardian Building. Photo: Michael Barera, CC BY-SA 4.0, via Wikimedia Commons",
+      "location": "Downtown Detroit",
+      "suggested_section": "gallery",
+      "placements": [
+        "eat",
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/guardian-building.webp",
+        "jpeg": "web/guardian-building.jpg",
+        "width": 1600,
+        "height": 1067
+      },
+      "thumb": {
+        "webp": "web/guardian-building-thumb.webp",
+        "jpeg": "web/guardian-building-thumb.jpg",
+        "width": 800,
+        "height": 533
+      },
+      "credit": "Photo: Michael Barera, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    {
+      "id": "campus-martius",
+      "original": "originals/campus-martius.jpg",
+      "commons_title": "File:Detroit December 2019 10 (Campus Martius Park).jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3ADetroit_December_2019_10_%28Campus_Martius_Park%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Michael Barera",
+      "title": "Campus Martius Park",
+      "description": "Campus Martius Park in downtown Detroit.",
+      "alt": "Campus Martius Park in downtown Detroit on a winter day, with event fencing, bare trees, and streetcar tracks in the foreground",
+      "caption": "Campus Martius Park. Photo: Michael Barera, CC BY-SA 4.0, via Wikimedia Commons",
+      "location": "Downtown Detroit",
+      "suggested_section": "gallery",
+      "placements": [
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/campus-martius.webp",
+        "jpeg": "web/campus-martius.jpg",
+        "width": 1600,
+        "height": 1067
+      },
+      "thumb": {
+        "webp": "web/campus-martius-thumb.webp",
+        "jpeg": "web/campus-martius-thumb.jpg",
+        "width": 800,
+        "height": 533
+      },
+      "credit": "Photo: Michael Barera, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    {
+      "id": "renaissance-center",
+      "original": "originals/renaissance-center.jpg",
+      "commons_title": "File:Detroit-Renaissance Center.jpg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File%3ADetroit-Renaissance_Center.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Patricia Drury",
+      "title": "Renaissance Center",
+      "description": "The Renaissance Center on the Detroit riverfront.",
+      "alt": "The cylindrical glass towers of the Renaissance Center on the Detroit riverfront",
+      "caption": "The Renaissance Center. Photo: Patricia Drury, CC BY 2.0, via Wikimedia Commons",
+      "location": "Detroit riverfront",
+      "suggested_section": "transit",
+      "placements": [
+        "transit",
+        "gallery"
+      ],
+      "on_page": true,
+      "orientation": "landscape",
+      "web": {
+        "webp": "web/renaissance-center.webp",
+        "jpeg": "web/renaissance-center.jpg",
+        "width": 1600,
+        "height": 1066
+      },
+      "thumb": {
+        "webp": "web/renaissance-center-thumb.webp",
+        "jpeg": "web/renaissance-center-thumb.jpg",
+        "width": 800,
+        "height": 533
+      },
+      "credit": "Photo: Patricia Drury, CC BY 2.0, via Wikimedia Commons"
+    }
+  ]
+}

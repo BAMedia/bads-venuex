@@ -1,0 +1,326 @@
+{
+  "default": "bayarea",
+  "cities": {
+    "detroit": {
+      "id": "detroit",
+      "name": "Detroit",
+      "title": "Urban Concierge - Detroit",
+      "tagline": "Your Detroit brief, refreshed from public sources.",
+      "footer": "Built from public sources. Snapshot, not real-time; check official links before you go.",
+      "brand_line": "Urban Concierge - Detroit is a Custom Concierge brand by",
+      "timezone": "America/Detroit",
+      "tz_abbr": "ET",
+      "out_dir": "detroit",
+      "briefs_dir": "briefs/detroit",
+      "site_url": "https://bamedia.agency/detroit/",
+      "legacy_root": false,
+      "photo_credit": "Photos: Wikimedia Commons contributors, used under the license on each caption",
+      "signup_intro": "Detroit events, weather and getting-around updates. Unsubscribe anytime.",
+      "signup_source": "detroit",
+      "scores_label": "Detroit sports scores",
+      "also": [
+        {
+          "label": "Bay Area",
+          "href": "/bads/"
+        },
+        {
+          "label": "Phoenix",
+          "href": "/phoenix/"
+        }
+      ],
+      "generic_img": [
+        "detroit-skyline",
+        "The Detroit skyline at sunset across the Detroit River, with the Renaissance Center towers at center"
+      ],
+      "event_images": [
+        [
+          [
+            "fisher",
+            "gatsby",
+            "theatre",
+            "theater"
+          ],
+          "fisher-building",
+          "The Fisher Building's stepped stone tower seen from the street, with scaffolding along the ground-floor storefronts"
+        ],
+        [
+          [
+            "little caesars",
+            "red wings",
+            "hockey",
+            "nhl",
+            "pistons",
+            "basketball",
+            "nba"
+          ],
+          "little-caesars-arena",
+          "The glass and steel exterior of Little Caesars Arena in downtown Detroit"
+        ],
+        [
+          [
+            "beacon park",
+            "holiday lights",
+            "winter lighting",
+            "aglow",
+            "lights",
+            "saint andrew",
+            "toosii",
+            "black milk",
+            "concert"
+          ],
+          "detroit-night",
+          "The green Spirit of Detroit sculpture lit at night in front of the Coleman A. Young Municipal Center"
+        ]
+      ],
+      "scores": {
+        "tz": "America/Detroit",
+        "tzAbbr": "ET",
+        "feeds": [
+          {
+            "path": "basketball/nba/teams/8/schedule",
+            "sport": "basketball/nba",
+            "id": "8",
+            "kind": "NBA"
+          },
+          {
+            "path": "football/nfl/teams/8/schedule",
+            "sport": "football/nfl",
+            "id": "8",
+            "kind": "NFL"
+          },
+          {
+            "path": "baseball/mlb/teams/6/schedule",
+            "sport": "baseball/mlb",
+            "id": "6",
+            "kind": "MLB"
+          },
+          {
+            "path": "hockey/nhl/teams/5/schedule",
+            "sport": "hockey/nhl",
+            "id": "5",
+            "kind": "NHL"
+          },
+          {
+            "path": "football/college-football/teams/130/schedule",
+            "sport": "football/college-football",
+            "id": "130",
+            "kind": "Football"
+          },
+          {
+            "path": "football/college-football/teams/127/schedule",
+            "sport": "football/college-football",
+            "id": "127",
+            "kind": "Football"
+          },
+          {
+            "path": "basketball/mens-college-basketball/teams/130/schedule",
+            "sport": "basketball/mens-college-basketball",
+            "id": "130",
+            "kind": "Men"
+          },
+          {
+            "path": "basketball/mens-college-basketball/teams/127/schedule",
+            "sport": "basketball/mens-college-basketball",
+            "id": "127",
+            "kind": "Men"
+          },
+          {
+            "path": "basketball/womens-college-basketball/teams/130/schedule",
+            "sport": "basketball/womens-college-basketball",
+            "id": "130",
+            "kind": "Women"
+          },
+          {
+            "path": "basketball/womens-college-basketball/teams/127/schedule",
+            "sport": "basketball/womens-college-basketball",
+            "id": "127",
+            "kind": "Women"
+          }
+        ],
+        "labels": {
+          "basketball/nba": {
+            "8": "Pistons"
+          },
+          "football/nfl": {
+            "8": "Lions"
+          },
+          "baseball/mlb": {
+            "6": "Tigers"
+          },
+          "hockey/nhl": {
+            "5": "Red Wings"
+          },
+          "football/college-football": {
+            "130": "Michigan",
+            "127": "Michigan State"
+          },
+          "basketball/mens-college-basketball": {
+            "130": "Michigan",
+            "127": "Michigan State"
+          },
+          "basketball/womens-college-basketball": {
+            "130": "Michigan",
+            "127": "Michigan State"
+          }
+        }
+      }
+    },
+    "phoenix": {
+      "id": "phoenix",
+      "name": "Phoenix",
+      "title": "Urban Concierge - Phoenix",
+      "tagline": "Your Greater Phoenix brief, refreshed from public sources.",
+      "footer": "Built from public sources. Snapshot, not real-time; check official links before you go.",
+      "brand_line": "Urban Concierge - Phoenix is a Custom Concierge brand by",
+      "timezone": "America/Phoenix",
+      "tz_abbr": "MST",
+      "out_dir": "phoenix",
+      "briefs_dir": "briefs/phoenix",
+      "site_url": "https://bamedia.agency/phoenix/",
+      "legacy_root": false,
+      "photo_credit": "Photos: Wikimedia Commons contributors, used under the license on each caption",
+      "signup_intro": "Greater Phoenix events, weather and getting-around updates. Unsubscribe anytime.",
+      "signup_source": "phoenix",
+      "scores_label": "Phoenix sports scores",
+      "also": [
+        {
+          "label": "Bay Area",
+          "href": "/bads/"
+        },
+        {
+          "label": "Detroit",
+          "href": "/detroit/"
+        }
+      ],
+      "generic_img": [
+        "phoenix-skyline",
+        "The downtown Phoenix skyline at night, with lit high-rises under a deep blue sky"
+      ],
+      "event_images": [
+        [
+          [
+            "gammage",
+            "wind symphony",
+            "wind ensemble",
+            "glory of the organ",
+            "organ"
+          ],
+          "gammage",
+          "The curved copper-colored colonnade, sculptural lamps and entrance ramp of ASU Gammage Auditorium in Tempe"
+        ],
+        [
+          [
+            "zoolights",
+            "zoo lights",
+            "phoenix zoo"
+          ],
+          "phoenix-zoo",
+          "Pelicans standing on a floating raft in a pond at the Phoenix Zoo"
+        ],
+        [
+          [
+            "crescent",
+            "pretty sick",
+            "dead hot",
+            "concert",
+            "downtown phoenix"
+          ],
+          "phoenix-skyline",
+          "The downtown Phoenix skyline at night, with lit high-rises under a deep blue sky"
+        ]
+      ],
+      "scores": {
+        "tz": "America/Phoenix",
+        "tzAbbr": "MST",
+        "feeds": [
+          {
+            "path": "basketball/nba/teams/21/schedule",
+            "sport": "basketball/nba",
+            "id": "21",
+            "kind": "NBA"
+          },
+          {
+            "path": "basketball/wnba/teams/11/schedule",
+            "sport": "basketball/wnba",
+            "id": "11",
+            "kind": "WNBA"
+          },
+          {
+            "path": "football/nfl/teams/22/schedule",
+            "sport": "football/nfl",
+            "id": "22",
+            "kind": "NFL"
+          },
+          {
+            "path": "baseball/mlb/teams/29/schedule",
+            "sport": "baseball/mlb",
+            "id": "29",
+            "kind": "MLB"
+          },
+          {
+            "path": "football/college-football/teams/9/schedule",
+            "sport": "football/college-football",
+            "id": "9",
+            "kind": "Football"
+          },
+          {
+            "path": "football/college-football/teams/12/schedule",
+            "sport": "football/college-football",
+            "id": "12",
+            "kind": "Football"
+          },
+          {
+            "path": "basketball/mens-college-basketball/teams/9/schedule",
+            "sport": "basketball/mens-college-basketball",
+            "id": "9",
+            "kind": "Men"
+          },
+          {
+            "path": "basketball/mens-college-basketball/teams/12/schedule",
+            "sport": "basketball/mens-college-basketball",
+            "id": "12",
+            "kind": "Men"
+          },
+          {
+            "path": "basketball/womens-college-basketball/teams/9/schedule",
+            "sport": "basketball/womens-college-basketball",
+            "id": "9",
+            "kind": "Women"
+          },
+          {
+            "path": "basketball/womens-college-basketball/teams/12/schedule",
+            "sport": "basketball/womens-college-basketball",
+            "id": "12",
+            "kind": "Women"
+          }
+        ],
+        "labels": {
+          "basketball/nba": {
+            "21": "Suns"
+          },
+          "basketball/wnba": {
+            "11": "Mercury"
+          },
+          "football/nfl": {
+            "22": "Cardinals"
+          },
+          "baseball/mlb": {
+            "29": "Diamondbacks"
+          },
+          "football/college-football": {
+            "9": "Arizona State",
+            "12": "Arizona"
+          },
+          "basketball/mens-college-basketball": {
+            "9": "Arizona State",
+            "12": "Arizona"
+          },
+          "basketball/womens-college-basketball": {
+            "9": "Arizona State",
+            "12": "Arizona"
+          }
+        }
+      }
+    }
+  }
+}

@@ -41,6 +41,15 @@ TZ = ZoneInfo("America/Los_Angeles")
 ASSET_VER = "15"
 MEDIA_JSON = os.path.join(OUT, "media", "media.json")
 PHOTO_CREDIT = "Photos: John Leyes / Bay Area Media"
+CITIES_FILE = os.path.join(ROOT, "cities.json")
+CITIES = json.load(open(CITIES_FILE, encoding="utf-8")) if os.path.exists(CITIES_FILE) else {"cities": {}}
+CITY = {"id": "bayarea"}
+DEFAULT_SITE_TITLE = SITE_TITLE
+DEFAULT_TAGLINE = TAGLINE
+DEFAULT_FOOTER = FOOTER
+DEFAULT_EVENT_IMAGES = None  # filled after EVENT_IMAGES is defined
+DEFAULT_GENERIC_IMG = None
+DEFAULT_MEDIA_EVENT_KEYWORDS = None
 
 URL_RE = re.compile(r'(?<![(<\["\'=])(https?://[^\s<>()\[\]"]+)')
 
@@ -94,8 +103,8 @@ def signup_html(prefix):
     if action:
         form = f"""<div class="signup">
   <h2>Get the Urban Concierge brief by email</h2>
-  <p>Bay Area events, weather and getting-around updates. Unsubscribe anytime.</p>
-  <form id="bads-signup" data-endpoint="{html.escape(action)}" novalidate>
+  <p>{html.escape(CITY.get("signup_intro") or "Events, weather and getting-around updates. Unsubscribe anytime.")}</p>
+  <form id="bads-signup" data-endpoint="{html.escape(action)}"{(' data-source="' + html.escape(CITY["signup_source"]) + '"') if CITY.get("signup_source") and CITY.get("id") != "bayarea" else ""} novalidate>
     <label class="fine" for="bads-email">Email address</label>
     <input id="bads-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
     <div class="hp" aria-hidden="true">
@@ -145,6 +154,102 @@ MEDIA_EVENT_KEYWORDS = {
     "oracle-park": ("oracle park", "sf giants", "giants vs", "mccovey"),
     "ferry-building": ("ferry building", "ferry plaza"),
 }
+
+DEFAULT_EVENT_IMAGES = EVENT_IMAGES
+DEFAULT_GENERIC_IMG = GENERIC_IMG
+DEFAULT_MEDIA_EVENT_KEYWORDS = MEDIA_EVENT_KEYWORDS
+
+def apply_city(city_id="bayarea"):
+    """Point this publish run at one city. Bay Area keeps the original defaults."""
+    global CITY, SITE_TITLE, TAGLINE, FOOTER, SITE_URL, OUT, BRIEFS, TZ, MEDIA_JSON, PHOTO_CREDIT
+    global EVENT_IMAGES, GENERIC_IMG, MEDIA_EVENT_KEYWORDS
+    if city_id in (None, "", "bayarea", "bads"):
+        CITY = {
+            "id": "bayarea",
+            "name": "Bay Area",
+            "title": DEFAULT_SITE_TITLE,
+            "tagline": DEFAULT_TAGLINE,
+            "footer": DEFAULT_FOOTER,
+            "brand_line": "Urban Concierge - Bay Area is a Custom Concierge brand by",
+            "timezone": "America/Los_Angeles",
+            "tz_abbr": "PT",
+            "out_dir": CONFIG.get("out_dir", "bads"),
+            "briefs_dir": "briefs",
+            "site_url": CONFIG.get("site_url", "https://bamedia.agency/bads/"),
+            "legacy_root": True,
+            "photo_credit": "Photos: John Leyes / Bay Area Media",
+            "signup_intro": "Bay Area events, weather and getting-around updates. Unsubscribe anytime.",
+            "signup_source": "bads",
+            "scores_label": "Bay Area sports scores",
+            "scores": None,
+            "also": [],
+        }
+        SITE_TITLE = DEFAULT_SITE_TITLE
+        TAGLINE = DEFAULT_TAGLINE
+        FOOTER = DEFAULT_FOOTER
+        EVENT_IMAGES = DEFAULT_EVENT_IMAGES
+        GENERIC_IMG = DEFAULT_GENERIC_IMG
+        MEDIA_EVENT_KEYWORDS = DEFAULT_MEDIA_EVENT_KEYWORDS
+        PHOTO_CREDIT = CITY["photo_credit"]
+    else:
+        cities = CITIES.get("cities") or {}
+        if city_id not in cities:
+            sys.exit("unknown city: %s (known: %s)" % (city_id, ", ".join(sorted(cities))))
+        CITY = dict(cities[city_id])
+        SITE_TITLE = CITY["title"]
+        TAGLINE = CITY.get("tagline") or DEFAULT_TAGLINE
+        FOOTER = CITY.get("footer") or DEFAULT_FOOTER
+        PHOTO_CREDIT = CITY.get("photo_credit") or PHOTO_CREDIT
+        EVENT_IMAGES = [
+            (tuple(k.lower() for k in keys), slug, alt)
+            for keys, slug, alt in (CITY.get("event_images") or [])
+        ]
+        gi = CITY.get("generic_img") or ["generic", GENERIC_IMG[1]]
+        GENERIC_IMG = (gi[0], gi[1])
+        MEDIA_EVENT_KEYWORDS = {}
+    SITE_URL = (CITY.get("site_url") or SITE_URL).rstrip("/") + "/"
+    OUT = os.path.join(ROOT, CITY.get("out_dir") or CONFIG.get("out_dir", "bads"))
+    BRIEFS = os.path.join(ROOT, CITY.get("briefs_dir") or "briefs")
+    TZ = ZoneInfo(CITY.get("timezone") or "America/Los_Angeles")
+    MEDIA_JSON = os.path.join(OUT, "media", "media.json")
+
+def ensure_city_shell():
+    """Create a city's output folder and copy shared CSS/JS/icons. Does not touch Bay Area assets."""
+    if CITY.get("id") in (None, "bayarea"):
+        return
+    os.makedirs(os.path.join(OUT, "archive"), exist_ok=True)
+    os.makedirs(os.path.join(OUT, "assets", "events"), exist_ok=True)
+    os.makedirs(os.path.join(OUT, "assets", "icons"), exist_ok=True)
+    os.makedirs(os.path.join(OUT, "media"), exist_ok=True)
+    src_assets = os.path.join(ROOT, "bads", "assets")
+    shutil.copyfile(os.path.join(src_assets, "style.css"), os.path.join(OUT, "assets", "style.css"))
+    shutil.copyfile(os.path.join(src_assets, "app.js"), os.path.join(OUT, "assets", "app.js"))
+    icon_src = os.path.join(src_assets, "icons")
+    icon_dst = os.path.join(OUT, "assets", "icons")
+    for fn in os.listdir(icon_src):
+        shutil.copyfile(os.path.join(icon_src, fn), os.path.join(icon_dst, fn))
+    sw_src = open(os.path.join(ROOT, "bads", "sw.js"), encoding="utf-8").read()
+    sw_src = sw_src.replace("bads-v14", CITY["id"] + "-v1")
+    open(os.path.join(OUT, "sw.js"), "w", encoding="utf-8").write(sw_src)
+    manifest = {
+        "name": SITE_TITLE,
+        "short_name": "Urban Concierge",
+        "description": TAGLINE,
+        "id": "./",
+        "start_url": "./index.html?source=pwa",
+        "scope": "./",
+        "display": "standalone",
+        "background_color": "#fafaf7",
+        "theme_color": "#0b6e99",
+        "lang": "en",
+        "categories": ["news", "travel", "lifestyle"],
+        "icons": [
+            {"src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+            {"src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+            {"src": "assets/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
+        ],
+    }
+    open(os.path.join(OUT, "manifest.webmanifest"), "w", encoding="utf-8").write(json.dumps(manifest, indent=2) + "\n")
 
 DAYS = r"(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*"
 MONTHS = r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*"
@@ -433,6 +538,14 @@ def render_v2(text, prefix):
 def page(title, body, prefix, active, photos=True):
     nav_home = "current" if active == "home" else ""
     nav_arch = "current" if active == "archive" else ""
+    scores_config = ""
+    if CITY.get("id") not in (None, "bayarea") and CITY.get("scores"):
+        scores_config = "<script>window.UC_SCORES = " + json.dumps(CITY["scores"], separators=(",", ":")) + ";</script>\n"
+    also = CITY.get("also") or []
+    also_nav = ""
+    if also:
+        links = " · ".join(f'<a href="{html.escape(a["href"])}">{html.escape(a["label"])}</a>' for a in also)
+        also_nav = f'<p class="fine">Also: {links}</p>'
     return f"""<!doctype html>
 <html lang="en" data-root="{prefix or './'}">
 <head>
@@ -461,7 +574,7 @@ def page(title, body, prefix, active, photos=True):
     <nav><a class="{nav_home}" href="{prefix}index.html">Latest</a> <a class="{nav_arch}" href="{prefix}archive/index.html">Archive</a> <a href="{prefix}index.html#follow">Get updates</a> <a href="{prefix}feed.xml">RSS</a></nav>
   </div>
 </header>
-<section class="scores" aria-label="Bay Area sports scores">
+{scores_config}<section class="scores" aria-label="{html.escape(CITY.get("scores_label") or "Sports scores")}">
   <div class="scores-bar">
     <p class="scores-label" id="scores-label">Scores</p>
     <div class="scores-sr visually-hidden" id="scores-sr" role="status" aria-live="polite">Loading scores…</div>
@@ -479,7 +592,7 @@ def page(title, body, prefix, active, photos=True):
 {gallery_html(prefix) if photos else ""}
 {signup_html(prefix)}
 </main>
-<footer class="site"><div class="wrap"><p>{html.escape(FOOTER)}</p><p class="fine">Urban Concierge - Bay Area is a Custom Concierge brand by <a href="{prefix}../">Bay Area Media</a>.</p></div></footer>
+<footer class="site"><div class="wrap"><p>{html.escape(FOOTER)}</p><p class="fine">{html.escape(CITY.get("brand_line") or "Urban Concierge - Bay Area is a Custom Concierge brand by")} <a href="{prefix}../">Bay Area Media</a>.</p>{also_nav}</div></footer>
 </body>
 </html>
 """
@@ -494,7 +607,7 @@ def build_brief(src):
     body = '<article class="brief">' + render_md(strip_bads_json(text)) + "</article>"
     archive_body = (render_v2(text, "../") or body) + '<p class="back"><a href="index.html">&larr; All briefs</a></p>'
     with open(os.path.join(OUT, "archive", base + ".html"), "w", encoding="utf-8") as f:
-        f.write(page(f"{title} · {sub[:60]} · Urban Concierge - Bay Area", archive_body, "../", "archive"))
+        f.write(page(f"{title} · {sub[:60]} · {SITE_TITLE}", archive_body, "../", "archive"))
     return base, title, sub, (render_v2(text, "") or body)
 
 def write_index(base, title, sub, body):
@@ -514,7 +627,7 @@ def write_archive_index():
         items.append(f'<li><a href="{base}.html">{html.escape(sub or title)}</a><span class="fn">{html.escape(base)}</span></li>')
     body = "<h1>Archive</h1><p>Every published brief, newest first.</p><ul class=\"archive\">" + "\n".join(items) + "</ul>"
     with open(os.path.join(OUT, "archive", "index.html"), "w", encoding="utf-8") as f:
-        f.write(page("Archive · Urban Concierge - Bay Area", body, "../", "archive"))
+        f.write(page(f"Archive · {SITE_TITLE}", body, "../", "archive"))
 
 def brief_time(base):
     m = re.search(r"(\d{4})-(\d{2})-(\d{2})-(\d{2})(\d{2})$", base)
@@ -567,7 +680,7 @@ def write_feed():
 def write_offline():
     body = '<h1>You are offline</h1><p>This page has not been saved on this device yet. Briefs you have opened before still work offline. Try the <a href="index.html">latest brief</a> or the <a href="archive/index.html">archive</a>.</p>'
     with open(os.path.join(OUT, "offline.html"), "w", encoding="utf-8") as f:
-        f.write(page("Offline · Urban Concierge - Bay Area", body, "", "home", photos=False))
+        f.write(page(f"Offline · {SITE_TITLE}", body, "", "home", photos=False))
 
 LEGACY_STUB = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
@@ -582,6 +695,8 @@ LEGACY_STUB = """<!doctype html>
 def write_legacy():
     """BADS used to live at the site root. Keep old URLs working: redirect stubs for
     /archive/*.html and /offline.html, and a copy of the feed at /feed.xml."""
+    if not CITY.get("legacy_root"):
+        return
     if os.path.abspath(OUT) == os.path.abspath(ROOT):
         return
     rel = os.path.relpath(OUT, ROOT).replace(os.sep, "/") + "/"
@@ -604,10 +719,14 @@ def git(*args):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("briefs", nargs="*")
-    ap.add_argument("--rebuild", action="store_true", help="re-render every brief in briefs/ (newest becomes index.html)")
+    ap.add_argument("--city", default="bayarea", help="bayarea (default), detroit, or phoenix")
+    ap.add_argument("--rebuild", action="store_true", help="re-render every brief in this city's briefs folder (newest becomes index.html)")
     ap.add_argument("--archive-only", action="store_true", help="add to archive without changing index.html")
     ap.add_argument("--no-push", action="store_true")
     a = ap.parse_args()
+    apply_city(a.city)
+    os.makedirs(BRIEFS, exist_ok=True)
+    ensure_city_shell()
     if a.rebuild:
         a.briefs = [os.path.join(BRIEFS, fn) for fn in sorted(os.listdir(BRIEFS)) if fn.endswith(".md")]
     if not a.briefs:
