@@ -43,7 +43,7 @@ Thanksgiving Day Thu Nov 26: no evening event confirmed. Biscuits and Blues is c
 ## Where to eat
 No Yelp ratings. Descriptions and hours from the restaurants' own pages. The Michelin Guide pages did not load this run, so no Michelin claims are made.
 
-**Foreign Cinema, Mission (2534 Mission St).** Californian-Mediterranean since 1999, with outdoor film screenings. **Closed Thu Nov 26.** Dinner Mon–Thu 5–9:30 pm, Fri–Sat 5–10 pm; brunch Sat–Sun 10:30 am–2 pm. Its page lists some dates as sold out. https://foreigncinema.com/
+**Foreign Cinema, Mission.** Californian-Mediterranean since 1999, with outdoor film screenings. **Closed Thu Nov 26.** Dinner Mon–Thu 5–9:30 pm, Fri–Sat 5–10 pm; brunch Sat–Sun 10:30 am–2 pm. Its page lists some dates as sold out. https://foreigncinema.com/
 **Nopa, Divisadero (560 Divisadero St).** Organic wood-fired cuisine. Open Fri–Sat 5–11 pm; **closed Thanksgiving Day**. https://www.nopasf.com/
 **Kin Khao, Union Square (55 Cyril Magnin St).** Thai. Lunch daily 11:30 am–2 pm; dinner Sun–Thu 5:30–9 pm, Fri–Sat 5:30–10 pm. Its page lists no Thanksgiving hours; call before going. https://www.kinkhao.com/
 **Rich Table, Hayes Valley.** "Go to the market, see what's good & cook it." Holiday hours not found; check before going. Its sister RT Rotisserie (101 Oak St) lists 11 am–9 pm daily. https://www.richtablesf.com/
